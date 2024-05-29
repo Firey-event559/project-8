@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Log in</h1>
-    <h1>Sign up</h1>
+<x-layout>
 
-    <h1>Log in</h1>
-</body>
-</html>
+</x-layout>
+
+<div class="container">
+    <div class="login-signup">
+        <h1>Het lijkt erop dat jij niet ingelogd is</h1>
+        <button onclick="window.location.href='login.html'">Log In</button>
+        <button onclick="window.location.href='registration.html'">Sign Up</button>
+    </div>

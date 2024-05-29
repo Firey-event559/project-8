@@ -9,4 +9,9 @@ Route::get('/', function () {
 Route::get('/login_signup', function () {
     return view('/login_signup'); 
  });
+
+Route::get('/index', function () {
+    return view('/index');
+
+});
  
