@@ -13,11 +13,7 @@ body {
     align-items: center;
     min-height: 90vh;
     padding-top: 160px;
-    background-image: url('../assets/engineer.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
+
 }
 
 #navbar {
