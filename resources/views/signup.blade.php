@@ -1,7 +1,4 @@
 <x-layout>
-
-</x-layout>
-
 <main class="main-content">
     <div class="form-container">
         <h1 class="form-title">Registration</h1>
@@ -20,3 +17,5 @@
         </form>
     </div>
 </main>
+</x-layout>
+
