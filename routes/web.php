@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
 use App\Http\Controllers\RegistrationController;
+use Illuminate\Support\Facades\Hash;
 
 // Define routes for static views
 Route::get('/', function () {
@@ -37,10 +38,12 @@ Route::get('/services', function () {
 Route::get('/offerte', function () {
     return view('offerte');
 });
+Route::get('/signup', [App\Http\Controllers\RegistrationController::class, 'Showform']);
+Route::post('/signup', [App\Http\Controllers\RegistrationController::class, 'Registeren']);
 
 
-Route::get('/signup', [RegistrationController::class, 'Showform']);
-Route::post('/signup', [RegistrationController::class, 'Registeren']);
+
+
 
 
 

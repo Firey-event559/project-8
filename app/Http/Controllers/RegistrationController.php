@@ -10,7 +10,7 @@ class RegistrationController extends Controller
 {
     public function Showform()
     {
-        return view('signup');
+        return view('/signup');
     }
 
     public function Registeren(Request $request)

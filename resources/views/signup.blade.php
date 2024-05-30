@@ -2,7 +2,7 @@
 <main class="main-content">
     <div class="form-container">
         <h1 class="form-title">Registeren</h1>
-        <form id="registration-form" action="/register" method="post">
+        <form id="registration-form" action="/project-8/public/signup" method="post">
             <label for="naam">Naam:</label>
             <input type="text" name="naam" id="naam" placeholder="Name" required><br>
             <label for="telefoonnummer">telefoonnummer:</label>
@@ -13,7 +13,7 @@
             <input type="text" name="adres" id="adres" placeholder="Adres" required><br>
             <label for="password">Password:</label>
             <input type="password" name="password" id="password" placeholder="Password" required><br>
-            <input type="submit" value="Registeren">
+            <input type="submit" value="Registeren" name="submit">
         </form>
     </div>
 </main>
