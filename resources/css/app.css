@@ -9,6 +9,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0px;
 }
 
 #navbar {
@@ -414,4 +415,8 @@ main {
 
 .service-box p {
     color: #ccc;
+}
+
+footer{
+    color: #fff;
 }
