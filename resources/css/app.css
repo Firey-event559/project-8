@@ -175,8 +175,8 @@ body {
 .login-signup {
     text-align: center;
     margin-top: 100px;
-    padding-top: 140px;
-    padding-bottom: 130px;
+    padding-top: 25vh;
+    padding-bottom: 25vh;
 }
 
 .login-signup button {
