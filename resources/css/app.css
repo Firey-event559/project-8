@@ -9,14 +9,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0px;
+    padding: 40px 0px;
 }
 
 #navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #333;
+    background-color: #212529;
     padding: 10px 20px;
     position: fixed;
     width: 100%;
@@ -56,15 +56,15 @@ body {
 }
 
 #navbar ul li.redc a {
-    color: red;
+    color: #fff;
 }
 
 #navbar ul li.bluec a {
-    color: mediumturquoise;
+    color: #fff;
 }
 
 #navbar ul li a:hover {
-    color: #ffd700;
+    color: #fff;
 }
 
 #hometext {
@@ -123,7 +123,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #333;
+    background-color: #212529;
     padding: 10px 20px;
     position: fixed;
     width: 100%;
@@ -152,13 +152,13 @@ body {
     color: #fff;
 }
 #logoptions ul li.redc a {
-    color: red;
+    color: #fff;
 }
 #logoptions ul li.bluec a {
-    color: mediumturquoise;
+    color: #fff;
 }
 #logoptions ul li a:hover {
-    color: #ffd700;
+    color: #fff;
 }
 
 #logoptions ul li:last-child {
@@ -253,7 +253,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #333;
+    background-color: #212529;
     padding: 10px 20px;
     position: fixed;
     width: 100%;
@@ -282,13 +282,13 @@ body {
     color: #fff;
 }
 #logoptions ul li.redc a {
-    color: red;
+    color: #fff;
 }
 #logoptions ul li.bluec a {
-    color: mediumturquoise;
+    color: #fff;
 }
 #logoptions ul li a:hover {
-    color: #ffd700;
+    color: #fff;
 }
 
 #logoptions ul li:last-child {
