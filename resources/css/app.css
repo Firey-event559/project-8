@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    
+
     font-family: Arial, sans-serif;
 }
 
@@ -199,16 +199,16 @@ main {
 }
 
 .services h2 {
-    color: #f00;
+    color: black;
     font-size: 36px;
 }
 
 .services p {
-    color: #0ff;
+    color: black;
     font-size: 18px;
 }
 
-.services-container {
+.services-containers {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -220,14 +220,9 @@ main {
 
 .service-box {
     background-color: #111;
-    border: 2px solid #0ff;
+    border: 2px solid black;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
     transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-.service-box:nth-child(2n) {
-    border-color: #f00;
 }
 
 .service-box h3 {
@@ -258,8 +253,58 @@ main {
 }
 
 .services_body {
-    background-color: #000;
+    background-color: white;
 }
 footer {
     color: #fff;
+}
+
+.aboutus_body {
+    font-family: Arial, sans-serif;
+    padding-top: 150px;
+    color: #fff;
+}
+
+.container_aboutus {
+    padding-left: 50%;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid #ff0000;
+    border-radius: 10px;
+    padding: 20px;
+    margin-left: 350px;
+    max-width: 800px;
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.h1_aboutus {
+    color: #ff0000;
+    text-align: center;
+}
+
+.p_aboutus {
+    margin-bottom: 20px;
+}
+
+.accordion {
+    padding-top: 25px;
+    max-width: 1110px;
+    color: #212529;
+}
+.accordion-button {
+    background-color: green;
+}
+.accordion-header {
+    color: #212529;
+}
+
+.accordion-item {
+    color: white;
+}
+
+.accordion-collapse {
+    background-color: #212529;
+    color: white;
 }
