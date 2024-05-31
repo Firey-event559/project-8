@@ -52,7 +52,7 @@
                         when looking at its layout.<br>
                         Is it safe to use Lorem Ipsum?<br>
                         Is it safe to use Lorem Ipsum?<br>
-                        Is it safe to use Lorem Ipsum? </p>
+                        Is it safe to use Lorem Ipsum?</p>
 
                 </div>
             </section>
