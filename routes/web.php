@@ -3,6 +3,7 @@
 
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Logincontroller;
 
 
 Route::view('/', 'index');
@@ -16,6 +17,11 @@ Route::view('/signup', 'signup');
 
 
 Route::post('signup', [UserController::class, 'Insertaccount']);
+
+Route::post('login', [LoginController::class, 'Selectaccount']);
+
+
+
 
 
 

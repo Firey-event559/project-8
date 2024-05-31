@@ -12,7 +12,7 @@ class UserController extends Controller{
 
     public function Insertaccount(Request $request){
         // Validate the form data
-        $Validated = $request->validate([
+        $validated = $request->validate([
             'name' => 'required|max:255',
             'phonenumber' => 'required|numeric',
             'email' => 'required',
@@ -22,11 +22,11 @@ class UserController extends Controller{
 
      // Create a new user
    $user = new User();
-   $user->name = $Validated['name'];
-   $user->phonenumber = $Validated['phonenumber'];
-   $user->email = $Validated['email'];
-   $user->adress = $Validated['adress'];
-   $user->password = Hash::make($Validated['password']);
+   $user->name = $validated['name'];
+   $user->phonenumber = $validated['phonenumber'];
+   $user->email = $validated['email'];
+   $user->adress = $validated['adress'];
+   $user->password = Hash::make($validated['password']);
    $user->role = 1;
    $user->save();
 
