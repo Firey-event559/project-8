@@ -182,7 +182,8 @@ body {
 }
 
 main {
-    padding: 20px;
+    padding-top: 120px;
+    padding-bottom: 50px;
 }
 
 .services {
@@ -200,17 +201,19 @@ main {
 }
 
 .services-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    justify-content: center;
+    padding-top: 15px;
+    padding-left: 210px;
+    padding-right: 210px;
 }
 
 .service-box {
     background-color: #111;
     border: 2px solid #0ff;
     padding: 20px;
-    width: 300px;
     box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
     transition: border-color 0.3s, box-shadow 0.3s;
 }
@@ -228,6 +231,27 @@ main {
     color: #ccc;
 }
 
+.faq {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+}
+.content {
+    background-color: rgb(56, 57, 60);
+    border: solid #19cfcf;
+    border-width: 4px;
+    border-radius: 12px;
+    padding: 20px;
+    width: 80%; /* Adjust this value to your desired width */
+}
+.content_p {
+    color: #000;
+    font-size: 20px;
+}
+
+.services_body {
+    background-color: #000;
+}
 footer {
     color: #fff;
 }

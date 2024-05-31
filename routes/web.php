@@ -19,12 +19,3 @@ Route::view('/signup', 'signup');
 Route::post('signup', [UserController::class, 'Insertaccount']);
 
 Route::post('login', [LoginController::class, 'Selectaccount']);
-
-
-
-
-
-
-
-
-
