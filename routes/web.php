@@ -19,3 +19,7 @@ Route::view('/signup', 'signup');
 Route::post('signup', [UserController::class, 'Insertaccount']);
 
 Route::post('login', [LoginController::class, 'Selectaccount']);
+
+Route::get('/index', function () {
+    return view('index');
+})->name('index');
