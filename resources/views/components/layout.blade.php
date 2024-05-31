@@ -21,7 +21,7 @@
         <div id="logoptions">
             <ul>
                 <li class="redc"> <a href="{{ url('/index')}}">Home</a> </li>
-                <li class="bluec"> <a href="OverOns.html">Over ons </a></li>
+                <li class="bluec"> <a href="{{ url('/about_us')}}">Over ons </a></li>
                 <li class="redc"> <a href="{{ url('/services') }}">Service </a></li>
                 <li class="redc"> <a href="{{ url('/webshop') }}">Webshop </a> </li>
                 <li class="redc"> <a href="{{ url('/offerte') }}">Reparatie </a></li>
