@@ -24,7 +24,7 @@
                 <li class="bluec"> <a href="OverOns.html">Over ons </a></li>
                 <li class="redc"> <a href="service.html">Service </a></li>
                 <li class="redc"> <a href="{{ url('/webshop') }}">Webshop </a> </li>
-                <li class="redc"> <a href="{{ url('/offerte') }}">Offerte </a></li>
+                <li class="redc"> <a href="{{ url('/offerte') }}">Reparatie </a></li>
                 <li class="redc"><a href="{{ url('/login_signup') }}">Account</a></li>
 
             </ul>

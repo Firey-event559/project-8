@@ -6,13 +6,11 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
-class UserController extends Controller
-{
+class UserController extends Controller{
 
    
 
-    public function Register(Request $request)
-    {
+    public function Insertaccount(Request $request){
         // Validate the form data
         $Validated = $request->validate([
             'name' => 'required|max:255',

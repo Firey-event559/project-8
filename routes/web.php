@@ -15,7 +15,7 @@ Route::view('/contact', 'contact');
 Route::view('/signup', 'signup');
 
 
-Route::post('signup', [UserController::class, 'Register']);
+Route::post('signup', [UserController::class, 'Insertaccount']);
 
 
 
