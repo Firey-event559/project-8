@@ -1,4 +1,5 @@
 <x-layout>
+    <body class="login_body">
 <main class="main-content">
     <div class="form-container">
         <h2 class="form-title">Login</h2>
