@@ -25,6 +25,18 @@ class User extends Authenticatable
         'address',
         'password',
     ];
+
+    public function isAdmin()
+    {
+        return $this->role == 3; 
+
+    }
+
+    public function isUser()
+    {
+        return $this->role == 1; 
+    }
+
     
 
     /**

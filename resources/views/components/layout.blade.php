@@ -2,7 +2,7 @@
 <?php 
 
 $email = Session::get('user_email');
-
+use Illuminate\Support\Facades\Auth;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,30 +20,49 @@ $email = Session::get('user_email');
 </head>
 
 <body>
-    <nav id="navbar">
-        <div id="logonav">
-            <img src="{{ Vite::asset('resources/assets/cropped-logo UNEED-IT.png') }}">
-        </div>
-        <div id="logoptions">
-            <ul>
-                <li class="redc"> <a href="{{ url('/index')}}">Home</a> </li>
-                <li class="bluec"> <a href="{{ url('/about_us')}}">Over ons </a></li>
-                <li class="redc"> <a href="{{ url('/services') }}">Service </a></li>
-                <li class="redc"> <a href="{{ url('/webshop') }}">Webshop </a> </li>
-                <li class="redc"> <a href="{{ url('/offerte') }}">Reparatie </a></li>
+<nav id="navbar">
+    <div id="logonav">
+        <img src="{{ Vite::asset('resources/assets/cropped-logo UNEED-IT.png') }}">
+    </div>
+    <div id="logoptions">
+        <ul>
+            @guest
+                <li class="redc"><a href="{{ url('/index') }}">Home</a></li>
+                <li class="bluec"><a href="{{ url('/about_us') }}">Over ons</a></li>
+                <li class="redc"><a href="{{ url('/services') }}">Service</a></li>
+                <li class="redc"><a href="{{ url('/webshop') }}">Webshop</a></li>
+                <li class="redc"><a href="{{ url('/offerte') }}">Reparatie</a></li>
                 <li class="redc"><a href="{{ url('/login_signup') }}">Account</a></li>
-                @auth
-                <li>
-                <form method="POST" action="layout">
-                    @csrf
-                <button type="submit">uitloggen </button>
-                </form>
-                </li>
-                @endauth
+            @endguest
 
-            </ul>
-        </div>
-    </nav>
+            @auth
+                <!-- Links common to role 1 users and admin -->
+                @if (Auth::user()->isUser() || Auth::user()->isAdmin())
+                    <li class="redc"><a href="{{ url('/index') }}">Home</a></li>
+                    <li class="bluec"><a href="{{ url('/about_us') }}">Over ons</a></li>
+                    <li class="redc"><a href="{{ url('/services') }}">Service</a></li>
+                    <li class="redc"><a href="{{ url('/webshop') }}">Webshop</a></li>
+                    <li class="redc"><a href="{{ url('/offerte') }}">Reparatie</a></li>
+                    <li class="redc"><a href="{{ url('/login_signup') }}">Account</a></li>
+                @endif
+
+                <!-- Links specific to admin -->
+                @if (Auth::user()->isAdmin())
+                    <li class="redc"><a href="{{ url('/login_signup') }}">Admin Dashboard</a></li>
+                @endif
+
+                <!-- Logout button for authenticated users -->
+                <li>
+                    <form method="POST" action="layout">
+                        @csrf
+                        <button type="submit" class="redc">Uitloggen</button>
+                    </form>
+                </li>
+            @endauth
+        </ul>
+    </div>
+</nav>
+
 
 
     {{ $slot }}
