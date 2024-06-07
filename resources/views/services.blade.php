@@ -46,11 +46,14 @@
                 <div class="accordion" id="accordionExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header bg-white" id="headingOne">
-                            <button data-mdb-collapse-init class="accordion-button" type="button" data-mdb-toggle="collapse" data-mdb-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                FAQ
+                            <button data-mdb-collapse-init class="accordion-button  bg-dark text-light" type="button"
+                                data-mdb-toggle="collapse" data-mdb-target="#collapseOne" aria-expanded="false"
+                                aria-controls="collapseOne">
+                                What is Lorem Ipsum?
                             </button>
                         </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-mdb-parent="#accordionExample">
+                        <div id="collapseOne" class="accordion-collapse collapse show " aria-labelledby="headingOne"
+                            data-mdb-parent="#accordionExample">
                             <div class="accordion-body">
                                 <strong>This is the first item's accordion body.</strong> It is hidden by default,
                                 until the collapse plugin adds the appropriate classes that we use to style each
@@ -65,11 +68,14 @@
 
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingTwo">
-                            <button data-mdb-collapse-init class="accordion-button collapsed" type="button" data-mdb-toggle="collapse" data-mdb-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                FAQ
+                            <button data-mdb-collapse-init class="accordion-button collapsed bg-dark text-light" type="button"
+                                data-mdb-toggle="collapse" data-mdb-target="#collapseTwo" aria-expanded="false"
+                                aria-controls="collapseTwo">
+                                Where does it come from?
                             </button>
                         </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-mdb-parent="#accordionExample">
+                        <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo"
+                            data-mdb-parent="#accordionExample">
                             <div class="accordion-body">
                                 <strong>This is the second item's accordion body.</strong> It is hidden by
                                 default, until the collapse plugin adds the appropriate classes that we use to
@@ -83,11 +89,14 @@
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingThree">
-                            <button data-mdb-collapse-init class="accordion-button collapsed" type="button" data-mdb-toggle="collapse" data-mdb-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                FAQ
+                            <button data-mdb-collapse-init class="accordion-button collapsed bg-dark text-light" type="button"
+                                data-mdb-toggle="collapse" data-mdb-target="#collapseThree" aria-expanded="false"
+                                aria-controls="collapseThree">
+                                Is it safe to use Lorem Ipsum?
                             </button>
                         </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-mdb-parent="#accordionExample">
+                        <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree"
+                            data-mdb-parent="#accordionExample">
                             <div class="accordion-body">
                                 <strong>This is the third item's accordion body.</strong> It is hidden by default,
                                 until the collapse plugin adds the appropriate classes that we use to style each
@@ -102,19 +111,8 @@
                 </div>
 
             </div>
-            </div>
-            </section>
-        </main>
-        <script>
-            // Initialization for ES Users
-            import {
-                Collapse,
-                initMDB
-            } from 'mdb-ui-kit';
 
-            initMDB({
-                Collapse
-            });
-        </script>
+        </main>
+
     </body>
 </x-layout>

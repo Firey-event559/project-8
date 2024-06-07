@@ -30,6 +30,18 @@ public function Selectaccount(Request $request){
 
     return view('login')->with('error', 'These credentials do not match our records.');
 }
+
+
+public function uitloggen(){
+    
+    Session::forget('user_email');
+
+    
+    Auth::Logout();
+
+    return view('login');
 }
+}
+
 
 

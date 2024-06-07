@@ -1,3 +1,9 @@
+
+<?php 
+
+$email = Session::get('user_email');
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,6 +32,14 @@
                 <li class="redc"> <a href="{{ url('/webshop') }}">Webshop </a> </li>
                 <li class="redc"> <a href="{{ url('/offerte') }}">Reparatie </a></li>
                 <li class="redc"><a href="{{ url('/login_signup') }}">Account</a></li>
+                @auth
+                <li>
+                <form method="POST" action="layout">
+                    @csrf
+                <button type="submit">uitloggen </button>
+                </form>
+                </li>
+                @endauth
 
             </ul>
         </div>

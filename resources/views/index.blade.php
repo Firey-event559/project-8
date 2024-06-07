@@ -1,8 +1,10 @@
-<?php
+
+<?php 
 
 $email = Session::get('user_email');
 
 ?>
+
 <x-layout>
 
 <main id="mainhome">
