@@ -1,8 +1,9 @@
+<?php
 
-<?php 
-
-$email = Session::get('user_email');
 use Illuminate\Support\Facades\Auth;
+
+
+var_dump(Auth::user()['name'])
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,44 +12,42 @@ use Illuminate\Support\Facades\Auth;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @vite (['resources/css/app.css'])
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
     <title>Document</title>
 </head>
 
 <body>
-<nav id="navbar">
-    <div id="logonav">
-        <img src="{{ Vite::asset('resources/assets/cropped-logo UNEED-IT.png') }}">
-    </div>
-    <div id="logoptions">
-        <ul>
-            @guest
+    <nav id="navbar">
+        <div id="logonav">
+            <img src="{{ Vite::asset('resources/assets/cropped-logo UNEED-IT.png') }}">
+        </div>
+        <div id="logoptions">
+            <ul>
+                @guest
                 <li class="redc"><a href="{{ url('/index') }}">Home</a></li>
                 <li class="bluec"><a href="{{ url('/about_us') }}">Over ons</a></li>
                 <li class="redc"><a href="{{ url('/services') }}">Service</a></li>
                 <li class="redc"><a href="{{ url('/webshop') }}">Webshop</a></li>
                 <li class="redc"><a href="{{ url('/offerte') }}">Reparatie</a></li>
                 <li class="redc"><a href="{{ url('/login_signup') }}">Account</a></li>
-            @endguest
+                @endguest
 
-            @auth
+                @auth
                 <!-- Links common to role 1 users and admin -->
                 @if (Auth::user()->isUser() || Auth::user()->isAdmin())
-                    <li class="redc"><a href="{{ url('/index') }}">Home</a></li>
-                    <li class="bluec"><a href="{{ url('/about_us') }}">Over ons</a></li>
-                    <li class="redc"><a href="{{ url('/services') }}">Service</a></li>
-                    <li class="redc"><a href="{{ url('/webshop') }}">Webshop</a></li>
-                    <li class="redc"><a href="{{ url('/offerte') }}">Reparatie</a></li>
-                    <li class="redc"><a href="{{ url('/login_signup') }}">Account</a></li>
+                <li class="redc"><a href="{{ url('/index') }}">Home</a></li>
+                <li class="bluec"><a href="{{ url('/about_us') }}">Over ons</a></li>
+                <li class="redc"><a href="{{ url('/services') }}">Service</a></li>
+                <li class="redc"><a href="{{ url('/webshop') }}">Webshop</a></li>
+                <li class="redc"><a href="{{ url('/offerte') }}">Reparatie</a></li>
+                <li class="redc"><a href="{{ url('/login_signup') }}">Account</a></li>
                 @endif
 
                 <!-- Links specific to admin -->
                 @if (Auth::user()->isAdmin())
-                    <li class="redc"><a href="{{ url('/login_signup') }}">Admin Dashboard</a></li>
+                <li class="redc"><a href="{{ url('/login_signup') }}">Admin Dashboard</a></li>
                 @endif
 
                 <!-- Logout button for authenticated users -->
@@ -58,10 +57,10 @@ use Illuminate\Support\Facades\Auth;
                         <button type="submit" class="redc">Uitloggen</button>
                     </form>
                 </li>
-            @endauth
-        </ul>
-    </div>
-</nav>
+                @endauth
+            </ul>
+        </div>
+    </nav>
 
 
 
