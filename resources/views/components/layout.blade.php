@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 
 
-var_dump(Auth::user()['name'])
+$email = Session::get('user_email');
 ?>
 <!DOCTYPE html>
 <html lang="en">

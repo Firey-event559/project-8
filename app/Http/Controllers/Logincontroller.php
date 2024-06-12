@@ -25,10 +25,11 @@ public function Selectaccount(Request $request){
         
         Session::put('user_email', $user->email);
 
-        return view('index', ['email' => $user->email]);
+        return redirect('/index')->with('email', $user->email);
+
     }
 
-    return view('login')->with('error', 'These credentials do not match our records.');
+    return view('login');
 }
 
 
