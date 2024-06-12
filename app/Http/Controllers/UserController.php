@@ -30,7 +30,6 @@ class UserController extends Controller{
    $user->role = 1;
    $user->save();
 
-   redirect()->route("{{ url('login') }}");
 
 
   
