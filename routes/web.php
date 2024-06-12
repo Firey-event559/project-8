@@ -29,3 +29,6 @@ Route::get('/index', function () {
 
 Route::post('layout', [loginController::class, 'uitloggen']);
 
+Route::post('signup', [UserController::class, 'Insertaccount'])
+
+?>

@@ -6,12 +6,14 @@
                 @csrf
                 <label for="naam">volledige naam:</label>
                 <input type="text" name="name" id="naam" placeholder="naam" required><br>
+                <label for="serienummer">serienummer:</label>
+                <input type="text" name="serienummer" id="serienummer" placeholder="serienummer" required><br>
                 <label for="telefoonnummer">Telefoonnummer:</label>
                 <input type="text" name="phonenumber" id="telefoonnummer" placeholder="Telefoonnummer" required><br>
                 <label for="email">Email:</label>
                 <input type="text" name="adress" id="adres" placeholder="Adres" required><br>
-                <label for="details">vraag/opmerking:</label>
-            <textarea id="details" name="details" rows="4" placeholder="srfdfrr"></textarea>
+                <label for="details">beschrijf uw probleem:</label>
+            <textarea id="details" name="details" rows="4" placeholder="details"></textarea>
                 <input type="submit" value="Registreren" name="Register">
             </form>
         </div>
