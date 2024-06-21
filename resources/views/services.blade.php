@@ -68,9 +68,9 @@
 
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingTwo">
-                            <button data-mdb-collapse-init class="accordion-button collapsed bg-dark text-light" type="button"
-                                data-mdb-toggle="collapse" data-mdb-target="#collapseTwo" aria-expanded="false"
-                                aria-controls="collapseTwo">
+                            <button data-mdb-collapse-init class="accordion-button collapsed bg-dark text-light"
+                                type="button" data-mdb-toggle="collapse" data-mdb-target="#collapseTwo"
+                                aria-expanded="false" aria-controls="collapseTwo">
                                 Where does it come from?
                             </button>
                         </h2>
@@ -89,9 +89,9 @@
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingThree">
-                            <button data-mdb-collapse-init class="accordion-button collapsed bg-dark text-light" type="button"
-                                data-mdb-toggle="collapse" data-mdb-target="#collapseThree" aria-expanded="false"
-                                aria-controls="collapseThree">
+                            <button data-mdb-collapse-init class="accordion-button collapsed bg-dark text-light"
+                                type="button" data-mdb-toggle="collapse" data-mdb-target="#collapseThree"
+                                aria-expanded="false" aria-controls="collapseThree">
                                 Is it safe to use Lorem Ipsum?
                             </button>
                         </h2>
@@ -113,6 +113,21 @@
             </div>
 
         </main>
+        <script>
+        const accordionItems = document.querySelectorAll('.accordion-item');
+
+
+        accordionItems.forEach((item) => {
+            const accordionHeader = item.querySelector('.accordion-header');
+            const accordionCollapse = item.querySelector('.accordion-collapse');
+
+
+            accordionHeader.addEventListener('click', () => {
+
+                accordionCollapse.classList.toggle('show');
+            });
+        });
+        </script>
 
     </body>
 </x-layout>
