@@ -19,7 +19,7 @@ class UserController extends Controller
             'phonenumber' => 'required|numeric',
             'email' => 'required',
             'adress' => 'required',
-            'password' => 'required',
+            'password' => 'required | min:6',
         ]);
 
      // Create a new user
@@ -31,6 +31,8 @@ class UserController extends Controller
    $user->password = Hash::make($validated['password']);
    $user->role = 1;
    $user->save();
+
+   return redirect('signup_succes');
 
 
 

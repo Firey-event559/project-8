@@ -304,4 +304,41 @@ footer {
     color: white;
 }
 
+div.container_offerte {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; 
+}
+
+h1.Offerte_success {
+    color: #212529;
+    margin-top: 250px;
+    margin-bottom: 200px;
+}
+
+div.container_signup {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    height: 70vh; 
+}
+
+.signup {
+    color: #212529;
+    margin: 10px 0; 
+    text-decoration: none;
+}
+
+a.button{
+    background-color: #212529;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
 

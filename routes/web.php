@@ -18,6 +18,9 @@ Route::view('/signup', 'signup');
 Route::view('/about_us', 'about_us');
 Route::view('/login', 'login');
 Route::view('offertes.offerte', 'offertes.offerte');
+Route::view('webshop', 'webshop');
+Route::view('offertes.offerte_succes', 'offertes.offerte_succes');
+Route::view('signup_succes', 'signup_succes');
 
 
 Route::post('signup', [UserController::class, 'Insertaccount']);

@@ -15,16 +15,16 @@
                 <label for="telefoonnummer">Telefoonnummer:</label>
                 @error('phonenumber')
                 <span style="color: red;">{{$message}}</span> @enderror
-                <input type="text" name="phonenumber" id="telefoonnummer" placeholder="Telefoonnummer" required><br>
+                <input type="text" name="phonenumber" id="telefoonnummer" placeholder="Telefoonnummer" value="{{ old('phonenumber') }}"  required><br>
                 <label for="serienummer">Serienummer:</label>
                 @error('serialnumber')
                 <span style="color: red;">{{$message}}</span> @enderror
-                <input type="text" name="serialnumber" id="serienummer" placeholder="serienummer" required><br>
+                <input type="text" name="serialnumber" id="serienummer" placeholder="serienummer" value="{{ old('serialnumber') }}"  required><br>
 
                 <label for="details">Details:</label>
                 @error('details')
                 <span style="color: red;">{{$message}}</span> @enderror
-                <textarea id="details" name="details" rows="4" cols="33" placeholder="details"></textarea><br>
+                <textarea id="details" name="details" rows="4" cols="33" placeholder="details" value="{{ old('details') }}"  required></textarea><br>
 
                 <input type="submit" value="Aanvragen" name="aanvragen">
             </form>

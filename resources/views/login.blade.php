@@ -8,11 +8,11 @@
         <label for="email"></label>
         @error('email')
         <span style="color: red;">{{$message}}</span> @enderror
-            <input type="text" class="" name="email" id="email" placeholder="Email"><br>
-            <label for="password"></label>
+        <input type="text" class="" name="email" id="email" placeholder="Email" value="{{ old('email') }}" required><br>
+        <label for="password"></label>
             @error('password')
             <span style="color: red;">{{$message}}</span> @enderror
-            <input type="password" class="" name="password" id="password" placeholder="Wachtwoord"><br>
+            <input type="password" class="" name="password" id="password" placeholder="Wachtwoord" value="{{ old('password') }}" required><br>
             <input type="submit" class="" id="submit">
         </form>
     </div>

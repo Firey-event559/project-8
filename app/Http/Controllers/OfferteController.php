@@ -36,7 +36,7 @@ class OfferteController extends Controller
         $offerte->details = $validated['details'];
         $offerte->save();
 
-        
+        return redirect('offertes.offerte_succes');
 
 
 
