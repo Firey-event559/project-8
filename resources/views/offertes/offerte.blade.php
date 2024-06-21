@@ -1,21 +1,34 @@
 <x-layout>
-<main class="main-content">
+    <main class="main-content">
         <div class="form-container">
             <h1 class="form-title">Offerte aanvragen</h1>
-            <form id="registration-form" action="/" method="post">
+            <form id="registration-form" action="{{ url('offerte') }}" method="post">
                 @csrf
-                <label for="naam">volledige naam:</label>
-                <input type="text" name="name" id="naam" placeholder="naam" required><br>
-                <label for="serienummer">serienummer:</label>
-                <input type="text" name="serienummer" id="serienummer" placeholder="serienummer" required><br>
+                <label for="naam">Volledige naam:</label>
+                @error('name')
+                <span style="color: red;">{{$message}}</span> @enderror
+                <input type="text" name="name" id="naam" placeholder="naam" value="{{ old('name') }}" required ><br>
+                <label for="email">Emailadres</label>
+                @error('email')
+                <span style="color: red;">{{$message}}</span> @enderror
+                <input type="email" name="email" id="email" placeholder="email" value="{{ old('email') }}" required><br>
                 <label for="telefoonnummer">Telefoonnummer:</label>
+                @error('phonenumber')
+                <span style="color: red;">{{$message}}</span> @enderror
                 <input type="text" name="phonenumber" id="telefoonnummer" placeholder="Telefoonnummer" required><br>
-                <label for="email">Email:</label>
-                <input type="text" name="adress" id="adres" placeholder="Adres" required><br>
-                <label for="details">beschrijf uw probleem:</label>
-            <textarea id="details" name="details" rows="4" placeholder="details"></textarea>
-                <input type="submit" value="Registreren" name="Register">
+                <label for="serienummer">Serienummer:</label>
+                @error('serialnumber')
+                <span style="color: red;">{{$message}}</span> @enderror
+                <input type="text" name="serialnumber" id="serienummer" placeholder="serienummer" required><br>
+
+                <label for="details">Details:</label>
+                @error('details')
+                <span style="color: red;">{{$message}}</span> @enderror
+                <textarea id="details" name="details" rows="4" cols="33" placeholder="details"></textarea><br>
+
+                <input type="submit" value="Aanvragen" name="aanvragen">
             </form>
+
         </div>
     </main>
 

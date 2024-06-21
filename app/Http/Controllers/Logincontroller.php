@@ -12,8 +12,8 @@ class LoginController extends Controller{
 public function Selectaccount(Request $request){
         
     $validateddata = $request->validate([
-        'email' => 'required|email',
-        'password' => 'required',
+        'email' => 'required|email|exists:users,email|max:255|min:6',
+        'password' => 'required | min:6 | max:255',
     ]);
 
     $gegevens = $request->only('email', 'password');

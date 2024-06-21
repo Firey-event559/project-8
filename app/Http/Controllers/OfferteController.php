@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\offerte;
+use Illuminate\Http\Request;
 use App\Http\Requests\StoreofferteRequest;
 use App\Http\Requests\UpdateofferteRequest;
 
@@ -16,12 +17,30 @@ class OfferteController extends Controller
         //
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
+    
+    public function Insertofferte(Request $request){
+
+        $validated = $request->validate([
+            'name' => 'required|max:255',
+            'email' => 'required',
+            'phonenumber' => 'required|numeric',
+            'serialnumber' => 'required',
+            'details' => 'required',
+        ]);
+
+        $offerte = new offerte();
+        $offerte->name = $validated['name'];
+        $offerte->email = $validated['email'];
+        $offerte->phonenumber = $validated['phonenumber'];
+        $offerte->serialnumber = $validated['serialnumber'];
+        $offerte->details = $validated['details'];
+        $offerte->save();
+
+        
+
+
+
+       
     }
 
     /**

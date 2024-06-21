@@ -4,6 +4,7 @@
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Logincontroller;
+use App\Http\Controllers\OfferteController;
 
 
 Route::view('/', 'index');
@@ -23,13 +24,7 @@ Route::post('signup', [UserController::class, 'Insertaccount']);
 
 Route::post('login', [LoginController::class, 'Selectaccount']);
 
-Route::get('/index', function () {
-    return view('index');
-})->name('index');
-
-
 Route::post('layout', [loginController::class, 'uitloggen']);
 
-Route::post('signup', [UserController::class, 'Insertaccount'])
-
+Route::post('offerte', [OfferteController::class, 'Insertofferte']);
 ?>
