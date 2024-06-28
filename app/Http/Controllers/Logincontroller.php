@@ -40,7 +40,7 @@ public function uitloggen(){
     
     Auth::Logout();
 
-    return view('login');
+    return redirect('/login');
 }
 }
 
