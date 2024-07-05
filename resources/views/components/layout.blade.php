@@ -35,7 +35,7 @@ $email = Session::get('user_email');
                 @endguest
 
                 @auth
-                <!-- Links common to role 1 users and admin -->
+                
                 @if (Auth::user()->isUser() || Auth::user()->isAdmin())
                 <li class="redc"><a href="{{ url('/index') }}">Home</a></li>
                 <li class="bluec"><a href="{{ url('/about_us') }}">Over ons</a></li>
@@ -45,12 +45,11 @@ $email = Session::get('user_email');
                 <li class="redc"><a href="{{ url('/login_signup') }}">Account</a></li>
                 @endif
 
-                <!-- Links specific to admin -->
+                
                 @if (Auth::user()->isAdmin())
                 <li class="redc"><a href="{{ url('/login_signup') }}">Admin Dashboard</a></li>
                 @endif
 
-                <!-- Logout button for authenticated users -->
                 <li>
                     <form method="POST" action="layout">
                         @csrf
