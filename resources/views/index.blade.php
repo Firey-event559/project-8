@@ -1,9 +1,3 @@
-<?php 
-
-
-
-?>
-
 <x-layout>
 
 <main id="mainhome">

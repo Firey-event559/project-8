@@ -15,10 +15,10 @@ class UserController extends Controller
     {
         // Validate the form data
         $validated = $request->validate([
-            'name' => 'required|max:255',
+            'name' => 'required|max:255|string|min:2',
             'phonenumber' => 'required|numeric',
-            'email' => 'required',
-            'adress' => 'required',
+            'email' => 'required|email',
+            'adress' => 'required|string|min:2',
             'password' => 'required | min:6',
         ]);
 

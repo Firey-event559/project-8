@@ -21,7 +21,7 @@ $email = Session::get('user_email');
 <body>
     <nav id="navbar">
         <div id="logonav">
-            <img src="{{ Vite::asset('resources/assets/cropped-logo UNEED-IT.png') }}">
+         <img src="{{ Vite::asset('resources/assets/cropped-logo UNEED-IT.png') }}">
         </div>
         <div id="logoptions">
             <ul>
@@ -47,7 +47,7 @@ $email = Session::get('user_email');
 
                 
                 @if (Auth::user()->isAdmin())
-                <li class="redc"><a href="{{ url('/login_signup') }}">Admin Dashboard</a></li>
+                <li class="redc"><a href="{{ url('/admin') }}">Admin Dashboard</a></li>
                 @endif
 
                 <li>

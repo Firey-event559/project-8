@@ -28,8 +28,6 @@ public function Selectaccount(Request $request){
         return redirect('/index')->with('email', $user->email);
 
     }
-
-    return view('login');
 }
 
 
@@ -40,7 +38,7 @@ public function uitloggen(){
     
     Auth::Logout();
 
-    return redirect('/login');
+    return redirect('/login_signup');
 }
 }
 

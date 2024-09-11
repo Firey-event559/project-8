@@ -21,6 +21,7 @@ Route::view('offertes.offerte', 'offertes.offerte');
 Route::view('webshop', 'webshop');
 Route::view('offertes.offerte_succes', 'offertes.offerte_succes');
 Route::view('signup_succes', 'signup_succes');
+Route::view('admin', 'admin');
 
 
 Route::post('signup', [UserController::class, 'Insertaccount']);
