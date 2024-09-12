@@ -322,7 +322,7 @@ div.container_signup {
     flex-direction: column; 
     justify-content: center;
     align-items: center;
-    height: 70vh; 
+    height: 300vh; 
 }
 
 .signup {
@@ -340,4 +340,61 @@ a.button{
     border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
+}
+
+h1.admin_dashboard_text {
+    color: #212529;
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+div.button_admin_container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    flex-wrap: wrap; 
+    padding: 20px;
+    margin-top: 70px;
+    margin-bottom: 200px;
+}
+
+button.producten_insert {
+    background-color: #212529;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.offerte_search{
+    background-color: #212529;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.producten_update {
+    background-color: #212529;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.producten_list {
+    background-color: #212529;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
 }
