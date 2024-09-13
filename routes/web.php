@@ -32,7 +32,7 @@ Route::post('signup', [UserController::class, 'Insertaccount']);
 
 Route::post('login', [LoginController::class, 'Selectaccount']);
 
-Route::post('layout', [loginController::class, 'uitloggen']);
+Route::post('layout', [loginController::class, 'logout']);
 
 Route::post('offerte', [OfferteController::class, 'Insertofferte']);
 ?>

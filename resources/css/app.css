@@ -111,6 +111,10 @@ body {
     text-align: center;
 }
 
+.register_href{
+    color: white;
+}
+
 .login-signup {
     text-align: center;
     margin-top: 100px;
@@ -401,6 +405,14 @@ button.producten_list {
     color: white;
     padding: 10px 20px;
     margin: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.button_uitloggen {
+    background-color: white;
+    color: black;
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;

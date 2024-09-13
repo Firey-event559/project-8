@@ -1,9 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Auth;
-
-
-$email = Session::get('user_email');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,12 +9,10 @@ $email = Session::get('user_email');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @vite (['resources/css/app.css'])
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-        </script>
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+    <title>Uneed-IT</title>
 </head>
 
 <body>
@@ -34,7 +29,7 @@ $email = Session::get('user_email');
                     <li class="redc"><a href="{{ url('/offertes.offerte') }}">Reparatie</a></li>
                     <li class="redc"><a href="{{ url('/services') }}">Service</a></li>
                     <li class="bluec"><a href="{{ url('/about_us') }}">Over ons</a></li>
-                    <li class="redc"><a href="{{ url('/login_signup') }}">Account</a></li>
+                    <li class="redc"><a href="{{ url('/login') }}">Account</a></li>
                 @endguest
 
                 @auth
@@ -46,20 +41,12 @@ $email = Session::get('user_email');
                         <li class="bluec"><a href="{{ url('/about_us') }}">Over ons</a></li>
                         
 
-                        <li class="redc"><a href="{{ url('/login_signup') }}">Account</a></li>
-                    @endif
-
-
-                    @if (Auth::user()->isAdmin())
-                        <li class="redc"><a href="{{ url('/admin') }}">Admin Dashboard</a></li>
-                    @endif
-
-                    <li>
-                        <form method="POST" action="layout">
-                            @csrf
-                            <button type="submit" class="redc">Uitloggen</button>
-                        </form>
-                    </li>
+                <li>
+                    <form method="POST" action="layout">
+                        @csrf
+                        <button type="submit" class="button_uitloggen">Uitloggen</button>
+                    </form>
+                </li>
                 @endauth
             </ul>
         </div>

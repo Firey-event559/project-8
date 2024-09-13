@@ -14,9 +14,10 @@
                 <input type="text" name="phonenumber" id="telefoonnummer" placeholder="Telefoonnummer"
                     value="{{ old('phonenumber') }}" required><br>
                 <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="Email" value="{{ old('email') }}" required><br>
                 @error('email')
                 <span style="color: red;">{{$message}}</span> @enderror
-                <input type="email" name="email" id="email" placeholder="Email" value="{{ old('email') }}" required><br>
+                
                 <label for="adres">Adres:</label>
                 @error('adress')
                 <span style="color: red;">{{$message}}</span> @enderror
