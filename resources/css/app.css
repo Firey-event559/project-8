@@ -405,3 +405,11 @@ button.producten_list {
     border-radius: 5px;
     cursor: pointer;
 }
+
+button.button_uitloggen {
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}

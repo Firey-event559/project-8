@@ -53,7 +53,7 @@ $email = Session::get('user_email');
                 <li>
                     <form method="POST" action="layout">
                         @csrf
-                        <button type="submit" class="redc">Uitloggen</button>
+                        <button type="submit" class="button_uitloggen">Uitloggen</button>
                     </form>
                 </li>
                 @endauth
