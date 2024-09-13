@@ -293,9 +293,15 @@ footer {
     max-width: 1110px;
     color: #212529;
 }
-.accordion-button {
-    background-color: green;
+
+.accordion-collapse{
+    min-width: 1110px;
 }
+
+.accordion-item{
+    min-width: 1110px;
+}
+
 .accordion-header {
     color: white;
 }
