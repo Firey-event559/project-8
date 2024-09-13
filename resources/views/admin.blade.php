@@ -1,7 +1,7 @@
 <x-layout>
 
     @auth
-    <p>Ingelogd als: {{ Auth::user()->email; }}</p>
+    <p>Ingelogd als: {{ Auth::user()->email }}</p>
     @endauth
 
 
