@@ -31,7 +31,7 @@ $email = Session::get('user_email');
                 <li class="redc"><a href="{{ url('/services') }}">Service</a></li>
                 <li class="redc"><a href="{{ url('/webshop') }}">Webshop</a></li>
                 <li class="redc"><a href="{{ url('/offertes.offerte') }}">Reparatie</a></li>
-                <li class="redc"><a href="{{ url('/login_signup') }}">Account</a></li>
+                <li class="redc"><a href="{{ url('/login') }}">Account</a></li>
                 @endguest
 
                 @auth
@@ -42,7 +42,7 @@ $email = Session::get('user_email');
                 <li class="redc"><a href="{{ url('/services') }}">Service</a></li>
                 <li class="redc"><a href="{{ url('/webshop') }}">Webshop</a></li>
                 <li class="redc"><a href="{{ url('offertes.offerte') }}">Reparatie</a></li>
-                <li class="redc"><a href="{{ url('/login_signup') }}">Account</a></li>
+                <li class="redc"><a href="{{ url('/login') }}">Account</a></li>
                 @endif
 
                 

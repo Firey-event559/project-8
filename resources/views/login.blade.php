@@ -13,7 +13,13 @@
             <input type="password" class="" name="password" id="password" placeholder="Wachtwoord" value="{{ old('password') }}" required><br>
             @error('password')
             <span style="color: red;">{{$message}}</span><br> @enderror
-            <input type="submit" class="" id="submit">
+            <div class="register_href">
+                <p>Don't have a account?
+                <a href="{{url('signup')}}">Login here!</a></p>
+            </div>
+            <input type="submit" class="login_button" id="submit">
+
+
         </form>
     </div>
 </main>
