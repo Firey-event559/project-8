@@ -92,52 +92,49 @@
         </div>
 
         <div class="content1">
-            <h2>Producten toevoegen</h2>
-            <form>
-                <!-- 2 column grid layout with text inputs for the Productnaam en Productnummer -->
-                <div class="row mb-4">
-                    <div class="col">
-                        <div data-mdb-input-init class="form-outline">
-                            <label class="form-label" for="form6Example1">Productnaam</label>
-                            <input type="text" id="form6Example1" class="form-control" />
-
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div data-mdb-input-init class="form-outline">
-                            <label class="form-label" for="form6Example2">Productnummer</label>
-                            <input type="text" id="form6Example2" class="form-control" />
-
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Number input -->
-                <div data-mdb-input-init class="form-outline mb-4">
-                    <label class="form-label" for="form6Example6">Voorraad</label>
-                    <input type="number" id="form6Example6" class="form-control" />
-
-                </div>
-
-                <!-- Message input -->
-                <div data-mdb-input-init class="form-outline mb-4">
-                    <label class="form-label" for="form6Example7">Beschrijving</label>
-                    <textarea class="form-control" id="form6Example7" rows="4"></textarea>
-
-                </div>
-
-                <!-- Photo input -->
-                <div class=" mb-4">
-                    <div class="form-group">
-                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                    </div>
-
-
-                </div>
-
-                <!-- Submit button -->
-                <button data-mdb-ripple-init type="button" class="btn btn-danger btn-block mb-4">Product toevoegen</button>
-            </form>
+            <h2>Offertes</h2>
+            <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Naam</th>
+      <th scope="col">Achternaam</th>
+      <th scope="col">Email</th>
+      <th scope="col">Telefoonnummer</th>
+      <th scope="col">Serienummer</th>
+      <th scope="col">Message</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+    </tr>
+  </tbody>
+</table>
 
         </div>
 
