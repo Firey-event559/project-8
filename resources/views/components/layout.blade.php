@@ -39,7 +39,12 @@ use Illuminate\Support\Facades\Auth;
                     <li class="redc"><a href="{{ url('offertes.offerte') }}">Reparatie</a></li>
                     <li class="redc"><a href="{{ url('/services') }}">Service</a></li>
                         <li class="bluec"><a href="{{ url('/about_us') }}">Over ons</a></li>
+
                         @endif
+
+                        @if (Auth::user()->isAdmin())
+                        <li class="redc"><a href="{{ url('/admin') }}">Admin Dashboard</a></li>
+                    @endif
                         
 
                 <li>
