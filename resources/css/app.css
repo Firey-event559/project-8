@@ -328,10 +328,10 @@ div.container_signup {
     flex-direction: column; 
     justify-content: center;
     align-items: center;
-    height: 300vh; 
+    height: 85vh; 
 }
 
-.signup {
+.signup_success {
     color: #212529;
     margin: 10px 0; 
     text-decoration: none;
