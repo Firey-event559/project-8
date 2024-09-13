@@ -413,3 +413,7 @@ button.button_uitloggen {
     border-radius: 5px;
     cursor: pointer;
 }
+p.user_login{
+    color: white;
+   justify-content: space-evenly;
+}
