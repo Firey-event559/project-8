@@ -5,6 +5,7 @@ use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Logincontroller;
 use App\Http\Controllers\OfferteController;
+use App\Http\Controllers\ProductenController;
 
 
 Route::view('/', 'index');
@@ -31,6 +32,8 @@ Route::view('admin_list', 'admin_list');
 Route::post('signup', [UserController::class, 'Insertaccount']);
 
 Route::post('login', [LoginController::class, 'Selectaccount']);
+
+Route::post('Productinsert', [ProductenController::class, 'Insertproduct']);
 
 Route::post('layout', [loginController::class, 'logout']);
 
