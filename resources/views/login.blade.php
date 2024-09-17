@@ -14,8 +14,8 @@
             @error('password')
             <span style="color: red;">{{$message}}</span><br> @enderror
             <div class="register_href">
-                <p>Don't have a account?
-                <a href="{{url('signup')}}">Login here!</a></p>
+                <p>Heb je geen account?
+                <a href="{{url('signup')}}">Login hier!</a></p>
             </div>
             <input type="submit" class="login_button" id="submit">
 
