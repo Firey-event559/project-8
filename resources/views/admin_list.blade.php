@@ -12,76 +12,9 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
             </script>
-        <title>Document</title>
-        <style>
-            body {
-                margin: 0;
-                padding-top: 100px;
-                font-family: "Lato", sans-serif;
-            }
-
-            .sidebar {
-                color: white;
-                margin: 0;
-                padding: 0;
-                width: 200px;
-                background-color: #212529;
-                position: fixed;
-                height: 100%;
-                overflow: auto;
-            }
-
-            .sidebar a {
-                display: block;
-                color: white;
-                padding: 16px;
-                text-decoration: none;
-            }
-
-            .sidebar a.active {
-                background-color: #212529;
-                color: white;
-            }
-
-            .sidebar a:hover:not(.active) {
-                background-color: #555;
-                color: white;
-            }
-
-            div.content1 {
-                margin-left: 200px;
-                padding: 1px 16px;
-                height: 1000px;
-            }
-
-            @media screen and (max-width: 700px) {
-                .sidebar {
-                    width: 100%;
-                    height: auto;
-                    position: relative;
-                }
-
-                .sidebar a {
-                    float: left;
-                }
-
-                div.content {
-                    margin-left: 0;
-                }
-            }
-
-            @media screen and (max-width: 400px) {
-                .sidebar a {
-                    text-align: center;
-                    float: none;
-                }
-            }
-        </style>
     </head>
-
-
-
-    <body>
+    
+    <body class="admin_list">
 
         <div class="sidebar">
 
