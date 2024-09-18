@@ -677,7 +677,13 @@ div.product_toegevoegd{
 
 }
 
+h1.Product_webshop_tekst{
+    color: #212529;
+    margin-top: 100px;
+    margin-left:10px ;
+}
+
 div.Product_webshop{
-    margin-top: 20px;
+    margin-top: 50px;
 
 }
