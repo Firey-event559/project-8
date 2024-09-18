@@ -134,9 +134,10 @@ body {
     color: white;
 }
 
+
 .container {
     display: flex;
-    justify-content: center;
+    margin-right: 400px;
     align-items: center;
 }
 
@@ -144,16 +145,45 @@ body {
     color: #ffffff;
 }
 
+.main-content{
+    display: flex;
+ 
+    justify-content: center;
+    align-items: center;
+    gap: 55px;   
+    flex-direction: row-reverse;
+}
+.form-container{
+    border-radius: 9px;
+    padding: 12px;
+   
+    
+}
+.offerte_button{
+    
+    border-style: solid;
+    background-color: firebrick;
+}
+.container-offerte{
+    padding: 15px;
+}
+.registration-form{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.reparatie-h2{
+    color: white;
+}
+
+.offerte_img{
+    display: inline-block;
+    text-align: center;
+    border-radius: 2px;
+    
+}
+
 .form-container {
-    width: 300px;
-    margin: auto;
-    margin-top: 15vh;
-    margin-bottom: 10vh;
-    background-color: #f2f2f2;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #212529;
+    display: flex;
 }
 
 .form-container label {
