@@ -4,7 +4,7 @@
 <div
     class="p-5 text-center bg-image"
     style="
-      background-image: url('/recources/assets/banner.png') ;
+     background-image: url('{{ Vite::asset('resources/assets/banner.png') }}');
       height: 400px;
     "
   >
