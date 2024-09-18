@@ -16,7 +16,7 @@
 
 
 
-    <body>
+    <body class="admin_body">
 
         <div class="sidebar">
 
@@ -35,14 +35,18 @@
                     <div class="col">
                         <div data-mdb-input-init class="form-outline">
                             <label class="form-label" for="form6Example1">Productnaam</label>
-                            <input type="text" id="form6Example1" class="form-control" name="Name" required />
+                            <input type="text" id="form6Example1" class="form-control" name="Name" value="{{ old('Name') }}" required />
+                            @error('Name')
+                            <span style="color: red;">{{$message}}</span> @enderror
 
                         </div>
                     </div>
                     <div class="col">
                         <div data-mdb-input-init class="form-outline">
                             <label class="form-label" for="form6Example2">Productnummer</label>
-                            <input type="text" id="form6Example2" class="form-control" name="Productnumber" required />
+                            <input type="text" id="form6Example2" class="form-control" name="Productnumber" value="{{ old('Productnumber') }}" required />
+                            @error('Productnumber')
+                            <span style="color: red;">{{$message}}</span> @enderror
 
                         </div>
                     </div>
@@ -51,25 +55,33 @@
                 <!-- Number input -->
                 <div data-mdb-input-init class="form-outline mb-4">
                     <label class="form-label" for="form6Example6">Voorraad</label>
-                    <input type="number" id="form6Example6" class="form-control" name="Stock" required />
+                    <input type="number" id="form6Example6" class="form-control" name="Stock" value="{{ old('Stock') }}" required />
+                    @error('Stock')
+                    <span style="color: red;">{{$message}}</span> @enderror
 
                 </div>
 
                 <div data-mdb-input-init class="form-outline mb-4">
                     <label class="form-label " for="form6Example6">Prijs</label>
-                    <input type="number" id="form6Example6" class="form-control" name="Price" required />
+                    <input type="number" id="form6Example6" class="form-control" name="Price" value="{{ old('Price') }}"  required />
+                    @error('Price')
+                    <span style="color: red;">{{$message}}</span> @enderror
 
                 <!-- Message input -->
                 <div data-mdb-input-init class="form-outline mb-4">
                     <label class="form-label" for="form6Example7">Beschrijving</label>
-                    <textarea name="Description" class="form-control" id="form6Example7" rows="4" required></textarea>
+                    <textarea name="Description" class="form-control" id="form6Example7" rows="4" value="{{ old('Description') }}"   required></textarea>
+                    @error('Description')
+                    <span style="color: red;">{{$message}}</span> @enderror
 
-                </div>
+              </div>
 
                 <!-- Photo input -->
                 <div class=" mb-4">
                     <div class="form-group">
-                        <input name="Image" type="file" class="form-control-file" id="exampleFormControlFile1">
+                        <input name="Image" type="file" class="form-control-file" id="exampleFormControlFile1" value="{{ old('Image') }}">
+                        @error('Image')
+                        <span style="color: red;">{{$message}}</span> @enderror
                     </div>
 
 

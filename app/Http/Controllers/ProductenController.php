@@ -48,7 +48,7 @@ class ProductenController extends Controller{
         $product->Image = $imagePath; // Save the image path
         $product->save();
     
-        return redirect()->route('webshop')->with('success', 'Product added successfully.');
+
     }
 
 }
