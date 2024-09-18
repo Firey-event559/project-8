@@ -28,7 +28,15 @@
 
         <div class="content1">
             <h2>Producten bewerken</h2>
-                
+
+            @if(session('success'))
+            <div class="alert alert-success" role="alert">
+            {{ session('success') }}
+                </div>
+               
+           
+            @endif
+
 
         </div>
 
