@@ -669,3 +669,15 @@ div.content1 {
         float: none;
     }
 }
+
+div.product_toegevoegd{
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+
+}
+
+div.Product_webshop{
+    margin-top: 20px;
+
+}

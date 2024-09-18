@@ -88,7 +88,7 @@
                 </div>
 
                 <!-- Submit button -->
-                <Input type="submit" name="Product_insert" data-mdb-ripple-init class="btn btn-danger btn-block mb-4" value="Product toevoegen">
+                <Input type="submit" name="Product_insert" data-mdb-ripple-init class="btn btn-danger btn-block mb-4-submit_producten" value="Product toevoegen">
             </form>
 
         </div>

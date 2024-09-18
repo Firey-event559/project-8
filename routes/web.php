@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Logincontroller;
 use App\Http\Controllers\OfferteController;
 use App\Http\Controllers\ProductenController;
+use App\Models\Producten;
 
 
 Route::view('/', 'index');
@@ -19,13 +20,18 @@ Route::view('/signup', 'signup');
 Route::view('/about_us', 'about_us');
 Route::view('/login', 'login');
 Route::view('offertes.offerte', 'offertes.offerte');
-Route::view('webshop', 'webshop');
+Route::get('webshop', function () {
+    $products = Producten::all();
+    return view('webshop', compact('products'));
+});
+
 Route::view('offertes.offerte_succes', 'offertes.offerte_succes');
 Route::view('signup_succes', 'signup_succes');
 Route::view('admin', 'admin');
 Route::view('admin_offerte', 'admin_offerte');
 Route::view('admin_change', 'admin_change');
 Route::view('admin_list', 'admin_list');
+Route::view('Product_succes', 'Product_succes');
 
 
 

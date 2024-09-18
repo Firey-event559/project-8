@@ -49,6 +49,8 @@ class ProductenController extends Controller{
         $product->save();
     
 
+        return redirect('admin_change')->with('success', 'Het product is succesvol toegevoegd');
+
     }
 
 }
