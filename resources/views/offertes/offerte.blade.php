@@ -1,7 +1,7 @@
 <x-layout>
     <main class="main-content">
         <div class="form-container">
-            <h1 class="form-title">Offerte aanvragen</h1>
+            <h1 class="form-title">Reparatie verzoek</h1>
             <form id="registration-form" action="{{ url('offerte') }}" method="post">
                 @csrf
                 <label for="naam">Volledige naam:</label>
