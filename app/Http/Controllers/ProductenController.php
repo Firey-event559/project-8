@@ -23,19 +23,19 @@ class ProductenController extends Controller{
         ]);
     
         // Handle the uploaded image
-        $imagePath = null;
+        $imagepath = null;
         if ($request->hasFile('Image')) {
             $image = $request->file('Image');
-            $imageName = time() . '.' . $image->getClientOriginalExtension();
-            $destinationPath = public_path('/images');
+            $imagename = time() . '.' . $image->getClientOriginalExtension();
+            $destinationpath = public_path('/images');
     
             // Check if the directory exists
-            if (!file_exists($destinationPath)) {
-                mkdir($destinationPath, 0755, true);
+            if (!file_exists($destinationpath)) {
+                mkdir($destinationpath, 0755, true);
             }
     
-            $image->move($destinationPath, $imageName);
-            $imagePath = 'images/' . $imageName;
+            $image->move($destinationpath, $imagename);
+            $imagepath = 'images/' . $imagename;
         }
     
         // Create and save the product
@@ -45,7 +45,7 @@ class ProductenController extends Controller{
         $product->Stock = $validated['Stock'];
         $product->Price = $validated['Price'];
         $product->Description = $validated['Description'];
-        $product->Image = $imagePath; // Save the image path
+        $product->Image = $imagepath; // Save the image path
         $product->save();
     
 

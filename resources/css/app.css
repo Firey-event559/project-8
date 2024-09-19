@@ -714,6 +714,27 @@ h1.Product_webshop_tekst{
 }
 
 div.Product_webshop{
-    margin-top: 50px;
+   margin-left: 100px;
+   margin-top:60px ;
+   flex-direction: row;
+}
+
+img.Image_product{
+    width: 250px;
+    height: 250px;
+
+}
+
+h5.product_title{
+   color:#01d0fa;
+   margin-left:80px ;
+   margin-top: 20px;
+
+}
+
+p.product_price{
+    margin-left:80px ;
+    margin-top: 10px;
+    margin-bottom:50px ;
 
 }
