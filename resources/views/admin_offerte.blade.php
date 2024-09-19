@@ -48,9 +48,9 @@
                         <td>{{ $offerte->name }}</td>
                         <td>{{ $offerte->achternaam }}</td>
                         <td>{{ $offerte->email }}</td>
-                        <td>{{ $offerte->telefoonnummer }}</td>
-                        <td>{{ $offerte->serienummer }}</td>
-                        <td>{{ $offerte->message }}</td>
+                        <td>{{ $offerte->phonenumber }}</td>
+                        <td>{{ $offerte->serialnumber }}</td>
+                        <td>{{ $offerte->details }}</td>
                     </tr>
                     @endforeach
 
