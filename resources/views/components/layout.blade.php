@@ -44,7 +44,7 @@ use Illuminate\Support\Facades\Auth;
 
                         @if (Auth::user()->isAdmin())
                         <li class="redc"><a href="{{ url('/admin') }}">Admin Dashboard</a></li>
-                    @endif
+                    @endif   
                         
 
                 <li>
