@@ -19,7 +19,7 @@ class ProductenController extends Controller{
             'Stock' => 'required|numeric',
             'Price' => 'required|numeric',
             'Description' => 'required|string|min:2',
-            'Image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:50000',
+            'Image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:50000',
         ]);
     
         // Handle the uploaded image

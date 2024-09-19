@@ -41,34 +41,19 @@
                     </tr>
                 </thead>
                 <tbody>
+
+                    @foreach ($offertes as $offerte)
                     <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
+                        <th scope="row">{{ $offerte->id }}</th>
+                        <td>{{ $offerte->name }}</td>
+                        <td>{{ $offerte->achternaam }}</td>
+                        <td>{{ $offerte->email }}</td>
+                        <td>{{ $offerte->telefoonnummer }}</td>
+                        <td>{{ $offerte->serienummer }}</td>
+                        <td>{{ $offerte->message }}</td>
                     </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                    </tr>
-                </tbody>
+                    @endforeach
+
             </table>
 
         </div>

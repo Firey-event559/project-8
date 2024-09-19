@@ -700,7 +700,7 @@ div.content1 {
     }
 }
 
-div.product_toegevoegd{
+div.dtoegevoegd{
     margin-left: 200px;
     padding: 1px 16px;
     height: 1000px;
@@ -713,28 +713,64 @@ h1.Product_webshop_tekst{
     margin-left:10px ;
 }
 
-div.Product_webshop{
-   margin-left: 100px;
-   margin-top:60px ;
-   flex-direction: row;
+.Product_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
-img.Image_product{
-    width: 250px;
-    height: 250px;
-
+div.Product_webshop {
+    display: inline-block;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin-right: 60px;
+    max-width: 300px;
+    margin-top: 30px;
 }
 
-h5.product_title{
-   color:#01d0fa;
-   margin-left:80px ;
-   margin-top: 20px;
-
+img.Image_product {
+   max-width:400px;
+    max-height: 400px;
 }
 
-p.product_price{
-    margin-left:80px ;
-    margin-top: 10px;
-    margin-bottom:50px ;
+.Product_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+h5.product_name {
+    margin: 10px 0 5px; 
+    font-size: 16px;
+    font-weight: bold;
+    color: #03cee9;
+    text-align: center;
+    margin-bottom:10px ; 
+}
+
+p.product_price {
+    margin: 0;
+    font-size: 14px;
+    color: #555; 
+    text-align: center;
+    margin-bottom: 20px;
+}
+input.winkelmand{
+    background-color: rgb(196, 195, 195);
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 5px 10px;
+    width: 200px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    border: none; 
+    transition: background-color 0.3s; 
+}
+
+input.winkelmand:hover {
+    background-color:#19cfcf; 
 }

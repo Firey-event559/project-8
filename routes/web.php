@@ -7,6 +7,7 @@ use App\Http\Controllers\Logincontroller;
 use App\Http\Controllers\OfferteController;
 use App\Http\Controllers\ProductenController;
 use App\Models\Producten;
+use App\Models\offerte;
 
 
 Route::view('/', 'index');
@@ -28,7 +29,10 @@ Route::get('webshop', function () {
 Route::view('offertes.offerte_succes', 'offertes.offerte_succes');
 Route::view('signup_succes', 'signup_succes');
 Route::view('admin', 'admin');
-Route::view('admin_offerte', 'admin_offerte');
+Route::get('admin_offerte', function () {
+    $offertes = offerte::all();
+    return view('admin_offerte', compact('offertes'));
+});
 Route::view('admin_change', 'admin_change');
 Route::view('admin_list', 'admin_list');
 Route::view('Product_succes', 'Product_succes');
