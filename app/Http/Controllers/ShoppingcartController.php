@@ -13,7 +13,7 @@ class ShoppingcartController extends Controller
     
         $product = producten::find($id);
         if (!$product) {
-            return redirect()->route('webshop')->with('error', 'Product not found!');
+            return redirect('/webshop')->with('error', 'Product not found!');
         }
 
     
@@ -27,7 +27,7 @@ class ShoppingcartController extends Controller
         
         $request->session()->put('cart', $cart);
 
-        return redirect()->route('webshop')->with('added', 'Product toegevoegd aan winkelwagen!');
+        return redirect('/webshop')->with('added', 'Product toegevoegd aan winkelwagen!');
     }
 
     public function showCart()
