@@ -42,7 +42,7 @@
                     </div>
                 </div>
             </section>
-            <div class="container">
+            <div class="container_services">
                 <div class="accordion" id="accordionExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header bg-white" id="headingOne">
