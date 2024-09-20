@@ -18,36 +18,143 @@
     </div>
   </main>
   <div class="container text-center p-5">
-    
+
     <div class="col-md-6 text-start">
-      <h4>De beste hulp voor u.</h4>
-      <h4 class="subheading">skibidi gyatt rizzler</h4>
-      <p class="text-muted">Send and receive files. Deliver digital assets in a secure environment.
-        Share feedback in real time. Use GetLance Messages to communicate via text, chat, or video.
-        Use our mobile app. Many features can be accessed on your mobile phone when on the go.</p>
+      <h2>De beste hulp voor u</h2>
+      <h4 class="subheading">Ook nu hulp aan huis.</h4>
+      <p class="text-muted">
+        Als u een storing met uw computer of laptop heeft belt u gewoon ons service nummer: 0630985409 ( bereikbaar van
+        9:00 tot 23:00 uur) of ons kantoor 0182-820218 en wij lossen het probleem direct voor u op, meestal de zelfde
+        dag.
+
+        Morgens brengen en aan het eind van de dag weer klaar!
+
+        Onze deskundige computerhulp monteurs staan dagelijks voor u klaar van 09.00 uur tot 23.00 uur!</p>
     </div>
     <div class="col-md-6 ">
-      <img src="{{ Vite::asset('resources/assets/winkel.jpg') }}" width="450px" height="300px" >
+      <img src="{{ Vite::asset('resources/assets/winkel.jpg') }}" width="450px" height="300px">
     </div>
   </div>
 
 
-  <div class="container text-center p-5">
+  <div class="container text-center p-5 sectioncolor text-light ">
     <div class="col-md-6 how-img">
       <img src="{{ Vite::asset('resources/assets/engineer.jpg') }}" width="450px" height="300px">
     </div>
     <div class="col-md-6 text-start">
       <h2>Over ons</h2>
       <h4 class="subheading">10 jaar ervaring in de reparatiediensten.</h4>
-      <p class="text-muted">Welkom bij Uneed-it, uw vertrouwde partner voor al uw reparatiebehoeften. Bij Uneed-it streven
-          we ernaar hoogwaardige kwalitatieve reparatiediensten te bieden met een onwrikbare focus op klanttevredenheid
-          en excellentie in kwaliteit. Met een schat aan ervaring in de sector hebben we een onberispelijke reputatie
-          opgebouwd als een bedrijf dat synoniem staat voor vakmanschap, snelle service en eerlijke prijzen. Of het nu
-          gaat om het herstellen van elektronica, huishoudelijke apparaten, auto's of andere technische apparaten, ons
-          team van deskundige technici staat paraat om uw problemen op te lossen en uw apparaten weer in optimale staat
-          te herstellen.</p>
+      <p>Welkom bij Uneed-it, uw vertrouwde partner voor al uw reparatiebehoeften. Bij Uneed-it
+        streven
+        we ernaar hoogwaardige kwalitatieve reparatiediensten te bieden met een onwrikbare focus op klanttevredenheid
+        en excellentie in kwaliteit. Met een schat aan ervaring in de sector hebben we een onberispelijke reputatie
+        opgebouwd als een bedrijf dat synoniem staat voor vakmanschap, snelle service en eerlijke prijzen. Of het nu
+        gaat om het herstellen van elektronica, huishoudelijke apparaten, auto's of andere technische apparaten, ons
+        team van deskundige technici staat paraat om uw problemen op te lossen en uw apparaten weer in optimale staat
+        te herstellen.</p>
     </div>
   </div>
 
+  <div class="container mt-5 mb-5">
 
+    <div class="row g-2">
+      <div class="col-md-4">
+        <div class="card p-3 text-center px-4">
+
+          <div class="user-image">
+
+            <img src="https://i.imgur.com/PKHvlRS.jpg" class="rounded-circle" width="80">
+
+          </div>
+
+          <div class="user-content">
+
+            <h5 class="mb-0">Bruce Hardy</h5>
+            <span>Software Developer</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              ea commodo consequat.</p>
+
+          </div>
+
+          <div class="ratings">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-md-4">
+
+        <div class="card p-3 text-center px-4">
+
+          <div class="user-image">
+
+            <img src="https://i.imgur.com/w2CKRB9.jpg" class="rounded-circle" width="80">
+
+          </div>
+
+          <div class="user-content">
+
+            <h5 class="mb-0">Mark Smith</h5>
+            <span>Web Developer</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              ea commodo consequat.</p>
+
+          </div>
+
+          <div class="ratings">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="col-md-4">
+
+        <div class="card p-3 text-center px-4">
+
+          <div class="user-image">
+
+            <img src="https://i.imgur.com/ACeArwY.jpg" class="rounded-circle" width="80">
+
+          </div>
+
+          <div class="user-content">
+
+            <h5 class="mb-0">Veera Duncan</h5>
+            <span>Software Architect</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              ea commodo consequat.</p>
+
+          </div>
+
+          <div class="ratings">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
 </x-layout>

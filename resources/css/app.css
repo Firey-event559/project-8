@@ -217,8 +217,9 @@ body {
 
 .form-container input[type="submit"] {
     margin-top: 15px;;
-    background-color: #ffffff;
-    color: #212529;
+    /* background-color: #ac3737; */
+    background-color: #ae2522;
+    color: white;
     border: none;
     border-radius: 9px;
     cursor: pointer;
@@ -335,7 +336,8 @@ footer {
     margin-bottom: 20px;
 }
 .container_services{
-    margin-left: 200px;
+    display: flex;
+    justify-content: center;
 }
 
 .accordion {
@@ -360,6 +362,24 @@ footer {
 .accordion-item {
     color: white;
 }
+
+.main-content{
+    display: flex;
+    
+}
+.registration-form{
+width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.login_button{
+    background-color: #ff0000;
+}
+
 
 div.container_offerte {
     display: flex;
@@ -845,4 +865,42 @@ img.person_circle{
 .signout-form:hover {
     opacity: 1; 
     visibility: visible;
+
+}
+.how-section1{
+    margin-top:-15%;
+    padding: 10%;
+}
+.how-section1 h4{
+    color: #ffa500;
+    font-weight: bold;
+    font-size: 30px;
+}
+.how-section1 .subheading{
+    color: #3931af;
+    font-size: 20px;
+}
+.how-section1 .row
+{
+    margin-top: 10%;
+}
+.how-img 
+{
+    text-align: start;
+}
+
+.sectioncolor {
+background-color: #1A1E21;
+
+
+}
+
+.card{
+    
+    border:none;
+}
+
+.user-content p{
+    margin-top:5px;
+    font-size:12px;
 }
