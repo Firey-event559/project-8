@@ -10,11 +10,11 @@
                 <label for="naam"></label>
                 @error('name')
                 <span style="color: red;">{{$message}}</span> @enderror
-                <input type="text" name="name" id="naam" placeholder="naam" value="{{ old('name') }}" required ><br>
+                <input type="text" name="name" id="naam" placeholder="Naam" value="{{ old('name') }}" required ><br>
                 <label for="email"></label>
                 @error('email')
                 <span style="color: red;">{{$message}}</span> @enderror
-                <input type="email" name="email" id="email" placeholder="email" value="{{ old('email') }}" required><br>
+                <input type="email" name="email" id="email" placeholder="Email" value="{{ old('email') }}" required><br>
                 <label for="telefoonnummer"></label>
                 @error('phonenumber')
                 <span style="color: red;">{{$message}}</span> @enderror
@@ -22,11 +22,11 @@
                 <label for="serienummer"></label>
                 @error('serialnumber')
                 <span style="color: red;">{{$message}}</span> @enderror
-                <input type="text" name="productnumber" id="productnumber"placeholder="productnummer" value="{{ old('productnumber') }}"  required><br>
+                <input type="text" name="productnumber" id="productnumber"placeholder="Productnummer" value="{{ old('productnumber') }}"  required><br>
                 <label for="details"></label>
                 @error('details')
                 <span style="color: red;">{{$message}}</span> @enderror
-                <textarea  class="details" name="details" id="details" rows="4" placeholder="beschrijf zo goed mogelijk">{{ old('details') }}</textarea><br>
+                <textarea  class="details" name="details" id="details" rows="4" placeholder=" Beschrijf zo goed mogelijk">{{ old('details') }}</textarea><br>
 
 
                 
@@ -37,7 +37,7 @@
             
         </form>
         <div class="offerte_img">
-        <img src="{{ Vite::asset('resources/assets/laptop_reparatie.jpg') }}" height="300px" width="340px" alt="Laptop reparatie image"><br>
+        <img src="{{ Vite::asset('resources/assets/repair.png') }}"  alt="Laptop reparatie image"><br>
         </div>
        
     </main>

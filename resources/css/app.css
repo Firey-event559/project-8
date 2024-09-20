@@ -170,7 +170,7 @@ body {
 .offerte_button{
     
     border-style: solid;
-    background-color: #ae2522;
+    background-color: #ff0400;
     color: white;
 }
 .container-offerte{
@@ -389,6 +389,7 @@ footer {
 .login_button{
     background-color: #ff0000;
 }
+
 
 
 div.container_offerte {
@@ -824,6 +825,7 @@ input.winkelmand:hover {
 textarea.details{
     width: 100%;
     border: 1px solid #ccc;
+    border-radius: 5px ;
 }
 
 img.shopping_cart{
