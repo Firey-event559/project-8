@@ -19,7 +19,7 @@
                         <th scope="col">Naam</th>
                         <th scope="col">Email</th>
                         <th scope="col">Telefoonnummer</th>
-                        <th scope="col">Serienummer</th>
+                        <th scope="col">Productnummer</th>
                         <th scope="col">Message</th>
                     </tr>
                 </thead>
@@ -31,7 +31,7 @@
                         <td>{{ $offerte->name }}</td>
                         <td>{{ $offerte->email }}</td>
                         <td>{{ $offerte->phonenumber }}</td>
-                        <td>{{ $offerte->serialnumber }}</td>
+                        <td>{{ $offerte->productnumber }}</td>
                         <td>{{ $offerte->details }}</td>
                         <td><input type="submit" value="verwijderen"> </td>
                         <td><input type="submit" value="voltooien"> </td>

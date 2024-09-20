@@ -71,9 +71,7 @@
 
             <h5 class="mb-0">Bruce Hardy</h5>
             <span>Software Developer</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-              ea commodo consequat.</p>
+            <p>Ik ben ontzettend tevreden met de service van Uneed-it! Mijn wasmachine ging stuk en binnen 24 uur was er al een monteur langsgekomen om het probleem op te lossen. De technicus was vriendelijk, professioneel en wist precies wat er moest gebeuren. Binnen een uur werkte mijn wasmachine weer als nieuw.</p>
 
           </div>
 
@@ -102,9 +100,7 @@
 
             <h5 class="mb-0">Mark Smith</h5>
             <span>Web Developer</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-              ea commodo consequat.</p>
+            <p>Geweldige ervaring met Uneed-it. Ik had problemen met mijn laptop en dacht dat ik een nieuwe moest kopen, maar dankzij hun snelle diagnose en reparatie werkte mijn laptop weer perfect. Het team was transparant over de kosten, en er waren geen verborgen verrassingen. De reparatie duurde iets langer dan verwacht.</p>
 
           </div>
 
@@ -135,9 +131,7 @@
 
             <h5 class="mb-0">Veera Duncan</h5>
             <span>Software Architect</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-              ea commodo consequat.</p>
+            <p>Topservice! Mijn koelkast was kapot en Uneed-it heeft hem binnen no-time gerepareerd. De communicatie was uitstekend, ze hielden me goed op de hoogte van elke stap in het proces. De prijs was heel redelijk in vergelijking met andere bedrijven die ik had geraadpleegd. Ik zou ze zonder twijfel aan iedereen aanbevelen!</p>
 
           </div>
 
