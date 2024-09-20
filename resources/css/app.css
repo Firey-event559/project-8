@@ -327,7 +327,8 @@ footer {
     margin-bottom: 20px;
 }
 .container_services{
-    margin-left: 200px;
+    display: flex;
+    justify-content: center;
 }
 
 .accordion {
