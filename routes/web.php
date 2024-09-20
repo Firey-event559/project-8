@@ -7,9 +7,11 @@ use App\Http\Controllers\Logincontroller;
 use App\Http\Controllers\OfferteController;
 use App\Http\Controllers\ProductenController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\ShoppingcartController;
 use App\Models\Producten;
 use App\Models\offerte;
 use App\Models\orders;
+use app\Models\Shoppingcart;
 
 
 
@@ -63,4 +65,6 @@ Route::post('Productinsert', [ProductenController::class, 'Insertproduct']);
 Route::post('layout', [loginController::class, 'logout']);
 
 Route::post('offerte', [OfferteController::class, 'Insertofferte']);
+
+Route::post('/shoppingcart/add/{id}', [ShoppingcartController::class, 'shoppingcart'])->name('cart.add');
 ?>
