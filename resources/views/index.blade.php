@@ -131,7 +131,7 @@
 
             <h5 class="mb-0">Veera Duncan</h5>
             <span>Software Architect</span>
-            <p>Topservice! Mijn koelkast was kapot en Uneed-it heeft hem binnen no-time gerepareerd. De communicatie was uitstekend, ze hielden me goed op de hoogte van elke stap in het proces. De prijs was heel redelijk in vergelijking met andere bedrijven die ik had geraadpleegd. Ik zou ze zonder twijfel aan iedereen aanbevelen!.</p>
+            <p>Topservice! Mijn koelkast was kapot en Uneed-it heeft hem binnen no-time gerepareerd. De communicatie was uitstekend, ze hielden me goed op de hoogte van elke stap in het proces. De prijs was heel redelijk in vergelijking met andere bedrijven die ik had geraadpleegd. Ik zou ze zonder twijfel aan iedereen aanbevelen!</p>
 
           </div>
 
