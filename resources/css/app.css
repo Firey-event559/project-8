@@ -7,10 +7,10 @@ body {
 
 #mainhome {
     position: relative;
-    display: flex;
+   
     flex-direction: column;
     align-items: center;
-    padding: 40px 0;
+    padding: 100px 0;
 }
 
 #navbar {
@@ -778,3 +778,8 @@ input.winkelmand:hover {
 
 
 
+<<<<<<< Updated upstream
+=======
+}
+
+>>>>>>> Stashed changes

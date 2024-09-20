@@ -2,19 +2,20 @@
 
 <main id="mainhome">
 <div
-    class="p-5 text-center bg-image"
+    class="p-5 bg-image"
     style="
      background-image: url('{{ Vite::asset('resources/assets/banner.png') }}');
-      height: 400px;
+      
+      
     "
   >
-    <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
-      <div class="d-flex justify-content-center align-items-center h-100">
+    <div class="mask row p-5">
+      <div class="d-flex align-items-stretch h-10 p-5">
         <div class="text-white">
-          <h1 class="mb-3">Heading</h1>
-          <h4 class="mb-3">Subheading</h4>
-          <a data-mdb-ripple-init class="btn btn-outline-light btn-lg" href="#!" role="button"
-          >Call to action</a
+          <h1 class="mb-3">Welkom bij Uneed-IT</h1>
+          <h4 class="mb-3">U het gebruik, wij de zorg</h4>
+          <a data-mdb-ripple-init class="btn btn-light btn-lg" href="{{ url('/webshop') }}" role="button"
+          >Webshop</a
           >
         </div>
       </div>
