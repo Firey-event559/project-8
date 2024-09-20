@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('phonenumber');
-            $table->string('serialnumber');
+            $table->string('productnumber');
             $table->string('details');
 
         });
