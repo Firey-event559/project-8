@@ -63,56 +63,45 @@ use Illuminate\Support\Facades\Auth;
     {{ $slot }}
 
 
-    <footer class="bg-dark text-center text-lg-start" id="footer">
-        <!-- Grid container -->
-        <div class="container p-4">
-            <!--Grid row-->
-            <div class="row row-cols-2 row-cols-lg-3 g-2 g-lg-3">
-                <!--Grid column-->
-                <div class="col">
-                    <h5 class="text-uppercase ">Openingstijden</h5>
-
-                    <p>
-                        MA T/M VRIJ, 09:00 - 23:00
-
-                        <br>Telefonisch bereikbaar voor abonnementhouders
-
-
-                    </p>
-                </div>
-                <!--Grid column-->
-                <div class="col">
-                    <h5 class="text-uppercase">Telefoonnummer</h5>
-
-                    <p>
-                        Servicenummer +316 30 985 409 <br>Kantoor +3118 28 202 18 <br>Bereikbaar 09:00-18:00
-
-                    </p>
-                </div>
-                <!--Grid column-->
-                <div class="col">
-                    <h5 class="text-uppercase">Locatie</h5>
-
-                    <p>
-                        Zuidbaan 514, 2841MD
-
-                        Moordrecht
-                    </p>
-                </div>
-
-                <!--Grid column-->
+    <footer class="bg-dark text-white text-center text-lg-center" id="footer">
+    <!-- Grid container -->
+    <div class="container p-4">
+        <!-- Grid row -->
+        <div class="row row-cols-1 row-cols-md-3 g-4" id="footer_text">
+            <!-- Grid column 1 -->
+            <div class="col">
+                <h5 class="text-uppercase">Openingstijden</h5>
+                <p>
+                    MA T/M VRIJ, 09:00 - 23:00 <br>
+                    Telefonisch bereikbaar voor abonnementhouders
+                </p>
             </div>
-            <!--Grid row-->
+            <!-- Grid column 2 -->
+            <div class="col">
+                <h5 class="text-uppercase">Telefoonnummer</h5>
+                <p>
+                    Servicenummer +316 30 985 409 <br>
+                    Kantoor +3118 28 202 18 <br>
+                    Bereikbaar 09:00-18:00
+                </p>
+            </div>
+            <!-- Grid column 3 -->
+            <div class="col">
+                <h5 class="text-uppercase">Locatie</h5>
+                <p>
+                    Zuidbaan 514, 2841MD <br>
+                    Moordrecht
+                </p>
+            </div>
         </div>
-        <!-- Grid container -->
+        <!-- Grid row -->
+    </div>
+    <!-- Grid container -->
 
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
-            © 2024 Copyright:
-            <a class="text-light" href="">UNEED-IT</a>
-        </div>
-        <!-- Copyright -->
-    </footer>
-</body>
-
-</html>
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2024 Copyright:
+        <a class="text-light" href="#">UNEED-IT</a>
+    </div>
+    <!-- Copyright -->
+</footer>
