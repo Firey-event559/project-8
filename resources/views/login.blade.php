@@ -18,7 +18,8 @@
                 <p>Heb je geen account?
                 <a href="{{url('signup')}}">Registreren</a></p>
             </div>
-            <input type="submit" class="login_button" id="submit">
+            <input type="submit" value="Login" class="login_button" id="submit">
+            
 
 
         </form>

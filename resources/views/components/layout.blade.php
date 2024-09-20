@@ -30,7 +30,6 @@ use Illuminate\Support\Facades\Auth;
                 <li class="redc"><a href="{{ url('/webshop') }}">Webshop</a></li>
                 <li class="redc"><a href="{{ url('/offertes.offerte') }}">Reparatie</a></li>
                 <li class="redc"><a href="{{ url('/services') }}">Service</a></li>
-                <li class="bluec"><a href="{{ url('/about_us') }}">Over ons</a></li>
                 <li class="redc"><a href="{{ url('/login') }}">Account</a></li>
                 <img src="{{ Vite::asset('resources/assets/cart.svg') }}">
                 @endguest
@@ -41,7 +40,6 @@ use Illuminate\Support\Facades\Auth;
                 <li class="redc"><a href="{{ url('/webshop') }}">Webshop</a></li>
                 <li class="redc"><a href="{{ url('offertes.offerte') }}">Reparatie</a></li>
                 <li class="redc"><a href="{{ url('/services') }}">Service</a></li>
-                <li class="bluec"><a href="{{ url('/about_us') }}">Over ons</a></li>
                 <img class="shopping_cart" src="{{ Vite::asset('resources/assets/cart.svg') }}">
                 <div class="profile-container">
                     <img class="person_circle" src="{{ Vite::asset('resources/assets/person-circle.svg') }}"
