@@ -170,7 +170,7 @@ body {
 .offerte_button{
     
     border-style: solid;
-    background-color: firebrick;
+    background-color: #ae2522;
 }
 .container-offerte{
     padding: 15px;
@@ -183,7 +183,7 @@ body {
     color: #000;
 }
 .reparatie-h2{
-    color: white;
+    color: black;
 }
 
 .offerte_img{
@@ -217,7 +217,6 @@ body {
 
 .form-container input[type="submit"] {
     margin-top: 15px;;
-    /* background-color: #ac3737; */
     background-color: #ae2522;
     color: white;
     border: none;
@@ -369,8 +368,12 @@ footer {
     display: flex;
     
 }
+.form-container-2{
+   display: flex;
+   justify-content: center;
+}
 .registration-form{
-width: 100%;
+  width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
