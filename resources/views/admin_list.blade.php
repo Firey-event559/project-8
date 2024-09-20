@@ -39,33 +39,18 @@
                     </tr>
                 </thead>
                 <tbody>
+                @foreach ($orders as $order)
                     <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
+                        <th scope="row">{{ $order->id }}</th>
+                        <td>{{ $order->product_name }}</td>
+                        <td>{{ $order->product_number }}</td>
+                        <td>{{ $order->amount }}</td>
+                        <td>{{ $order->name }}</td>
+                        <td>{{ $order->address }}</td>
+                        <td>{{ $order->phone_number }}</td>
                     </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                    </tr>
+                    @endforeach
+                    
                 </tbody>
             </table>
 

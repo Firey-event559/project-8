@@ -2,7 +2,7 @@
     <body class="login_body">
 <main class="main-content">
     <div class="form-container">
-        <h2 class="form-title">Login</h2>
+        <h2 class="form-title">Login</h2><br>
         <form id="registration-form" action="login" method="post">
         @csrf
         <label for="email"></label>
@@ -15,7 +15,7 @@
             <span style="color: red;">{{$message}}</span><br> @enderror
             <div class="register_href">
                 <p>Heb je geen account?
-                <a href="{{url('signup')}}">Login hier!</a></p>
+                <a href="{{url('signup')}}">Registreren</a></p>
             </div>
             <input type="submit" class="login_button" id="submit">
 
