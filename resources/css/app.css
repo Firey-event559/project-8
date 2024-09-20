@@ -800,4 +800,49 @@ img.shopping_cart{
     margin-right:10px ;
 }
 
+img.shopping_cart{
+    margin-right: 10px;
+    cursor: pointer;
+}
+img.person_circle{
+    margin-right: 10px;
+    cursor: pointer;
+}
 
+
+.profile-container {
+    position: relative;
+    display: inline-block;
+}
+
+.person_circle {
+    border-radius: 50%;
+}
+
+.signout-form {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.button_uitloggen {
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.profile-container:hover .signout-form {
+    opacity: 1;
+    visibility: visible; 
+}
+
+.signout-form:hover {
+    opacity: 1; 
+    visibility: visible;
+}
