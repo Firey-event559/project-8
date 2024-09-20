@@ -37,7 +37,7 @@
             
         </form>
         <div class="offerte_img">
-        <img src="{{ Vite::asset('resources/assets/repair.png') }}"  alt="Laptop reparatie image"><br>
+        <img src="{{ Vite::asset('resources/assets/laptop_reparatie.jpg') }}" height="300px" width="340px" alt="Laptop reparatie image"><br>
         </div>
        
     </main>
