@@ -6,8 +6,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Logincontroller;
 use App\Http\Controllers\OfferteController;
 use App\Http\Controllers\ProductenController;
+use App\Http\Controllers\OrderController;
 use App\Models\Producten;
 use App\Models\offerte;
+use App\Models\orders;
+
+
 
 
 Route::view('/', 'index');
@@ -21,9 +25,18 @@ Route::view('/signup', 'signup');
 Route::view('/about_us', 'about_us');
 Route::view('/login', 'login');
 Route::view('offertes.offerte', 'offertes.offerte');
+Route::get('orders', [OrderController::class, 'index']);
 Route::get('webshop', function () {
     $products = Producten::all();
     return view('webshop', compact('products'));
+});
+
+Route::get('orders', function () {
+    // Fetch orders from the database
+    $orders = Order::all();
+
+    // Pass orders to the view
+    return view('orders.index', compact('orders'));
 });
 
 Route::view('offertes.offerte_succes', 'offertes.offerte_succes');
@@ -37,7 +50,10 @@ Route::view('admin_change', 'admin_change');
 Route::view('admin_list', 'admin_list');
 Route::view('Product_succes', 'Product_succes');
 
-
+Route::get('admin_list', function () {
+    $orders = orders::all();  // Fetch all orders from the database
+    return view('admin_list', compact('orders'));  // Pass orders to the view
+});
 
 Route::post('signup', [UserController::class, 'Insertaccount']);
 

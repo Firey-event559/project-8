@@ -10,7 +10,7 @@ body {
    
     flex-direction: column;
     align-items: center;
-    padding: 100px 0 50px 0;
+    padding: 100px 0;
 }
 
 #navbar {
@@ -147,6 +147,7 @@ body {
 
 .main-content{
     display: flex;
+ 
     justify-content: center;
     align-items: center;
     gap: 55px;   
@@ -154,7 +155,7 @@ body {
 }
 .form-container{
     border-radius: 9px;
-   
+    padding: 12px;
    
     
 }
@@ -169,6 +170,9 @@ body {
 .registration-form{
     padding-top: 15px;
     padding-bottom: 15px;
+}
+.register_href {
+    color: #000;
 }
 .reparatie-h2{
     color: white;
@@ -219,6 +223,7 @@ body {
 
 .form-title,
 .login-header {
+    color: #000;
     text-align: center;
     margin-bottom: 20px;
 }
