@@ -22,12 +22,12 @@
                 <label for="serienummer"></label>
                 @error('serialnumber')
                 <span style="color: red;">{{$message}}</span> @enderror
-                <input type="text" name="serialnumber" id="serienummer" placeholder="serienummer" value="{{ old('serialnumber') }}"  required><br>
-
+                <input type="text" name="productnumber" id="productnumber"placeholder="productnummer" value="{{ old('productnumber') }}"  required><br>
                 <label for="details"></label>
                 @error('details')
                 <span style="color: red;">{{$message}}</span> @enderror
-                <input type="text" details" name="details" id="details" placeholder="details" value="{{ old('details') }}"  required></input><br>
+                <textarea  class="details" name="details" id="details" rows="4" placeholder="beschrijf zo goed mogelijk">{{ old('details') }}</textarea><br>
+
 
                 
                 

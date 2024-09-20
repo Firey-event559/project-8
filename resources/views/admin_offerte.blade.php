@@ -17,7 +17,6 @@
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Naam</th>
-                        <th scope="col">Achternaam</th>
                         <th scope="col">Email</th>
                         <th scope="col">Telefoonnummer</th>
                         <th scope="col">Serienummer</th>
@@ -30,7 +29,6 @@
                     <tr>
                         <th scope="row">{{ $offerte->id }}</th>
                         <td>{{ $offerte->name }}</td>
-                        <td>{{ $offerte->achternaam }}</td>
                         <td>{{ $offerte->email }}</td>
                         <td>{{ $offerte->phonenumber }}</td>
                         <td>{{ $offerte->serialnumber }}</td>
