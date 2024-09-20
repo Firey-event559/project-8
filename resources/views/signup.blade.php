@@ -4,7 +4,7 @@
     <div class="form-container">
        
         <form class="registration-form" id="registration-form" action="login" method="post">
-            <h2 class="form-title">Login</h2>
+            <h2 class="form-title">Registreren</h2>
         @csrf
         <label for="name"></label>
         <input type="text" class="" name="email" id="email" placeholder="naam" value="{{ old('email') }}" required><br>
@@ -28,10 +28,10 @@
             <span style="color: red;">{{$message}}</span><br> @enderror
             <label for="email"></label>
             <div class="register_href">
-                <p>Heb je geen account?
-                <a href="{{url('signup')}}">Registreren</a></p>
+                <p>Heb je al een account?
+                <a href="{{url('login')}}">Login!</a></p>
             </div>
-            <input type="submit" class="login_button" id="submit">
+            <input type="submit" value="Registreer" class="login_button" id="submit" placeholder="Login">
 
 
         </form>
