@@ -6,25 +6,30 @@
                     <h2 class="form-title">Registreren</h2>
                     @csrf
                     <label for="name" style="width: 350px; display: block; margin-bottom: -12px">Naam</label>
-                    <input type="text" class="" name="email" id="email" placeholder="naam" value="{{ old('email') }}" required><br>
-                    @error('email')
+                    <input type="text" class="" name="name" id="name" placeholder="naam" value="{{ old('email') }}" required><br>
+                    @error('naam')
+
                     <span style="color: red;">{{$message}}</span> @enderror
-                    <label for="phonenumber" style="width: 350px; display: block; margin-bottom: -12px">Telefoon</label>
-                    <input type="password" class="" name="password" id="password" placeholder="Telefoon" value="{{ old('password') }}" required><br>
-                    @error('password')
-                    <span style="color: red;">{{$message}}</span><br> @enderror
-                    <label for="email"style="width: 350px; display: block; margin-bottom: -12px">Email</label>
+                    <label for="phonenumber" style="width: 350px; display: block; margin-bottom: -12px">Telefoonnummer</label>
+                    <input type="text" class="" name="phonenumber" id="phonenumber" placeholder="Telefoonnummer" value="{{ old('email') }}" required><br>
+                    @error('phonenumber')
+
+                    <span style="color: red;">{{$message}}</span> @enderror
+                    <label for="Email" style="width: 350px; display: block; margin-bottom: -12px">Email</label>
                     <input type="text" class="" name="email" id="email" placeholder="Email" value="{{ old('email') }}" required><br>
-                    @error('email')
+                    @error('gmail')
+
                     <span style="color: red;">{{$message}}</span> @enderror
-                    <label for="password" style="width: 350px; display: block; margin-bottom: -12px">Adres</label>
-                    <input type="password" class="" name="password" id="password" placeholder="adres" value="{{ old('password') }}" required><br>
-                    @error('password')
-                    <span style="color: red;">{{$message}}</span><br> @enderror
-                    <label for="password" style="width: 350px; display: block; margin-bottom: -12px">Wachtwoord</label>
+                    <label for="adress" style="width: 350px; display: block; margin-bottom: -12px">Adress</label>
+                    <input type="text" class="" name="adress" id="adress" placeholder="Adress" value="{{ old('email') }}" required><br>
+                    @error('adress')
+                    <span style="color: red;">{{$message}}</span> @enderror
+                     <label for="password" style="width: 350px; display: block; margin-bottom: -12px">password</label>
                     <input type="password" class="" name="password" id="password" placeholder="Wachtwoord" value="{{ old('password') }}" required><br>
                     @error('password')
-                    <span style="color: red;">{{$message}}</span><br> @enderror
+
+                    
+                    <span style="color: red;">{{$message}}</span> @enderror
                     <div class="register_href">
                         <p>Heb je al een account?
                         <a href="{{url('login')}}">Login!</a></p>
