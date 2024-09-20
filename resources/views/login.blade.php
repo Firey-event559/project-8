@@ -2,8 +2,9 @@
     <body class="login_body">
 <main class="main-content">
     <div class="form-container">
-        <h2 class="form-title">Login</h2><br>
-        <form id="registration-form" action="login" method="post">
+       
+        <form class="registration-form" id="registration-form" action="login" method="post">
+            <h2 class="form-title">Login</h2>
         @csrf
         <label for="email"></label>
         <input type="text" class="" name="email" id="email" placeholder="Email" value="{{ old('email') }}" required><br>

@@ -217,8 +217,9 @@ body {
 
 .form-container input[type="submit"] {
     margin-top: 15px;;
-    background-color: #ffffff;
-    color: #212529;
+    /* background-color: #ac3737; */
+    background-color: #ae2522;
+    color: white;
     border: none;
     border-radius: 9px;
     cursor: pointer;
@@ -361,6 +362,24 @@ footer {
 .accordion-item {
     color: white;
 }
+
+.main-content{
+    display: flex;
+    
+}
+.registration-form{
+width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.login_button{
+    background-color: #ff0000;
+}
+
 
 div.container_offerte {
     display: flex;
