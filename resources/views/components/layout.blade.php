@@ -9,9 +9,11 @@ use Illuminate\Support\Facades\Auth;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @vite (['resources/css/app.css'])
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
     <title>Uneed-IT</title>
 </head>
 
@@ -25,28 +27,31 @@ use Illuminate\Support\Facades\Auth;
         <div id="logoptions">
             <ul>
                 @guest
-                    <li class="redc"><a href="{{ url('/webshop') }}">Webshop</a></li>
-                    <li class="redc"><a href="{{ url('/offertes.offerte') }}">Reparatie</a></li>
-                    <li class="redc"><a href="{{ url('/services') }}">Service</a></li>
-                    <li class="bluec"><a href="{{ url('/about_us') }}">Over ons</a></li>
-                    <li class="redc"><a href="{{ url('/login') }}">Account</a></li>
+                <li class="redc"><a href="{{ url('/webshop') }}">Webshop</a></li>
+                <li class="redc"><a href="{{ url('/offertes.offerte') }}">Reparatie</a></li>
+                <li class="redc"><a href="{{ url('/services') }}">Service</a></li>
+                <li class="bluec"><a href="{{ url('/about_us') }}">Over ons</a></li>
+                <li class="redc"><a href="{{ url('/login') }}">Account</a></li>
+                <img class="shopping_cart" src="{{ Vite::asset('resources/assets/cart.svg') }}" alt="winkelkartje">
                 @endguest
 
                 @auth
 
-                    @if (Auth::user()->isUser() || Auth::user()->isAdmin())
-                    <li class="redc"><a href="{{ url('/webshop') }}">Webshop</a></li>
-                    <li class="redc"><a href="{{ url('offertes.offerte') }}">Reparatie</a></li>
-                    <li class="redc"><a href="{{ url('/services') }}">Service</a></li>
-                        <li class="bluec"><a href="{{ url('/about_us') }}">Over ons</a></li>
+                @if (Auth::user()->isUser() || Auth::user()->isAdmin())
+                <li class="redc"><a href="{{ url('/webshop') }}">Webshop</a></li>
+                <li class="redc"><a href="{{ url('offertes.offerte') }}">Reparatie</a></li>
+                <li class="redc"><a href="{{ url('/services') }}">Service</a></li>
+                <li class="bluec"><a href="{{ url('/about_us') }}">Over ons</a></li>
+                <img class="shopping_cart" src="{{ Vite::asset('resources/assets/cart.svg') }}" alt="winkelkartje">
+                <img src="{{ Vite::asset('resources/assets/person-circle.svg') }}" alt="usericoon">
+                @endif
 
-                        @endif
+                @if (Auth::user()->isAdmin())
+                <li class="redc"><a href="{{ url('/admin') }}">Admin Dashboard</a></li>
+                @endif
 
-                        @if (Auth::user()->isAdmin())
-                        <li class="redc"><a href="{{ url('/admin') }}">Admin Dashboard</a></li>
-                    @endif   
-                        
-
+                   
+                
                 <li>
                     <form method="POST" action="layout">
                         @csrf
@@ -55,6 +60,7 @@ use Illuminate\Support\Facades\Auth;
                 </li>
                 @endauth
             </ul>
+        
         </div>
     </nav>
 
