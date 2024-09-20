@@ -326,7 +326,9 @@ footer {
     text-align: left;
     margin-bottom: 50px;
 }
-
+.reparatie-h2 {
+    color: black;
+}
 .h1_aboutus {
     color: #ff0000;
     text-align: center;
