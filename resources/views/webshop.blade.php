@@ -26,4 +26,4 @@
 
 
 
-</x-loyout>
+</x-layout>
