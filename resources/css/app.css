@@ -326,11 +326,15 @@ footer {
 .p_aboutus {
     margin-bottom: 20px;
 }
+.container_services{
+    margin-left: 200px;
+}
 
 .accordion {
     padding-top: 25px;
     max-width: 1110px;
     color: #212529;
+    
 }
 
 .accordion-collapse{
