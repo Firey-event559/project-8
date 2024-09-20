@@ -784,4 +784,7 @@ input.winkelmand:hover {
     background-color:#19cfcf; 
 }
 
-
+textarea.details{
+    width: 100%;
+    border: 1px solid #ccc;
+}
