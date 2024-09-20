@@ -307,36 +307,11 @@ footer {
     color: #fff;
 }
 
-.aboutus_body {
-    font-family: Arial, sans-serif;
-    padding-top: 150px;
-    color: #fff;
-}
 
-.container_aboutus {
-    padding-left: 50%;
-    display: flex;
-    justify-content: center;
-    background-color: #212529;
-    border: 2px solid #ff0000;
-    border-radius: 10px;
-    padding: 20px;
-    margin-left: 350px;
-    max-width: 800px;
-    text-align: left;
-    margin-bottom: 50px;
-}
 .reparatie-h2 {
     color: black;
 }
-.h1_aboutus {
-    color: #ff0000;
-    text-align: center;
-}
 
-.p_aboutus {
-    margin-bottom: 20px;
-}
 .container_services{
     display: flex;
     justify-content: center;
