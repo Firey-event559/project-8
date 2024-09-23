@@ -17,6 +17,7 @@ use App\Models\orders;
 Route::view('/', 'index');
 Route::view('/index', 'index');
 Route::view('/login_signup', 'login_signup');
+Route::view('shopping_cart', 'shopping_cart');
 Route::view('/login', 'login');
 Route::view('/services', 'services');
 Route::view('/offerte', 'offerte');
