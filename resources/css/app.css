@@ -196,6 +196,7 @@ body {
 
 .form-container {
     display: flex;
+    margin-bottom: 75px;
 }
 
 .form-container label {
@@ -350,13 +351,13 @@ footer {
 }
 .wide-label {
     display: block;
-    width: 350px !important; /* adjust the width to your liking */
+    width: 350px !important; 
     margin-bottom: 2px;
 }
 .registration-form{
-  
+  width: 350px;
   padding: 5px 45px;
-  margin: 8px 0;
+  margin: 18px 0;
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
@@ -393,6 +394,8 @@ div.container_signup {
     margin: 10px 0; 
     text-decoration: none;
 }
+
+
 
 a.button{
     background-color: #212529;
