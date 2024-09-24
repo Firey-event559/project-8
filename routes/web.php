@@ -11,9 +11,6 @@ use App\Models\Producten;
 use App\Models\offerte;
 use App\Models\orders;
 
-
-
-
 Route::view('/', 'index');
 Route::view('/index', 'index');
 Route::view('/login_signup', 'login_signup');
@@ -41,19 +38,26 @@ Route::get('orders', function () {
 
 Route::view('offertes.offerte_succes', 'offertes.offerte_succes');
 Route::view('signup_succes', 'signup_succes');
-Route::view('admin', 'admin');
-Route::get('admin_offerte', function () {
-    $offertes = offerte::all();
-    return view('admin_offerte', compact('offertes'));
-});
-Route::view('admin_change', 'admin_change');
-Route::view('admin_list', 'admin_list');
-Route::view('Product_succes', 'Product_succes');
 
-Route::get('admin_list', function () {
-    $orders = orders::all();  // Fetch all orders from the database
-    return view('admin_list', compact('orders'));  // Pass orders to the view
+
+Route::group(['middleware' => ['admin']], function () {
+    Route::view('admin', 'admin');
+
+    Route::get('admin_offerte', function () {
+        $offertes = Offerte::all(); // Use the correct model name
+        return view('admin_offerte', compact('offertes'));
+    });
+
+    Route::view('admin_change', 'admin_change');
+
+    Route::get('admin_list', function () {
+        $orders = Orders::all();  // Use the correct model name
+        return view('admin_list', compact('orders'));
+    });
+
+    Route::view('Product_succes', 'Product_succes');
 });
+
 
 Route::post('signup', [UserController::class, 'Insertaccount']);
 
@@ -64,5 +68,6 @@ Route::post('Productinsert', [ProductenController::class, 'Insertproduct']);
 Route::post('layout', [loginController::class, 'logout']);
 
 Route::post('offerte', [OfferteController::class, 'Insertofferte']);
+
 
 ?>
