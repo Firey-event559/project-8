@@ -22,7 +22,7 @@ class AdminMiddleware
         }
 
         // Redirect non-admin users or unauthenticated users
-        return redirect('/index')->with('error', 'You do not have admin access.');
+        return redirect('/login');
     }
 }
 

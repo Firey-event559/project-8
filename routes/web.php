@@ -23,6 +23,9 @@ Route::view('/signup', 'signup');
 Route::view('/login', 'login');
 Route::view('offertes.offerte', 'offertes.offerte');
 Route::get('orders', [OrderController::class, 'index']);
+
+
+
 Route::get('webshop', function () {
     $products = Producten::all();
     return view('webshop', compact('products'));
@@ -48,7 +51,10 @@ Route::group(['middleware' => ['admin']], function () {
         return view('admin_offerte', compact('offertes'));
     });
 
-    Route::view('admin_change', 'admin_change');
+    Route::get('admin_change', function () {
+        $products = Producten::all(); // Use the correct model name
+        return view('admin_change', compact('products'));
+    });
 
     Route::get('admin_list', function () {
         $orders = Orders::all();  // Use the correct model name
@@ -56,7 +62,19 @@ Route::group(['middleware' => ['admin']], function () {
     });
 
     Route::view('Product_succes', 'Product_succes');
+
+
+    Route::get('edit/{id}', function ($id) {
+        $product = Producten::find($id);
+        return view('admin_product_update', compact('product'));
+    })->name('edit');
+
+    Route::patch('update/{product}', [ProductenController::class, 'Updateproduct'])->name('update');
+
+
 });
+
+
 
 
 Route::post('signup', [UserController::class, 'Insertaccount']);

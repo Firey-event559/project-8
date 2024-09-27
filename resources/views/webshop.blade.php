@@ -28,8 +28,11 @@
             <div class="Product_details">
                 <h5 class="product_name">{{ $product->Name }}</h5>
                 <p class="product_price">€ {{ $product->Price }}</p>
+
+                <form>
             @csrf
             <input class="winkelmand" type="submit" value="In winkelwagen">
+            </form>
             </div>
         </div>
     </div>
