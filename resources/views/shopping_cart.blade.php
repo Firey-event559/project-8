@@ -33,11 +33,6 @@
 
             <button class="update-cart-btn">Update winkelwagen</button>
 
-            <div class="coupon-section">
-                <input type="text" placeholder="Waarde bon code">
-                <button class="apply-coupon-btn">Waarde bon toepassen</button>
-            </div>
-
             <div class="cart-totals">
                 <h2>Totalen winkelwagen</h2>
                 <div class="totals-item">
