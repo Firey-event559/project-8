@@ -829,30 +829,33 @@ img.person_circle{
     border-radius: 50%;
 }
 
-.signout-form {
+.account_info {
+    background-color: white;
     opacity: 0;
     visibility: hidden;
     position: absolute;
-    top: 40px;
+    top: 65px;
     left: 50%;
     transform: translateX(-50%);
     transition: opacity 0.3s, visibility 0.3s;
 }
 
+
+
 .button_uitloggen {
-    color: white;
+    color: black;
     border: none;
-    padding: 8px 16px;
+    padding: 2px 16px;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.profile-container:hover .signout-form {
+.profile-container:hover .account_info {
     opacity: 1;
     visibility: visible; 
 }
 
-.signout-form:hover {
+.account_info:hover {
     opacity: 1; 
     visibility: visible;
 

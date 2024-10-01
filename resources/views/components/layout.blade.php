@@ -44,11 +44,18 @@ use Illuminate\Support\Facades\Auth;
                 <div class="profile-container">
                     <img class="person_circle" src="{{ Vite::asset('resources/assets/person-circle.svg') }}"
                         alt="Profile">
+                        
+                        
 
+                    <div class="account_info">
+                    <p class="button_uitloggen">{{ Auth::user()->name }}</p>
                     <form method="POST" action="layout" class="signout-form">
                         @csrf
+                        
                         <button type="submit" class="button_uitloggen">Uitloggen</button>
+
                     </form>
+</div>
                 </div>
 
 
