@@ -53,10 +53,6 @@ class ProductenController extends Controller{
 
     }
 
-
-
-
-  
     
 
     public function Updateproduct(Request $request, Producten $product)

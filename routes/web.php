@@ -7,6 +7,7 @@ use App\Http\Controllers\Logincontroller;
 use App\Http\Controllers\OfferteController;
 use App\Http\Controllers\ProductenController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\CartController;
 use App\Models\Producten;
 use App\Models\offerte;
 use App\Models\orders;
@@ -14,7 +15,6 @@ use App\Models\orders;
 Route::view('/', 'index');
 Route::view('/index', 'index');
 Route::view('/login_signup', 'login_signup');
-Route::view('shopping_cart', 'shopping_cart');
 Route::view('/login', 'login');
 Route::view('/services', 'services');
 Route::view('/offerte', 'offerte');
@@ -23,6 +23,7 @@ Route::view('/signup', 'signup');
 Route::view('/login', 'login');
 Route::view('offertes.offerte', 'offertes.offerte');
 Route::get('orders', [OrderController::class, 'index']);
+
 
 
 
@@ -42,6 +43,13 @@ Route::get('orders', function () {
 Route::view('offertes.offerte_succes', 'offertes.offerte_succes');
 Route::view('signup_succes', 'signup_succes');
 
+
+
+Route::group(['middleware' => ['auth']], function () {
+    Route::post('layout', [loginController::class, 'logout']);
+
+});
+  
 
 Route::group(['middleware' => ['admin']], function () {
     Route::view('admin', 'admin');
@@ -81,11 +89,13 @@ Route::post('signup', [UserController::class, 'Insertaccount']);
 
 Route::post('login', [LoginController::class, 'Selectaccount']);
 
-Route::post('Productinsert', [ProductenController::class, 'Insertproduct']);
-
-Route::post('layout', [loginController::class, 'logout']);
+Route::post('productinsert', [ProductenController::class, 'Insertproduct']);
 
 Route::post('offerte', [OfferteController::class, 'Insertofferte']);
+
+Route::post('add_to_cart', [CartController::class, 'Add_to_cart']);
+
+Route::get('/shopping_cart', [CartController::class, 'index'])->name('shopping_cart');
 
 
 ?>

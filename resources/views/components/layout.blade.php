@@ -40,7 +40,7 @@ use Illuminate\Support\Facades\Auth;
                 <li class="redc"><a href="{{ url('/webshop') }}">Webshop</a></li>
                 <li class="redc"><a href="{{ url('offertes.offerte') }}">Reparatie</a></li>
                 <li class="redc"><a href="{{ url('/services') }}">Service</a></li>
-                <img class="shopping_cart" src="{{ Vite::asset('resources/assets/cart.svg') }}">
+                <a href="{{url('shopping_cart')}}"><img class="shopping_cart" src="{{ Vite::asset('resources/assets/cart.svg') }}"></a>
                 <div class="profile-container">
                     <img class="person_circle" src="{{ Vite::asset('resources/assets/person-circle.svg') }}"
                         alt="Profile">

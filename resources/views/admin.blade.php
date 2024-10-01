@@ -28,7 +28,7 @@
 
         <div class="content1">
             <h2>Producten toevoegen</h2>
-            <form action="Productinsert" method="post" enctype="multipart/form-data">
+            <form action="productinsert" method="post" enctype="multipart/form-data">
                 @csrf
                 <!-- 2 column grid layout with text inputs for the Productnaam en Productnummer -->
                 <div class="row mb-4">
