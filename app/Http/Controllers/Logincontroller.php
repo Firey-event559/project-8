@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Session;
 class LoginController extends Controller
 {
     
-    public function selectAccount(Request $request)
+    public function Selectaccount(Request $request)
     {
       
         $validatedData = $request->validate([
