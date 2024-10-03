@@ -8,9 +8,11 @@ use App\Http\Controllers\OfferteController;
 use App\Http\Controllers\ProductenController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\CartController;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Producten;
 use App\Models\offerte;
 use App\Models\orders;
+
 
 Route::view('/', 'index');
 Route::view('/index', 'index');
@@ -20,9 +22,12 @@ Route::view('/services', 'services');
 Route::view('/offerte', 'offerte');
 Route::view('/contact', 'contact');
 Route::view('/signup', 'signup');
-Route::view('/login', 'login');
 Route::view('offertes.offerte', 'offertes.offerte');
 Route::get('orders', [OrderController::class, 'index']);
+
+
+Route::view('/login', 'login')->name('login');
+
 
 
 
@@ -45,10 +50,18 @@ Route::view('signup_succes', 'signup_succes');
 
 
 
+
+
 Route::group(['middleware' => ['auth']], function () {
     Route::post('layout', [loginController::class, 'logout']);
 
+    Route::get('/shopping_cart', [CartController::class, 'index'])->name('shopping_cart');
+
+    Route::post('add_to_cart', [CartController::class, 'Add_to_cart']);
+
 });
+
+
   
 
 Route::group(['middleware' => ['admin']], function () {
@@ -92,10 +105,6 @@ Route::post('login', [LoginController::class, 'Selectaccount']);
 Route::post('productinsert', [ProductenController::class, 'Insertproduct']);
 
 Route::post('offerte', [OfferteController::class, 'Insertofferte']);
-
-Route::post('add_to_cart', [CartController::class, 'Add_to_cart']);
-
-Route::get('/shopping_cart', [CartController::class, 'index'])->name('shopping_cart');
 
 
 ?>

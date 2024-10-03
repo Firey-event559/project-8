@@ -6,6 +6,11 @@
 {{ session('success') }}
     </div> @endif
 
+    @if(session('error'))
+    <div class=" alert alert-danger" role="alert">
+{{ session('error') }}
+    </div> @endif
+
     @foreach ($products as $product)
 
 
@@ -19,7 +24,7 @@
                 <form action="add_to_cart" method="post">
                     @csrf
                     <input type="hidden" name="product_id" value="{{ $product->id }}">
-                    <input type="number" name="quantity" value="1" min="1" required>
+                    <input type="hidden" name="quantity" value="1" min="1" required>
                     <input class="winkelmand" type="submit" value="In winkelwagen">
                 </form>
                 </form>

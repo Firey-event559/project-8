@@ -4,7 +4,7 @@
         <h1>Winkelwagentje</h1>
 
         @if($cartitems->isEmpty())
-            <p>Your cart is empty!</p>
+            <p class="text_empty_cart">Jouw winkelwagentje is leeg</p>
         @else
             <table class="cart-table">
                 <thead>
@@ -23,7 +23,7 @@
                             </td>
                             <td>€{{ number_format($item->price, 2, ',', '.') }}</td>
                             <td>
-                                <input type="number" value="{{ $item->quantity }}" min="1">
+                                <input type="idden" value="{{ $item->quantity }}" min="1">
                             </td>
                             <td>€{{ number_format($item->quantity * $item->price, 2, ',', '.') }}</td>
                         </tr>
