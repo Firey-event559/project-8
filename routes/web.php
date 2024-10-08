@@ -30,8 +30,6 @@ Route::view('/login', 'login')->name('login');
 
 
 
-
-
 Route::get('webshop', function () {
     $products = Producten::all();
     return view('webshop', compact('products'));
@@ -50,8 +48,6 @@ Route::view('signup_succes', 'signup_succes');
 
 
 
-
-
 Route::group(['middleware' => ['auth']], function () {
     Route::post('layout', [loginController::class, 'logout']);
 
@@ -59,7 +55,11 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::post('add_to_cart', [CartController::class, 'Add_to_cart']);
 
+    Route::post('cart_update', [CartController::class, 'update_cart']);
+
 });
+
+
 
 
   

@@ -26,6 +26,8 @@ class CartController extends Controller
 
     }
 
+    
+
     // Add a product to the user's cart
     public function Add_to_cart(Request $request)
     {
@@ -52,4 +54,28 @@ class CartController extends Controller
         }
     }
 
+    public function update_cart(Request $request)
+{
+    // Validate incoming request
+    $request->validate([
+        'product_id' => 'required|array',
+        'product_id.*' => 'integer',
+        'quantity' => 'required|array',
+        'quantity.*' => 'integer|min:1',
+    ]);
+
+    // Update the quantity of the products in the cart
+    foreach ($request->product_id as $index => $productId) {
+        $quantity = $request->quantity[$index];
+        Cart::session(Auth::id())->update($productId, array(
+            'quantity' => array(
+                'relative' => false,
+                'value' => $quantity,
+            ),
+        ));
+    }
+
+    // Redirect back to shopping cart
+    return redirect('shopping_cart');
+ }
 }

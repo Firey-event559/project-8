@@ -31,7 +31,7 @@ use Illuminate\Support\Facades\Auth;
                 <li class="redc"><a href="{{ url('/offertes.offerte') }}">Reparatie</a></li>
                 <li class="redc"><a href="{{ url('/services') }}">Service</a></li>
                 <li class="redc"><a href="{{ url('/login') }}">Account</a></li>
-                <img src="{{ Vite::asset('resources/assets/cart.svg') }}">
+                <a href="{{url('shopping_cart')}}"><img class="shopping_cart" src="{{ Vite::asset('resources/assets/cart.svg') }}"></a>
                 @endguest
 
                 @auth
