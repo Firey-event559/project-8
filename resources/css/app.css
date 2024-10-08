@@ -477,8 +477,8 @@ button.producten_list {
 }
 
 button.button_uitloggen {
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
@@ -745,12 +745,10 @@ div.dtoegevoegd{
 
 h1.Product_webshop_tekst{
     color: #212529;
-    margin-left:70px ;
     margin-top: 150px;
+    margin-left:70px ;
     margin-bottom:20px ;
 }
-
-
 
 .Product_list {
     display: flex;
@@ -807,7 +805,6 @@ input.winkelmand{
     cursor: pointer;
     border: none; 
     transition: background-color 0.3s; 
-    margin-bottom:50px ;
 }
 
 input.winkelmand:hover {
@@ -843,8 +840,14 @@ img.person_circle{
     border-radius: 50%;
 }
 
+.signout-form {
+background-color: black;
+color: white;
+}
+
 .account_info {
-    background-color: white;
+    color: white;
+    background-color: black;
     opacity: 0;
     visibility: hidden;
     position: absolute;
@@ -857,7 +860,8 @@ img.person_circle{
 
 
 .button_uitloggen {
-    color: black;
+    color: white;
+    background-color: black;
     border: none;
     padding: 2px 16px;
     border-radius: 5px;
