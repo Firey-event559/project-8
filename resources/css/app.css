@@ -266,6 +266,17 @@ main {
     padding-left: 190px;
     padding-right: 190px;
 }
+.img-service-page {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.img-service-page img {
+    width: 400px;
+    height: 350px; 
+    padding: 25px;
+}
 
 .service-box {
     background-color: #212529;
