@@ -1,41 +1,41 @@
 <x-layout>
-
-    <body>
+    <body class="login_body">
+        <main class="main-content">
         <div class="form-container">
-            <h2 class="form-title">Accountgegevens aanpassen</h2>
-            
             <form class="registration-form" id="registration-form" action="{{ route('Updateaccount', $user->id) }}" method="POST">
+            <h2 class="form-title">Accountgegevens aanpassen</h2>
                 @csrf
                 @method('PUT')
                 
-                <div>
+                
                     <label for="name">Naam</label>
-                    <input type="text" id="name" name="name" value="{{ old('name', $user->name) }}" required>
+                    <input type="text" id="name" name="name" placeholder="Naam" value="{{ old('name', $user->name) }}" required>
                     @error('name')
                         <div class="text-danger">{{ $message }}</div>
                     @enderror
-                </div>
+                
 
-                <div>
+                
                     <label for="phonenumber">Telefoonnummer</label>
-                    <input type="text" id="phonenumber" name="phonenumber" value="{{ old('phonenumber', $user->phonenumber) }}" required>
+                    <input type="text" id="phonenumber" name="phonenumber" placeholder="Telefoonnummer" value="{{ old('phonenumber', $user->phonenumber) }}" required>
                     @error('phonenumber')
                         <div class="text-danger">{{ $message }}</div>
                     @enderror
-                </div>
+                
 
 
-                <div>
+                
                     <label for="adress">Adres</label>
-                    <input type="text"  id="adress" name="adress" value="{{ old('adress', $user->adress) }}" required>
+                    <input type="text"  id="adress" name="adress"  placeholder="Adres" value="{{ old('adress', $user->adress) }}" required>
                     @error('adress')
                         <div class="text-danger">{{ $message }}</div>
                     @enderror
-                </div>
+                
 
                 <button type="submit" class="btn btn-primary">Updaten</button>
             </form>
         </div>
+        <main>
 </body>
 
     </html>
