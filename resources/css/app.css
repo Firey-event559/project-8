@@ -196,6 +196,7 @@ body {
 
 .form-container {
     display: flex;
+    justify-content: center;
     margin-bottom: 75px;
 }
 
@@ -240,7 +241,6 @@ body {
 
 main {
     padding-top: 120px;
-    padding-bottom: 50px;
 }
 
 .services {

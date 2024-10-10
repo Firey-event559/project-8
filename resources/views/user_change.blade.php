@@ -1,6 +1,5 @@
 <x-layout>
     <body class="login_body">
-        <main class="main-content">
         <div class="form-container">
             <form class="registration-form" id="registration-form" action="{{ route('Updateaccount', $user->id) }}" method="POST">
             <h2 class="form-title">Accountgegevens aanpassen</h2>
@@ -35,7 +34,6 @@
                 <button type="submit" class="btn btn-primary">Updaten</button>
             </form>
         </div>
-        <main>
 </body>
 
     </html>
