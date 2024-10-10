@@ -44,7 +44,7 @@ Route::get('orders', function () {
 });
 
 Route::view('offertes.offerte_succes', 'offertes.offerte_succes');
-Route::view('signup_succes', 'signup_succes');
+Route::view('signup_succes', 'signup_succes');  
 
 
 
@@ -56,6 +56,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('add_to_cart', [CartController::class, 'Add_to_cart']);
 
     Route::post('cart_update', [CartController::class, 'update_cart']);
+
+    Route::get('user_change/{user}', [UserController::class, 'showEditForm'])->name('user_change');
+    Route::put('user_change/{user}', [UserController::class, 'Updateaccount'])->name('Updateaccount');
 
 });
 

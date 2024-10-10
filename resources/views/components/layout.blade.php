@@ -47,14 +47,13 @@ use Illuminate\Support\Facades\Auth;
                         
                         
 
-                    <div class="account_info">
-                    <p class="button_uitloggen">{{ Auth::user()->name }}</p>
-                    <form method="POST" action="layout" class="signout-form">
-                        @csrf
-                        
-                        <button type="submit" class="button_uitloggen">Uitloggen</button>
-
-                    </form>
+                        <div class="account_info">
+                     <p class="button_uitloggen">{{ Auth::user()->name }}</p>
+                     <p class="button_uitloggen"><a href="{{ route('user_change', Auth::user()->id) }}">user bewerken</a></p>
+    <form method="POST" action="layout" class="signout-form">
+        @csrf
+        <button type="submit" class="button_uitloggen">Uitloggen</button>
+    </form>
 </div>
                 </div>
 

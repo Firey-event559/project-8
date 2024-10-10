@@ -1029,3 +1029,14 @@ h1 {
 p.text_empty_cart {
     margin-bottom: 400px;
 }
+
+div.change_container {
+    .form-container {
+        margin: auto;
+        padding: 20px; 
+        background-color: black; 
+        border-radius: 8px; 
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    }
+
+}
