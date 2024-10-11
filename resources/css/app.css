@@ -161,10 +161,48 @@ body {
     gap: 55px;   
     flex-direction: row-reverse;
 }
+
+.change-container {
+    border-radius: 9px;
+    padding: 12px;
+
+}
+.change-container label {
+    margin-bottom: 5px;
+    display: block;
+    color: #000000;
+}
+.change-container input[type="text"],
+.change-container input[type="email"],
+.change-container input[type="password"],
+.change-container button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.change-container input[type="submit"] {
+    margin-top: 15px;;
+    background-color: #ae2522;
+    color: white;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    height: 46px;
+}
+
+.change-container input[type="submit"]:hover {
+    background-color: #d7dce2;
+}
+
 .form-container{
     border-radius: 9px;
     padding: 12px;
-   
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
     
 }
 .offerte_button{
@@ -196,7 +234,8 @@ body {
 
 .form-container {
     display: flex;
-    margin-bottom: 75px;
+    justify-content: center;
+    margin-top: 50px;
 }
 
 .form-container label {
@@ -240,7 +279,6 @@ body {
 
 main {
     padding-top: 120px;
-    padding-bottom: 50px;
 }
 
 .services {
@@ -265,6 +303,17 @@ main {
     padding-top: 15px;
     padding-left: 190px;
     padding-right: 190px;
+}
+.img-service-page {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.img-service-page img {
+    width: 400px;
+    height: 350px; 
+    padding: 25px;
 }
 
 .service-box {
@@ -466,8 +515,8 @@ button.producten_list {
 }
 
 button.button_uitloggen {
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
@@ -734,12 +783,10 @@ div.dtoegevoegd{
 
 h1.Product_webshop_tekst{
     color: #212529;
-    margin-left:70px ;
     margin-top: 150px;
+    margin-left:70px ;
     margin-bottom:20px ;
 }
-
-
 
 .Product_list {
     display: flex;
@@ -796,7 +843,6 @@ input.winkelmand{
     cursor: pointer;
     border: none; 
     transition: background-color 0.3s; 
-    margin-bottom:50px ;
 }
 
 input.winkelmand:hover {
@@ -832,8 +878,14 @@ img.person_circle{
     border-radius: 50%;
 }
 
+.signout-form {
+background-color: black;
+color: white;
+}
+
 .account_info {
-    background-color: white;
+    color: white;
+    background-color: black;
     opacity: 0;
     visibility: hidden;
     position: absolute;
@@ -846,7 +898,8 @@ img.person_circle{
 
 
 .button_uitloggen {
-    color: black;
+    color: white;
+    background-color: black;
     border: none;
     padding: 2px 16px;
     border-radius: 5px;
@@ -1013,4 +1066,15 @@ h1 {
 
 p.text_empty_cart {
     margin-bottom: 400px;
+}
+
+div.change_container {
+    .form-container {
+        margin: auto;
+        padding: 20px; 
+        background-color: black; 
+        border-radius: 8px; 
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    }
+
 }

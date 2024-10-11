@@ -111,6 +111,12 @@
                 </div>
 
             </div>
+            <div class="img-service-page">
+           
+            <img src="{{ Vite::asset('resources/assets/certificaat2.png') }}"  alt="Laptop reparatie image"><br>
+            <img src="{{ Vite::asset('resources/assets/Certificaat1.png') }}"  alt="Laptop reparatie image"><br>
+            <img src="{{ Vite::asset('resources/assets/Certificaat3.png') }}"  alt="Laptop reparatie image"><br>
+        </div>
 
         </main>
         <script>

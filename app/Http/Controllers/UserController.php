@@ -34,11 +34,41 @@ class UserController extends Controller
 
    return redirect('signup_succes');
 
-
-
-  
-
     }
 
     
+   public function Updateaccount(Request $request, User $user)
+    {
+
+
+        // Validate the form data
+        $validated = $request->validate([
+            'name' => 'required|max:255|string|min:2',
+            'phonenumber' => 'required|numeric',
+            'email' => 'required|email|unique:users,email',
+            'adress' => 'required|string|min:2',
+        ]);
+
+    
+        // Update the user properties
+        $user->name = $validated['name'];
+        $user->phonenumber = $validated['phonenumber'];
+        $user->adress = $validated['adress'];
+        $user->email = $validated['email'];
+        
+        // Save changes to the database
+        $user->save(); // This should update the existing record
+    
+        // Log after saving to verify it's updated
+        \Log::info('user after update:', $user->toArray());
+    
+        return redirect('index')->with('success', ' je accountgegevens zijn succesvol bijgewerkt');
+    }
+
+    public function showEditForm(User $user)
+    {
+        return view('user_change', compact('user'));
+    }
+
 }
+

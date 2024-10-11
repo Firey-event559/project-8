@@ -44,7 +44,7 @@ Route::get('orders', function () {
 });
 
 Route::view('offertes.offerte_succes', 'offertes.offerte_succes');
-Route::view('signup_succes', 'signup_succes');
+Route::view('signup_succes', 'signup_succes');  
 
 
 
@@ -63,6 +63,9 @@ Route::group(['middleware' => ['auth']], function () {
         return view('order_succes');
     })->name('order_succes');
     
+    Route::get('user_change/{user}', [UserController::class, 'showEditForm'])->name('user_change');
+    Route::put('user_change/{user}', [UserController::class, 'Updateaccount'])->name('Updateaccount');
+
 });
 
 
