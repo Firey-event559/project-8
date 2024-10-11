@@ -19,9 +19,10 @@ class CartController extends Controller
         }else{
             // Get the cart items associated with the logged-in user
             $cartitems = Cart::session(Auth::id())->getContent();
+            $products = Producten::all();
             
             // Pass the cart items to the 'shopping_cart' view
-            return view('shopping_cart', compact('cartitems'));
+            return view('shopping_cart', compact('cartitems', 'products'));
         }
 
     }

@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Logincontroller;
 use App\Http\Controllers\OfferteController;
 use App\Http\Controllers\ProductenController;
-use App\Http\Controllers\OrderController;
+use App\Http\Controllers\OrdersController;
 use App\Http\Controllers\CartController;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Producten;
@@ -57,6 +57,12 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::post('cart_update', [CartController::class, 'update_cart']);
 
+    Route::post('Create_order', [OrdersController::class, 'Createorder']);
+
+    Route::get('order_succes', function () {
+        return view('order_succes');
+    })->name('order_succes');
+    
 });
 
 

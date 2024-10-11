@@ -35,6 +35,7 @@
                         <th scope="col">Aantal</th>
                         <th scope="col">Naam</th>
                         <th scope="col">Adres</th>
+                        <th scope="col">Bezorgopties</th>
                         <th scope="col">Telefoonnummer</th>
                     </tr>
                 </thead>
@@ -47,6 +48,8 @@
                         <td>{{ $order->amount }}</td>
                         <td>{{ $order->name }}</td>
                         <td>{{ $order->address }}</td>
+                        <td>{{ $order->email }}</td>
+                        <td>{{ $order->delivery_options }}</td>
                         <td>{{ $order->phone_number }}</td>
                     </tr>
                     @endforeach
