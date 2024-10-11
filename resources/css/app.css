@@ -197,7 +197,7 @@ body {
 .form-container {
     display: flex;
     justify-content: center;
-    margin-bottom: 75px;
+    margin-top: 50px;
 }
 
 .form-container label {
