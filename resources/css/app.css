@@ -515,7 +515,7 @@ button.producten_list {
 }
 
 button.button_uitloggen {
-    background-color: black;
+    background-color: #212529;
     color: white;
     font-size: 16px;
     border-radius: 5px;
@@ -883,9 +883,14 @@ background-color: black;
 color: white;
 }
 
+.user_bewerken {
+    text-decoration: none;
+    color: white;
+}
+
 .account_info {
     color: white;
-    background-color: black;
+    background-color: #212529;
     opacity: 0;
     visibility: hidden;
     position: absolute;
@@ -899,10 +904,11 @@ color: white;
 
 .button_uitloggen {
     color: white;
-    background-color: black;
+    background-color: #212529;
     border: none;
-    padding: 2px 16px;
-    border-radius: 5px;
+    width: 150px;
+    padding: 2px 20px;
+    border-radius: 4px;
     cursor: pointer;
 }
 
