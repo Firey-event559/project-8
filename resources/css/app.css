@@ -161,10 +161,48 @@ body {
     gap: 55px;   
     flex-direction: row-reverse;
 }
+
+.change-container {
+    border-radius: 9px;
+    padding: 12px;
+
+}
+.change-container label {
+    margin-bottom: 5px;
+    display: block;
+    color: #000000;
+}
+.change-container input[type="text"],
+.change-container input[type="email"],
+.change-container input[type="password"],
+.change-container button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.change-container input[type="submit"] {
+    margin-top: 15px;;
+    background-color: #ae2522;
+    color: white;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    height: 46px;
+}
+
+.change-container input[type="submit"]:hover {
+    background-color: #d7dce2;
+}
+
 .form-container{
     border-radius: 9px;
     padding: 12px;
-   
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
     
 }
 .offerte_button{

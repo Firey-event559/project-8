@@ -44,6 +44,7 @@ class UserController extends Controller
         $validated = $request->validate([
             'name' => 'required|max:255|string|min:2',
             'phonenumber' => 'required|numeric',
+            'email' => 'required|email|unique:users,email',
             'adress' => 'required|string|min:2',
         ]);
 
@@ -52,6 +53,7 @@ class UserController extends Controller
         $user->name = $validated['name'];
         $user->phonenumber = $validated['phonenumber'];
         $user->adress = $validated['adress'];
+        $user->email = $validated['email'];
         
         // Save changes to the database
         $user->save(); // This should update the existing record
