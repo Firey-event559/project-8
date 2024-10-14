@@ -105,6 +105,8 @@ Route::group(['middleware' => ['admin']], function () {
 
     Route::delete('/admin/products/{id}', [ProductenController::class, 'destroy'])->name('products.destroy');
 
+    Route::delete('/offertes/{offerte}', [OfferteController::class, 'destroy'])->name('offerte.destroy');
+
 });
 
 

@@ -13,7 +13,9 @@ use Illuminate\Support\Facades\Auth;
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        
         </script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <title>Uneed-IT</title>
 </head>
 
@@ -72,6 +74,9 @@ use Illuminate\Support\Facades\Auth;
 
 
     {{ $slot }}
+    <a href="https://business.whatsapp.com/developers/developer-hub" class="float" target="_blank">
+<i class="fa fa-whatsapp my-float"></i>
+</a>
 
 
     <footer class="bg-dark text-white text-center text-lg-center" id="footer">
@@ -116,3 +121,4 @@ use Illuminate\Support\Facades\Auth;
         </div>
         <!-- Copyright -->
     </footer>
+
