@@ -10,12 +10,11 @@ use Darryldecode\Cart\Facades\CartFacade as Cart;
 use App\Models\Producten;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Auth;
 
 class OrdersController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    
     public function index()
     {
         // Fetch all orders from the database
@@ -26,12 +25,7 @@ class OrdersController extends Controller
         return view('orders.index', compact('orders', 'products'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     
-   
-         // Validate the incoming request
          
          public function Createorder(Request $request) 
          {
@@ -39,7 +33,7 @@ class OrdersController extends Controller
              $request->validate([
                  'user_id' => 'required|exists:users,id',
                  'total' => 'required|numeric|min:0',  
-                 'shipping_cost' => 'required|numeric|min:0', // Validate shipping cost
+                 'shipping_cost' => 'required|numeric|min:0', 
                  'delivery_options' => 'required|string',
                  'product_id' => 'required|array',
                  'product_id.*' => 'required|exists:productens,id', 
@@ -50,7 +44,8 @@ class OrdersController extends Controller
              DB::beginTransaction();
          
              try {
-                 // Calculate total including shipping cost
+                 
+
                  $totalWithShipping = $request->total + $request->shipping_cost;
          
                  // Create the order
@@ -69,7 +64,7 @@ class OrdersController extends Controller
          
                      // Check stock
                      if ($product->Stock < $quantity) {
-                         DB::rollback(); // Rollback transaction if stock is insufficient
+                         DB::rollback();
                          return redirect('shopping_cart')->with('error', 'Not enough stock for ' . $product->Name);
                      }
          
@@ -86,14 +81,13 @@ class OrdersController extends Controller
                  }
          
                  // Clear the cart using Darryldecode\Cart
-                 Cart::clear();
+                 Cart::session(Auth::id())->clear();
          
                  // Commit the transaction
                  DB::commit();
          
                  return redirect('order_succes')->with('success', 'Order placed successfully!');
              } catch (\Exception $e) {
-                 // Rollback the transaction on error
                  DB::rollback();
                  \Log::error('Order creation failed: ' . $e->getMessage());
          

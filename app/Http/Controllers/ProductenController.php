@@ -87,7 +87,7 @@ class ProductenController extends Controller{
     
             // Move the new image to the destination path
             $image->move($destinationpath, $imagename);
-            $imagepath = 'images/' . $imagename; // Update image path to the new one
+            $imagepath = 'images/' . $imagename;
         }
     
         // Update the product properties
@@ -97,11 +97,11 @@ class ProductenController extends Controller{
         $product->Price = $validated['Price'];
         $product->Description = $validated['Description'];
     
-        // Set the Image field (will retain old value if no new image was uploaded)
+        
         $product->Image = $imagepath;
     
         // Save changes to the database
-        $product->save(); // This should update the existing record
+        $product->save(); 
     
         // Log after saving to verify it's updated
         \Log::info('Product after update:', $product->toArray());
