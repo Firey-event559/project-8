@@ -30,9 +30,9 @@
             <h2>Producten bewerken</h2>
 
             @if(session('success'))
-            <div class="alert alert-success" role="alert">
-                {{ session('success') }}
-            </div>
+                <div class="alert alert-success" role="alert">
+                    {{ session('success') }}
+                </div>
 
 
             @endif
@@ -40,22 +40,27 @@
             @foreach($products as $product)
 
 
-            <div class="Product_webshop">
-                <div class="Product_info">
-                    <img src="{{ $product->Image }}" class="Image_product" alt="foto product">
-                    <div class="Product_details">
-                        <h5 class="product_name">{{ $product->Name }}</h5>
-                        <p class="product_price">€ {{ $product->Price }}</p>
-                        <p>{{ $product->Description }}</p>
+                <div class="Product_webshop">
+                    <div class="Product_info">
+                        <img src="{{ $product->Image }}" class="Image_product" alt="foto product">
+                        <div class="Product_details">
+                            <h5 class="product_name">{{ $product->Name }}</h5>
+                            <p class="product_price">€ {{ $product->Price }}</p>
+                            <p>{{ $product->Description }}</p>
 
-                        <form action="{{ route('edit', $product->id) }}" method="GET">
-                            <input type="hidden" name="id" value="{{ $product->id }}">
-                            <input class="edit" type="submit" value="Bewerken">
-                        </form>
-                        <input class="winkelmand" type="submit" value="Verwijderen">
+                            <form action="{{ route('edit', $product->id) }}" method="GET">
+                                <input type="hidden" name="id" value="{{ $product->id }}">
+                                <input class="edit" type="submit" value="Bewerken">
+                            </form>
+                            <form id="delete-{{ $product->id }}" action="{{ route('products.destroy', $product->id) }}"
+                                method="POST" style="display: inline;">
+                                @csrf
+                                @method('DELETE')
+                                <input class="winkelmand" type="submit" value="Remove">
+                            </form>
+                        </div>
                     </div>
                 </div>
-            </div>
 
             @endforeach
 

@@ -109,4 +109,22 @@ class ProductenController extends Controller{
         return redirect('admin_change')->with('success', 'Het product is succesvol bijgewerkt');
     }
 
+    public function destroy($id)
+    {
+        // Find the product by ID
+        $product = producten::find($id);
+    
+        // Check if the product exists
+        if (!$product) {
+            return redirect()->back()->with('error', 'Product niet gevonden.');
+        }
+    
+        // Delete the product
+        $product->delete();
+    
+        // Redirect back with success message
+        return redirect('admin_change')->with('success', 'Product verwijderd.');
+    }
+    
+
 }
