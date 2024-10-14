@@ -79,7 +79,19 @@ class OfferteController extends Controller
      * Remove the specified resource from storage.
      */
     public function destroy(offerte $offerte)
-    {
-        //
+{
+    // Check if the product exists
+    if (!$offerte) {
+        return redirect()->back()->with('error', 'Product niet gevonden.');
     }
+
+    // Delete the product
+    $offerte->delete();
+
+    // Redirect back with success message
+    return redirect('admin_offerte')->with('success', 'Product verwijderd.');
+}
+
+
+
 }

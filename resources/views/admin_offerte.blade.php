@@ -26,16 +26,22 @@
                 <tbody>
 
                     @foreach ($offertes as $offerte)
-                    <tr>
-                        <th scope="row">{{ $offerte->id }}</th>
-                        <td>{{ $offerte->name }}</td>
-                        <td>{{ $offerte->email }}</td>
-                        <td>{{ $offerte->phonenumber }}</td>
-                        <td>{{ $offerte->productnumber }}</td>
-                        <td>{{ $offerte->details }}</td>
-                        <td><input type="submit" value="verwijderen"> </td>
-                        <td><input type="submit" value="voltooien"> </td>
-                    </tr>
+                        <tr>
+                            <th scope="row">{{ $offerte->id }}</th>
+                            <td>{{ $offerte->name }}</td>
+                            <td>{{ $offerte->email }}</td>
+                            <td>{{ $offerte->phonenumber }}</td>
+                            <td>{{ $offerte->productnumber }}</td>
+                            <td>{{ $offerte->details }}</td>
+                            <td>
+                                <form id="delete-{{ $offerte->id }}" action="{{ route('offerte.destroy', $offerte->id) }}"
+                                    method="POST" style="display: inline;">
+                                    @csrf
+                                    @method('DELETE')
+                                    <input class="winkelmand" type="submit" value="Remove">
+                                </form>
+                            </td>
+                        </tr>
                     @endforeach
 
             </table>
