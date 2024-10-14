@@ -15,7 +15,7 @@ class CartController extends Controller
     {
 
         if (!Auth::check()) {
-            return redirect('login')->with('error', 'U moet ingelogd zijn om iets toe te voegen aan uw winkelwagen');
+            return redirect('login');
         }else{
             // Get the cart items associated with the logged-in user
             $cartitems = Cart::session(Auth::id())->getContent();

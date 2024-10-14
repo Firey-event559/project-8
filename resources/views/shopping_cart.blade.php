@@ -3,18 +3,12 @@
         <h1>Winkelwagentje</h1>
 
         @if(session('error'))
-    <div class="alert alert-danger">{{ session('error') }}</div>
-@endif
-
-
-
-
-  
+            <div class="alert alert-danger">{{ session('error') }}</div>
+        @endif
 
         @if($cartitems->isEmpty())
             <p class="text_empty_cart">Jouw winkelwagentje is leeg</p>
         @else
-
             <!-- Cart update form -->
             <form action="cart_update" method="POST">
                 @csrf
@@ -43,9 +37,7 @@
                 </table>
 
                 <button type="submit" class="update-cart-btn">Winkelwagentje updaten</button>
-
-        </form>
-        
+            </form>
 
             <!-- Create Order Form -->
             <form action="Create_order" method="POST">
@@ -95,12 +87,13 @@
                 <input class="checkout-btn" type="submit" value="Doorgaan naar afrekenen">
             </form>
         </div>
-
-      
-
-       
-
         @endif 
-    @vite(['resources/js/app.js'])
-</x-layout>
 
+        @vite(['resources/js/app.js'])
+
+        <!-- Footer outside of the forms -->
+        <footer>
+            <p>© 2024 Jouw Bedrijf. Alle rechten voorbehouden.</p>
+        </footer>
+    </div>
+</x-layout>

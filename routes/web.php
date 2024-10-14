@@ -109,7 +109,7 @@ Route::group(['middleware' => ['admin']], function () {
 
 
 
-
+ 
 Route::post('signup', [UserController::class, 'Insertaccount']);
 
 Route::post('login', [LoginController::class, 'Selectaccount']);
