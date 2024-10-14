@@ -13,7 +13,7 @@
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
             </script>
     </head>
-    
+
     <body class="admin_list">
 
         <div class="sidebar">
@@ -40,20 +40,22 @@
                     </tr>
                 </thead>
                 <tbody>
-                @foreach ($orders as $order)
+                    @foreach ($orderItems as $orderItem)
                     <tr>
-                        <th scope="row">{{ $order->id }}</th>
-                        <td>{{ $order->product_name }}</td>
-                        <td>{{ $order->product_number }}</td>
-                        <td>{{ $order->amount }}</td>
-                        <td>{{ $order->name }}</td>
-                        <td>{{ $order->address }}</td>
-                        <td>{{ $order->email }}</td>
-                        <td>{{ $order->delivery_options }}</td>
-                        <td>{{ $order->phone_number }}</td>
+                        <th scope="row">{{ $orderItem->id }}</th>
+                        <td>{{ optional($orderItem->product)->Name }}</td> 
+                        <td>{{ $orderItem->Productnumber }}</td> <!-- Product number from OrderItem -->
+                        <td>{{ optional($orderItem->order)->amount }}</td> <!-- Accessing amount from Order -->
+                        <td>{{ optional($orderItem->order->user)->name }}</td> <!-- User name from Order -->
+                        <td>{{ optional($orderItem->order->user)->address }}</td> <!-- User address -->
+                        <td>{{ optional($orderItem->order->user)->email }}</td> <!-- User email -->
+                        <td>{{ optional($orderItem->order)->delivery_options }}</td>
+                        <!-- Delivery options from Order -->
+                        <td>{{ optional($orderItem->order->user)->phone_number }}</td> <!-- User phone number -->
                     </tr>
                     @endforeach
-                    
+
+
                 </tbody>
             </table>
 

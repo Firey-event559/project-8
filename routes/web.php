@@ -9,9 +9,11 @@ use App\Http\Controllers\ProductenController;
 use App\Http\Controllers\OrdersController;
 use App\Http\Controllers\CartController;
 use Illuminate\Support\Facades\Auth;
+
 use App\Models\Producten;
 use App\Models\offerte;
 use App\Models\orders;
+use App\Models\orderItem;
 
 
 Route::view('/', 'index');
@@ -87,8 +89,8 @@ Route::group(['middleware' => ['admin']], function () {
     });
 
     Route::get('admin_list', function () {
-        $orders = Orders::all();  // Use the correct model name
-        return view('admin_list', compact('orders'));
+        $orderItems = OrderItem::with(['product', 'order.user'])->get(); 
+        return view('admin_list', compact('orderItems')); 
     });
 
     Route::view('Product_succes', 'Product_succes');

@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Producten;
+use App\Models\OrderItem;
 
 class producten extends Model
 {
@@ -17,4 +19,11 @@ class producten extends Model
         'Description',
         'Image',
     ];
+
+
+
+    public function orderItems()
+    {
+        return $this->hasMany(OrderItem::class);
+    }
 }
