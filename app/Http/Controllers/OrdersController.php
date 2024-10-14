@@ -69,7 +69,8 @@ class OrdersController extends Controller
          
                      // Check stock
                      if ($product->Stock < $quantity) {
-                     return redirect()->back()->with('error', 'Not enough stock for ' . $product->Name);
+                         DB::rollback(); // Rollback transaction if stock is insufficient
+                         return redirect('shopping_cart')->with('error', 'Not enough stock for ' . $product->Name);
                      }
          
                      // Reduce stock and save
@@ -85,15 +86,21 @@ class OrdersController extends Controller
                  }
          
                  // Clear the cart using Darryldecode\Cart
-                 Cart::clear(); 
+                 Cart::clear();
          
+                 // Commit the transaction
                  DB::commit();
-                 return redirect('order_succes');
+         
+                 return redirect('order_succes')->with('success', 'Order placed successfully!');
              } catch (\Exception $e) {
+                 // Rollback the transaction on error
                  DB::rollback();
                  \Log::error('Order creation failed: ' . $e->getMessage());
+         
+                 return redirect('shopping_cart')->with('error', 'An error occurred while placing the order. Please try again.');
              }
          }
+         
          
 
 

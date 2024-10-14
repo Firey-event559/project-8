@@ -982,7 +982,7 @@ div.cart{
 
 .cart-container {
     max-width: 900px;
-    margin: 100px auto 0; /* Top margin set to 100px, auto left and right */
+    margin: 150px auto 0; /* Top margin set to 100px, auto left and right */
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;

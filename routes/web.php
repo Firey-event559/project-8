@@ -48,7 +48,7 @@ Route::view('signup_succes', 'signup_succes');
 
 
 
-Route::group(['middleware' => ['auth']], function () {
+Route::group(['middleware' => [ 'web', 'auth']], function () {
     Route::post('layout', [loginController::class, 'logout']);
 
     Route::get('/shopping_cart', [CartController::class, 'index'])->name('shopping_cart');
