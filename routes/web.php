@@ -101,6 +101,7 @@ Route::group(['middleware' => ['admin']], function () {
 
     Route::patch('update/{product}', [ProductenController::class, 'Updateproduct'])->name('update');
 
+    Route::delete('/admin/products/{id}', [ProductenController::class, 'destroy'])->name('products.destroy');
 
 });
 
