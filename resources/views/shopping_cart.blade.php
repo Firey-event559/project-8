@@ -19,6 +19,7 @@
                             <th>Prijs</th>
                             <th>Aantal</th>
                             <th>Subtotaal</th>
+                            <th>Verwijder</th> <!-- Added delete column -->
                         </tr>
                     </thead>
                     <tbody>
@@ -31,6 +32,18 @@
                                 <input type="number" name="quantity[]" value="{{ $item->quantity }}" min="1" style="width: 60px;">
                             </td>
                             <td>€{{ number_format($item->quantity * $item->price, 2, ',', '.') }}</td>
+                            <td>
+                                
+                                {{-- <form action="{{ route('cart_delete', $item->id) }}" method="POST" style="display:inline;"> --}}
+                                    <form>
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="shoppingcard_delete_btn">
+                                        <img src="{{ Vite::asset('resources/assets/trash3.svg') }}"  alt="Delete button"><br>
+
+                                    </button>
+                                </form>
+                            </td>
                         </tr>
                         @endforeach
                     </tbody>
