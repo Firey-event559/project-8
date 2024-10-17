@@ -8,6 +8,7 @@ use App\Http\Requests\StoreordersRequest;
 use App\Http\Requests\UpdateordersRequest;
 use Darryldecode\Cart\Facades\CartFacade as Cart;
 use App\Models\Producten;
+use App\Models\OrderItem;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Auth;
@@ -136,9 +137,17 @@ class OrdersController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(orders $orders)
-    {
-        //
-    }
+
+        
+     public function destroy(Orders $order)
+{
+    
 }
+ }
+
+
+
+     
+    
+
     
