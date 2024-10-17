@@ -42,16 +42,15 @@
                 <tbody>
                     @foreach ($orderItems as $orderItem)
                     <tr>
-                        <th scope="row">{{ $orderItem->id }}</th>
+                        <th scope="row">{{ $orderItem->order_id }}</th>
                         <td>{{ optional($orderItem->product)->Name }}</td> 
-                        <td>{{ $orderItem->Productnumber }}</td> <!-- Product number from OrderItem -->
-                        <td>{{ optional($orderItem->order)->amount }}</td> <!-- Accessing amount from Order -->
+                        <td>{{ optional($orderItem->product)->Productnumber }}</td> <!-- Product number from OrderItem -->
+                        <td>{{ $orderItem->quantity }}</td> <!-- Accessing amount from Order -->
                         <td>{{ optional($orderItem->order->user)->name }}</td> <!-- User name from Order -->
-                        <td>{{ optional($orderItem->order->user)->address }}</td> <!-- User address -->
-                        <td>{{ optional($orderItem->order->user)->email }}</td> <!-- User email -->
+                        <td>{{ optional($orderItem->order->user)->adress }}</td>
                         <td>{{ optional($orderItem->order)->delivery_options }}</td>
                         <!-- Delivery options from Order -->
-                        <td>{{ optional($orderItem->order->user)->phone_number }}</td> <!-- User phone number -->
+                        <td>{{ optional($orderItem->order->user)->phonenumber }}</td> <!-- User phone number -->
                     </tr>
                     @endforeach
 
