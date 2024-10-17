@@ -986,7 +986,10 @@ div.cart{
     margin-top: 100px;
 }
 
-
+.shoppingcard_delete_btn{
+    background-color: transparent;
+    border: none;
+}
 
 .cart-container {
     max-width: 900px;
