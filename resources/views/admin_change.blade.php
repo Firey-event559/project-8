@@ -57,7 +57,7 @@
                                 method="POST" style="display: inline;">
                                 @csrf
                                 @method('DELETE')
-                                <input class="winkelmand" type="submit" value="Remove">
+                                <input class="winkelmand" type="submit" value="Verwijderen">
                             </form>
                         </div>
                     </div>

@@ -10,7 +10,7 @@
             <a href="{{ url('/admin_list') }}">Bestellingen</a>
         </div>
 
-        <div class="content1">
+        <div class="content4">
             <h2>Offertes</h2>
             <table class="table table-striped">
                 <thead>
@@ -39,6 +39,7 @@
                                     @csrf
                                     @method('DELETE')
                                     <input class="btn btn-primary" type="submit" value="Remove">
+                                    <input class="winkelmand" type="submit" value="Verwijderen">
                                 </form>
                             </td>
                         </tr>
