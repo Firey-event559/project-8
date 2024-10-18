@@ -48,9 +48,9 @@
                         </div>
                     </div>
 
+
+                    <!-- product dropdown-->
                     <div class="col-12 mb-4">
-                        <label class="visually-hidden" for="productSelect">Select Preference and Enter Product
-                            Number</label>
                         <div class="input-group">
                             <select data-mdb-select-init class="select form-control" id="productSelect"
                                 name="productSelect" required>
