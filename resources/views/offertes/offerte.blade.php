@@ -1,8 +1,14 @@
 <x-layout>
-    <main class="main-content">
+
+    <main class="d-flex">
+    @if(session('success'))
+            <div class="alert alert-success">{{ session('success') }}</div>
+        @endif
         <div class="form-container">
             
-           
+        <div class="offerte_img">
+        <img src="{{ Vite::asset('resources/assets/repair.png') }}"  alt="Laptop reparatie image"><br>
+        </div>
             <form class="registration-form" action="{{ url('offerte') }}" method="post">
                 <h2 class="reparatie-h2"> Reparatie Aanvragen</h2>
                 <div class="container-offerte">
@@ -36,10 +42,7 @@
             </div>
             
         </form>
-        <div class="offerte_img">
-        <img src="{{ Vite::asset('resources/assets/repair.png') }}"  alt="Laptop reparatie image"><br>
-        </div>
-       
+        
     </main>
 
 </x-layout>
