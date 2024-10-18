@@ -206,26 +206,18 @@ body {
     margin-bottom:20px ;
     
 }
-.offerte_button{
-    
-    border-style: solid;
-    background-color: #ff0400;
-    color: white;
-}
+
 .container-offerte{
     padding: 15px;
 }
 .registration-form{
-    padding-top: 15px;
+    
     padding-bottom: 15px;
 }
 .register_href {
     color: #000;
 }
-.reparatie-h2{
-    color: black;
-    margin-left:20px ;
-}
+
 
 .offerte_img{
     display: inline-block;
@@ -623,10 +615,10 @@ body.admin_list {
     color: white;
 }
 
-div.content1 {
+div.content4{
     margin-left: 200px;
     padding: 1px 16px;
-    height: 1000px;
+    
 }
 
 @media screen and (max-width: 700px) {

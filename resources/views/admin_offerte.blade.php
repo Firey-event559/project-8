@@ -10,7 +10,7 @@
             <a href="{{ url('/admin_list') }}">Bestellingen</a>
         </div>
 
-        <div class="content1">
+        <div class="content4">
             <h2>Offertes</h2>
             <table class="table table-striped">
                 <thead>

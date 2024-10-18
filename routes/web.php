@@ -22,7 +22,12 @@ Route::view('/services', 'services');
 Route::view('/offerte', 'offerte');
 Route::view('/contact', 'contact');
 Route::view('/signup', 'signup');
-Route::view('offertes.offerte', 'offertes.offerte');
+
+
+Route::get('offertes.offerte', function () {
+    $products = Producten::all();
+    return view('offertes.offerte', compact('products'));
+});
 
 
 Route::get('webshop', function () {
