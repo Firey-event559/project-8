@@ -53,8 +53,8 @@
                     <div class="col-12 mb-4">
                         <div class="input-group">
                             <select data-mdb-select-init class="select form-control" id="productSelect"
-                                name="productSelect" required>
-                                <option value="">Select Preference</option>
+                                name="productselect" required>
+                                <option value="{{ old('productselect') }}">Select Preference</option>
                                 @foreach($products as $product)
                                 <option value="{{ $product->id }}">{{ $product->Name }}</option>
                                 @endforeach

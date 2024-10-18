@@ -39,7 +39,6 @@
                                     @csrf
                                     @method('DELETE')
                                     <input class="btn btn-primary" type="submit" value="Remove">
-                                    <input class="winkelmand" type="submit" value="Verwijderen">
                                 </form>
                             </td>
                         </tr>

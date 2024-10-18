@@ -24,7 +24,7 @@ class OfferteController extends Controller
             'name' => 'required|max:255',
             'email' => 'required|email',
             'phonenumber' => 'required|numeric',
-            'productSelect' => 'required',
+            'productselect' => 'required',
             'details' => 'required|min:10',
         ]);
 
@@ -32,7 +32,7 @@ class OfferteController extends Controller
         $offerte->name = $validated['name'];
         $offerte->email = $validated['email'];
         $offerte->phonenumber = $validated['phonenumber'];
-        $offerte->productnumber = $validated['productSelect'];
+        $offerte->productnumber = $validated['productselect'];
         $offerte->details = $validated['details'];
         $offerte->save();
 
