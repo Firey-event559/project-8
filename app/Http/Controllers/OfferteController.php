@@ -24,7 +24,7 @@ class OfferteController extends Controller
             'name' => 'required|max:255',
             'email' => 'required|email',
             'phonenumber' => 'required|numeric',
-            'productnumber' => 'required',
+            'productSelect' => 'required',
             'details' => 'required|min:10',
         ]);
 
@@ -32,11 +32,11 @@ class OfferteController extends Controller
         $offerte->name = $validated['name'];
         $offerte->email = $validated['email'];
         $offerte->phonenumber = $validated['phonenumber'];
-        $offerte->productnumber = $validated['productnumber'];
+        $offerte->productnumber = $validated['productSelect'];
         $offerte->details = $validated['details'];
         $offerte->save();
 
-        return redirect('offertes.offerte')->with('success', 'Uw offerte is ontvangen!');
+       return redirect('offertes.offerte')->with('success', 'Uw offerte is ontvangen!');
 
 
 
