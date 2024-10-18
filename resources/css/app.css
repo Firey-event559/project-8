@@ -557,10 +557,11 @@ body.admin_body {
     color: white;
 }
 
-div.content1 {
+div.content2 {
     margin-left: 200px;
     padding: 1px 16px;
-    height: 1000px;
+    margin-bottom:50px ;
+ 
 }
 
 @media screen and (max-width: 700px) {
@@ -620,10 +621,10 @@ body.admin_list {
     color: white;
 }
 
-div.content1 {
+div.content3 {
     margin-left: 200px;
     padding: 1px 16px;
-    height: 1000px;
+    margin-top: 50px;
 }
 
 @media screen and (max-width: 700px) {
@@ -804,6 +805,7 @@ div.Product_webshop {
     padding-left:60px ;
     margin-right:60px;
     max-width: 300px;
+    margin-bottom:30px ;
 }
 
 img.Image_product {
@@ -963,8 +965,6 @@ background-color: #1A1E21;
 }
 
 input.edit{
-    background-color: rgb(196, 195, 195);
-    color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding: 5px 10px;
     width: 200px;
@@ -978,9 +978,7 @@ input.edit{
 
 }
 
-input.edit:hover {
-    background-color:#19cfcf; 
-}
+
 
 div.cart{
     margin-top: 100px;
@@ -1107,4 +1105,17 @@ div.change_container {
 
 .my-float{
 	margin-top:16px;
+}
+
+input.remove{
+    
+    padding: 5px 20px;
+    cursor: pointer;
+    
+}
+
+div.message{
+    width: 1300px;
+    margin-left: 70px;
+
 }

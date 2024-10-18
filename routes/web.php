@@ -24,11 +24,22 @@ Route::view('/contact', 'contact');
 Route::view('/signup', 'signup');
 Route::view('offertes.offerte', 'offertes.offerte');
 
+Route::get('offertes.offerte', function () {
+    $products = Producten::all();
+    return view('offertes.offerte', compact('products'));
+});
+
 
 Route::get('webshop', function () {
     $products = Producten::all();
     return view('webshop', compact('products'));
 });
+
+Route::get('products/{product}', function (Producten $product) {
+    return view('product_view', compact('product'));
+})->name('products');
+
+
 
 
 Route::get('orders', function () {
@@ -39,6 +50,8 @@ Route::get('orders', function () {
 // Success Views
 Route::view('offertes.offerte_succes', 'offertes.offerte_succes');
 Route::view('signup_succes', 'signup_succes');
+
+
 
 
  Route::group(['middleware' => ['web', 'auth']], function () {
@@ -94,6 +107,8 @@ Route::group(['middleware' => ['admin']], function () {
     Route::delete('/admin/products/{id}', [ProductenController::class, 'destroy'])->name('products.destroy');
     Route::delete('/offertes/{offerte}', [OfferteController::class, 'destroy'])->name('offerte.destroy');
 });
+
+
 
 
 

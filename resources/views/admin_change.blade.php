@@ -50,7 +50,8 @@
 
                             <form action="{{ route('edit', $product->id) }}" method="GET">
                                 <input type="hidden" name="id" value="{{ $product->id }}">
-                                <input class="edit" type="submit" value="Bewerken">
+                                <input class="edit btn btn-primary" type="submit" value="Bewerken">
+
                             </form>
                             <form id="delete-{{ $product->id }}" action="{{ route('products.destroy', $product->id) }}"
                                 method="POST" style="display: inline;">

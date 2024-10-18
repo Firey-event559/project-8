@@ -10,7 +10,7 @@
             <a href="{{ url('/admin_list') }}">Bestellingen</a>
         </div>
 
-        <div class="content1">
+        <div class="content3">
             <h2>Producten Bewerken</h2>
             <form action="{{ route('update', $product->id) }}" method="post" enctype="multipart/form-data"> 
                @csrf
@@ -82,5 +82,6 @@
                     value="Product Bewerken">
             </form>
 
+        </div>
     </body>
 </x-layout>

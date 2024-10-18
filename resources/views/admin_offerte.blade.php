@@ -38,7 +38,7 @@
                                     method="POST" style="display: inline;">
                                     @csrf
                                     @method('DELETE')
-                                    <input class="winkelmand" type="submit" value="Remove">
+                                    <input class="btn btn-primary" type="submit" value="Remove">
                                 </form>
                             </td>
                         </tr>

@@ -58,7 +58,7 @@
                             @csrf
                             @method('delete')
                             <input type="hidden" name="order_id" value="{{ $orderItem->order_id }}">
-                            <td><input type="submit" class="btn btn-primary" value="bestelling voltooid"></td>
+                            <td><input type="submit" class="btn btn-primary" value="bestelling voltooien"></td>
                         </form>
                     </tr>
                     @endforeach

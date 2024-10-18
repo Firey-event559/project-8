@@ -11,46 +11,40 @@
         @else
             <!-- Cart update form -->
             <form action="cart_update" method="POST">
-                @csrf
-                <table class="cart-table">
-                    <thead>
-                        <tr>
-                            <th>Product</th>
-                            <th>Prijs</th>
-                            <th>Aantal</th>
-                            <th>Subtotaal</th>
-                            <th>Verwijder</th> <!-- Added delete column -->
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach($cartitems as $item)
-                        <tr>
-                            <td>{{ $item->name }}</td>
-                            <td>€{{ number_format($item->price, 2, ',', '.') }}</td>
-                            <td>
-                                <input type="hidden" name="product_id[]" value="{{ $item->id }}">
-                                <input type="number" name="quantity[]" value="{{ $item->quantity }}" min="1" style="width: 60px;">
-                            </td>
-                            <td>€{{ number_format($item->quantity * $item->price, 2, ',', '.') }}</td>
-                            <td>
-                                
-                                {{-- <form action="{{ route('cart_delete', $item->id) }}" method="POST" style="display:inline;"> --}}
-                                    <form>
-                                    @csrf
-                                    @method('DELETE')
-                                    <button class="shoppingcard_delete_btn">
-                                        <img src="{{ Vite::asset('resources/assets/trash3.svg') }}"  alt="Delete button"><br>
+    @csrf
+    <table class="cart-table">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Prijs</th>
+                <th>Aantal</th>
+                <th>Subtotaal</th>
+                <th>Verwijder</th> <!-- Delete column -->
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($cartitems as $item)
+            <tr>
+                <td>{{ $item->name }}</td>
+                <td>€{{ number_format($item->price, 2, ',', '.') }}</td>
+                <td>
+                    <input type="hidden" name="product_id[]" value="{{ $item->id }}">
+                    <input type="number" name="quantity[]" value="{{ $item->quantity }}" min="1" style="width: 60px;">
+                </td>
+                <td>€{{ number_format($item->quantity * $item->price, 2, ',', '.') }}</td>
+                <td>
+                   
+                    <button type="button" class="shoppingcard_delete_btn" onclick="deleteItem({{ $item->id }})">
+                        <img src="{{ Vite::asset('resources/assets/trash3.svg') }}" alt="Delete button"><br>
+                    </button>
+                </td>
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
 
-                                    </button>
-                                </form>
-                            </td>
-                        </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-
-                <button type="submit" class="update-cart-btn">Winkelwagentje updaten</button>
-            </form>
+    <button type="submit" class="update-cart-btn">Winkelwagentje updaten</button>
+</form>
 
             <!-- Create Order Form -->
             <form action="Create_order" method="POST">

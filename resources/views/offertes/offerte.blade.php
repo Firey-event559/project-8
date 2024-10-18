@@ -19,7 +19,7 @@
                 @error('phonenumber')
                 <span style="color: red;">{{$message}}</span> @enderror
                 <input type="text" name="phonenumber" id="telefoonnummer" placeholder="Telefoonnummer" value="{{ old('phonenumber') }}"  required><br>
-                <label for="serienummer"></label>
+                
                 @error('serialnumber')
                 <span style="color: red;">{{$message}}</span> @enderror
                 <input type="text" name="productnumber" id="productnumber"placeholder="Productnummer" value="{{ old('productnumber') }}"  required><br>
