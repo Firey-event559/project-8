@@ -7,6 +7,7 @@ use App\Http\Controllers\ProductenController;
 use App\Http\Controllers\OrdersController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\OrderItemController;
+use App\Http\Controllers\ItNieuwsController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Producten;
 use App\Models\Offerte; 
@@ -104,10 +105,17 @@ Route::group(['middleware' => ['admin']], function () {
         return view('admin_product_update', compact('product'));
     })->name('edit');
 
+    Route::get('admin_it-nieuws', function () {
+        return view('admin_it-nieuws');
+    });
+
+    Route::post('insert_it_nieuws', [ItNieuwsController::class, 'Insert_it_nieuws']);
     
     Route::patch('update/{product}', [ProductenController::class, 'Updateproduct'])->name('update');
     Route::delete('/admin/products/{id}', [ProductenController::class, 'destroy'])->name('products.destroy');
     Route::delete('/offertes/{offerte}', [OfferteController::class, 'destroy'])->name('offerte.destroy');
+    Route::post('productinsert', [ProductenController::class, 'Insertproduct']);
+
 });
 
 
@@ -116,5 +124,4 @@ Route::group(['middleware' => ['admin']], function () {
 
 Route::post('signup', [UserController::class, 'Insertaccount']);
 Route::post('login', [LoginController::class, 'Selectaccount']);
-Route::post('productinsert', [ProductenController::class, 'Insertproduct']);
 Route::post('offerte', [OfferteController::class, 'Insertofferte']);

@@ -24,6 +24,7 @@
             <a href="{{ url('/admin_offerte') }}">Offertes inzien </a>
             <a href="{{ url('/admin_change') }}">Producten bewerken</a>
             <a href="{{ url('/admin_list') }}">Bestellingen</a>
+            <a href="{{ url('/admin_it-nieuws') }}">IT Nieuws</a>
         </div>
 
         <div class="content2">
