@@ -1,6 +1,13 @@
 <x-layout>
     <div class="cart-container">
+
+    @if(session('success'))
+            <div class="alert alert-success">{{ session('success') }}</div>
+        @endif
+        
         <h1>Winkelwagentje</h1>
+
+        
 
         @if(session('error'))
             <div class="alert alert-danger">{{ session('error') }}</div>
@@ -15,16 +22,21 @@
     <table class="cart-table">
         <thead>
             <tr>
+            <th>Verwijder</th>
                 <th>Product</th>
                 <th>Prijs</th>
                 <th>Aantal</th>
                 <th>Subtotaal</th>
-                <th>Verwijder</th> <!-- Delete column -->
             </tr>
         </thead>
         <tbody>
             @foreach($cartitems as $item)
             <tr>
+            <td>
+            <button class="shoppingcard_delete_btn" type="submit" name="action" value="delete">
+                        <img src="{{ Vite::asset('resources/assets/trash3.svg') }}" alt="Delete button"><br>
+                    </button>
+                    </td>
                 <td>{{ $item->name }}</td>
                 <td>€{{ number_format($item->price, 2, ',', '.') }}</td>
                 <td>
@@ -32,12 +44,8 @@
                     <input type="number" name="quantity[]" value="{{ $item->quantity }}" min="1" style="width: 60px;">
                 </td>
                 <td>€{{ number_format($item->quantity * $item->price, 2, ',', '.') }}</td>
-                <td>
-                   
-                    <button type="button" class="shoppingcard_delete_btn" onclick="deleteItem({{ $item->id }})">
-                        <img src="{{ Vite::asset('resources/assets/trash3.svg') }}" alt="Delete button"><br>
-                    </button>
-                </td>
+              
+                
             </tr>
             @endforeach
         </tbody>

@@ -64,12 +64,9 @@ Route::view('signup_succes', 'signup_succes');
 
     Route::get('/shopping_cart', [CartController::class, 'index'])->name('shopping_cart');
     Route::post('add_to_cart', [CartController::class, 'Add_to_cart']);
-    Route::post('cart_update', [CartController::class, 'update_cart']);
+    Route::post('cart_update', [CartController::class, 'Update_cart']);
     Route::post('Create_order', [OrdersController::class, 'Createorder']);
     
-    Route::get('order_succes', function () {
-        return view('order_succes');
-    })->name('order_succes');
 
     Route::get('user_change/{user}', [UserController::class, 'showEditForm'])->name('user_change');
     Route::put('user_change/{user}', [UserController::class, 'Updateaccount'])->name('Updateaccount');

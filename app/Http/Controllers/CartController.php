@@ -55,28 +55,38 @@ class CartController extends Controller
         }
     }
 
-    public function update_cart(Request $request)
-{
-    // Validate incoming request
-    $request->validate([
-        'product_id' => 'required|array',
-        'product_id.*' => 'integer',
-        'quantity' => 'required|array',
-        'quantity.*' => 'integer|min:1',
-    ]);
-
-    // Update the quantity of the products in the cart
-    foreach ($request->product_id as $index => $productId) {
-        $quantity = $request->quantity[$index];
-        Cart::session(Auth::id())->update($productId, array(
-            'quantity' => array(
-                'relative' => false,
-                'value' => $quantity,
-            ),
-        ));
+    
+    public function Update_cart(Request $request)
+    {
+        // Check if the delete action is triggered
+        if ($request->input('action') == 'delete') {
+            $productId = $request->input('product_id')[0];
+            Cart::session(Auth::id())->remove($productId);
+            
+            // Redirect back after deletion
+            return redirect()->back();
+        }
+    
+        // Validate incoming request for updating cart
+        $request->validate([
+            'product_id' => 'required|array',
+            'product_id.*' => 'integer',
+            'quantity' => 'required|array',
+            'quantity.*' => 'integer|min:1',
+        ]);
+    
+        // Update the quantity of the products in the cart
+        foreach ($request->product_id as $index => $productId) {
+            $quantity = $request->quantity[$index];
+            Cart::session(Auth::id())->update($productId, array(
+                'quantity' => array(
+                    'relative' => false,
+                    'value' => $quantity,
+                ),
+            ));
+        }
+    
+        // Redirect back to shopping cart after update
+        return redirect('shopping_cart');
     }
-
-    // Redirect back to shopping cart
-    return redirect('shopping_cart');
- }
-}
+}    
