@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\producten;
-use App\Http\Controllers\CartController;
 use Darryldecode\Cart\Facades\CartFacade as Cart;
 use Illuminate\Support\Facades\Auth;
 
@@ -16,18 +15,17 @@ class CartController extends Controller
 
         if (!Auth::check()) {
             return redirect('login');
-        }else{
+        } else {
             // Get the cart items associated with the logged-in user
             $cartitems = Cart::session(Auth::id())->getContent();
             $products = Producten::all();
-            
+
             // Pass the cart items to the 'shopping_cart' view
             return view('shopping_cart', compact('cartitems', 'products'));
         }
-
     }
 
-    
+
 
     // Add a product to the user's cart
     public function Add_to_cart(Request $request)
@@ -55,18 +53,18 @@ class CartController extends Controller
         }
     }
 
-    
+
     public function Update_cart(Request $request)
     {
         // Check if the delete action is triggered
         if ($request->input('action') == 'delete') {
             $productId = $request->input('product_id')[0];
             Cart::session(Auth::id())->remove($productId);
-            
+
             // Redirect back after deletion
             return redirect()->back();
         }
-    
+
         // Validate incoming request for updating cart
         $request->validate([
             'product_id' => 'required|array',
@@ -74,7 +72,7 @@ class CartController extends Controller
             'quantity' => 'required|array',
             'quantity.*' => 'integer|min:1',
         ]);
-    
+
         // Update the quantity of the products in the cart
         foreach ($request->product_id as $index => $productId) {
             $quantity = $request->quantity[$index];
@@ -85,8 +83,8 @@ class CartController extends Controller
                 ),
             ));
         }
-    
+
         // Redirect back to shopping cart after update
         return redirect('shopping_cart');
     }
-}    
+}
