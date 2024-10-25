@@ -16,14 +16,24 @@ use App\Models\OrderItem;
 use App\Models\it_nieuws;
 
 // Public Routes
-Route::view('/', 'index');
-Route::view('/index', 'index');
+
+
 Route::view('/login_signup', 'login_signup');
 Route::view('/login', 'login')->name('login');
 Route::view('/services', 'services');
 Route::view('/offerte', 'offerte');
 Route::view('/contact', 'contact');
 Route::view('/signup', 'signup');
+
+Route::get('/', function () {
+    $it_nieuws = it_nieuws::all();
+    return view('index', compact('it_nieuws'));
+});
+
+route::get('index', function () {
+    $it_nieuws = it_nieuws::all();
+    return view('index', compact('it_nieuws'));
+});
 
 
 Route::get('offertes.offerte', function () {
