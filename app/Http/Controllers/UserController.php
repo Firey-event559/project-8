@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\ValidationException;
 
 class UserController extends Controller
 {
@@ -45,19 +46,27 @@ class UserController extends Controller
         $validated = $request->validate([
             'name' => 'required|max:255|string|min:2',
             'phonenumber' => 'required|numeric',
-            'email' => '|email|unique:users,email',
             'adress' => 'required|string|min:2',
+            'password' => 'nullable|string|min:8|confirmed', 
         ]);
 
-    
+        if ($request->filled('old_password')) {
+            if (!Hash::check($request->old_password, $user->password)) {
+                // validation error if password doesn't ma
+                throw ValidationException::withMessages([
+                    'old_password' => ['Het oude wachtwoord is onjuist.']
+                ]);
+            }
+        }
         // Update the user properties
         $user->name = $validated['name'];
         $user->phonenumber = $validated['phonenumber'];
         $user->adress = $validated['adress'];
-        $user->email = $validated['email'];
-        
+        if ($request->filled('password')) {
+        $user->password = Hash::make($request->password);
+        }
         // Save changes to the database
-        $user->save(); // This should update the existing record
+        $user->save();
     
         // Log after saving to verify it's updated
         \Log::info('user after update:', $user->toArray());
