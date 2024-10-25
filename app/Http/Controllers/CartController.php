@@ -28,7 +28,7 @@ class CartController extends Controller
 
 
     // Add a product to the user's cart
-    public function Add_to_cart(Request $request)
+    public function Addtocart(Request $request)
     {
         // Retrieve the product from the database by its ID
         $product = Producten::find($request->product_id);
@@ -54,7 +54,7 @@ class CartController extends Controller
     }
 
 
-    public function Update_cart(Request $request)
+    public function Updatecart(Request $request)
     {
         // Check if the delete action is triggered
         if ($request->input('action') == 'delete') {

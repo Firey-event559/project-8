@@ -23,22 +23,22 @@ class UserController extends Controller
             'password' => 'required | min:6',
         ]);
 
-     // Create a new user
-   $user = new User();
-   $user->name = $validated['name'];
-   $user->phonenumber = $validated['phonenumber'];
-   $user->email = $validated['email'];
-   $user->adress = $validated['adress'];
-   $user->password = Hash::make($validated['password']);
-   $user->role = 1;
-   $user->save();
+        // Create a new user
+        $user = new User();
+        $user->name = $validated['name'];
+        $user->phonenumber = $validated['phonenumber'];
+        $user->email = $validated['email'];
+        $user->adress = $validated['adress'];
+        $user->password = Hash::make($validated['password']);
+        $user->role = 1;
+        $user->save();
 
-   return redirect('signup_succes');
+        return redirect('signup_succes');
 
     }
 
-    
-   public function Updateaccount(Request $request, User $user)
+
+    public function Updateaccount(Request $request, User $user)
     {
 
 
@@ -47,7 +47,7 @@ class UserController extends Controller
             'name' => 'required|max:255|string|min:2',
             'phonenumber' => 'required|numeric',
             'adress' => 'required|string|min:2',
-            'password' => 'nullable|string|min:8|confirmed', 
+            'password' => 'nullable|string|min:8|confirmed',
         ]);
 
         if ($request->filled('old_password')) {
@@ -63,14 +63,14 @@ class UserController extends Controller
         $user->phonenumber = $validated['phonenumber'];
         $user->adress = $validated['adress'];
         if ($request->filled('password')) {
-        $user->password = Hash::make($request->password);
+            $user->password = Hash::make($request->password);
         }
         // Save changes to the database
         $user->save();
-    
+
         // Log after saving to verify it's updated
         \Log::info('user after update:', $user->toArray());
-    
+
         return redirect('index')->with('success', ' je accountgegevens zijn succesvol bijgewerkt');
     }
 

@@ -35,26 +35,23 @@
                 <div class="alert alert-success" role="alert">
                     {{ session('success') }}
                 </div>
-
-
             @endif
 
             @foreach($products as $product)
-
-
                 <div class="Product_webshop">
                     <div class="Product_info">
-                        <img src="{{ $product->Image }}" class="Image_product" alt="foto product">
+                        <img src="{{ asset($product->Image) }}" class="Image_product" alt="foto product">
                         <div class="Product_details">
                             <h5 class="product_name">{{ $product->Name }}</h5>
                             <p class="product_price">€ {{ $product->Price }}</p>
                             <p>{{ $product->Description }}</p>
 
-                            <form action="{{ route('edit', $product->id) }}" method="GET">
+                            <form action="{{ route('edit', $product->id) }}" method="POST">
+                                @csrf
                                 <input type="hidden" name="id" value="{{ $product->id }}">
                                 <input class="edit btn btn-primary" type="submit" value="Bewerken">
-
                             </form>
+
                             <form id="delete-{{ $product->id }}" action="{{ route('products.destroy', $product->id) }}"
                                 method="POST" style="display: inline;">
                                 @csrf
@@ -64,15 +61,8 @@
                         </div>
                     </div>
                 </div>
-
             @endforeach
-
         </div>
-
-
-
-
-    </body>
 
     </html>
 </x-layout>
