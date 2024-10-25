@@ -112,27 +112,27 @@
 
             </div>
             <div class="img-service-page">
-           
-            <img src="{{ Vite::asset('resources/assets/certificaat2.png') }}"  alt="Laptop reparatie image"><br>
-            <img src="{{ Vite::asset('resources/assets/Certificaat1.png') }}"  alt="Laptop reparatie image"><br>
-            <img src="{{ Vite::asset('resources/assets/Certificaat3.png') }}"  alt="Laptop reparatie image"><br>
-        </div>
+
+                <img src="{{ Vite::asset('resources/assets/certificaat2.png') }}" alt="Laptop reparatie image"><br>
+                <img src="{{ Vite::asset('resources/assets/Certificaat1.png') }}" alt="Laptop reparatie image"><br>
+                <img src="{{ Vite::asset('resources/assets/Certificaat3.png') }}" alt="Laptop reparatie image"><br>
+            </div>
 
         </main>
         <script>
-        const accordionItems = document.querySelectorAll('.accordion-item');
+            const accordionItems = document.querySelectorAll('.accordion-item');
 
 
-        accordionItems.forEach((item) => {
-            const accordionHeader = item.querySelector('.accordion-header');
-            const accordionCollapse = item.querySelector('.accordion-collapse');
+            accordionItems.forEach((item) => {
+                const accordionHeader = item.querySelector('.accordion-header');
+                const accordionCollapse = item.querySelector('.accordion-collapse');
 
 
-            accordionHeader.addEventListener('click', () => {
+                accordionHeader.addEventListener('click', () => {
 
-                accordionCollapse.classList.toggle('show');
+                    accordionCollapse.classList.toggle('show');
+                });
             });
-        });
         </script>
 
     </body>

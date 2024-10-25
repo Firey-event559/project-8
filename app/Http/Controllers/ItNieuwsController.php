@@ -92,7 +92,7 @@ class ItNieuwsController extends Controller
      */
     public function update(Updateit_nieuwsRequest $request, it_nieuws $it_nieuws)
     {
-       
+
     }
 
 
@@ -100,18 +100,18 @@ class ItNieuwsController extends Controller
     {
         // Find the it_nieuw instance by ID
         $it_nieuw = it_nieuws::findOrFail($id);
-    
+
         // Get the image path
         $imagepath = public_path($it_nieuw->Image);
-    
+
         // Check if the image file exists and delete it
         if (File::exists($imagepath)) {
             File::delete($imagepath);
         }
-    
+
         // Delete the it_nieuw instance
         $it_nieuw->delete();
-    
+
         // Redirect to the appropriate route with a success message
         return redirect('admin_it-nieuws-verwijder')->with('success', 'Nieuwsbericht is verwijderd!');
     }

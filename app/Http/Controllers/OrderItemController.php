@@ -61,20 +61,20 @@ class OrderItemController extends Controller
      */
     public function destroy(string $order_id)
     {
-      
+
         $orderItems = OrderItem::where('order_id', $order_id);
-    
+
         // Check if any order items exist
         if ($orderItems->exists()) {
             // Delete all associated OrderItems
             $orderItems->delete();
         }
-    
+
         // Optionally, delete the Order itself if needed
-         Orders::find($order_id)->delete();
-    
-       return redirect()->back()->with('success', 'jouw bestelling is voltooid');                                        
-      
+        Orders::find($order_id)->delete();
+
+        return redirect()->back()->with('success', 'jouw bestelling is voltooid');
+
     }
-    
+
 }

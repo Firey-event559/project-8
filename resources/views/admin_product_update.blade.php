@@ -14,9 +14,9 @@
 
         <div class="content3">
             <h2>Producten Bewerken</h2>
-            <form action="{{ route('update', $product->id) }}" method="post" enctype="multipart/form-data"> 
-               @csrf
-               @method('patch')
+            <form action="{{ route('update', $product->id) }}" method="post" enctype="multipart/form-data">
+                @csrf
+                @method('patch')
                 <div class="row mb-4">
                     <div class="col">
                         <div data-mdb-input-init class="form-outline">
@@ -24,7 +24,7 @@
                             <input type="text" id="form6Example1" class="form-control" name="Name"
                                 value="{{ $product->Name }}" required />
                             @error('Name')
-                            <span style="color: red;">{{$message}}</span>
+                                <span style="color: red;">{{$message}}</span>
                             @enderror
                         </div>
                     </div>
@@ -34,7 +34,7 @@
                             <input type="text" id="form6Example2" class="form-control" name="Productnumber"
                                 value="{{ $product->Productnumber }}" required />
                             @error('Productnumber')
-                            <span style="color: red;">{{$message}}</span>
+                                <span style="color: red;">{{$message}}</span>
                             @enderror
                         </div>
                     </div>
@@ -46,7 +46,7 @@
                     <input type="number" id="form6Example6" class="form-control" name="Stock"
                         value="{{ $product->Stock }}" required />
                     @error('Stock')
-                    <span style="color: red;">{{$message}}</span>
+                        <span style="color: red;">{{$message}}</span>
                     @enderror
                 </div>
 
@@ -55,7 +55,7 @@
                     <input type="number" id="form6Example6" class="form-control" name="Price"
                         value="{{ $product->Price }}" required />
                     @error('Price')
-                    <span style="color: red;">{{$message}}</span>
+                        <span style="color: red;">{{$message}}</span>
                     @enderror
                 </div>
 
@@ -65,7 +65,7 @@
                     <textarea name="Description" class="form-control" id="form6Example7" rows="4"
                         required>{{ old('Description', $product->Description) }}</textarea>
                     @error('Description')
-                    <span style="color: red;">{{$message}}</span>
+                        <span style="color: red;">{{$message}}</span>
                     @enderror
                 </div>
 
@@ -74,7 +74,7 @@
                         <input name="Image" type="file" class="form-control-file" id="exampleFormControlFile1"
                             value="{{ $product->Image }}">
                         @error('Image')
-                        <span style="color: red;">{{$message}}</span>
+                            <span style="color: red;">{{$message}}</span>
                         @enderror
                     </div>
                 </div>

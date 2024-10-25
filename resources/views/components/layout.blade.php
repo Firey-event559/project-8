@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Auth;
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-        
+
         </script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <title>Uneed-IT</title>
 </head>
 
@@ -29,42 +29,45 @@ use Illuminate\Support\Facades\Auth;
         <div id="logoptions">
             <ul>
                 @guest
-                <li class="redc"><a href="{{ url('/webshop') }}">Webshop</a></li>
-                <li class="redc"><a href="{{ url('/offertes.offerte') }}">Reparatie</a></li>
-                <li class="redc"><a href="{{ url('/services') }}">Service</a></li>
-                <li class="redc"><a href="{{ url('/login') }}">Account</a></li>
-                <a href="{{url('shopping_cart')}}"><img class="shopping_cart" src="{{ Vite::asset('resources/assets/cart.svg') }}"></a>
+                    <li class="redc"><a href="{{ url('/webshop') }}">Webshop</a></li>
+                    <li class="redc"><a href="{{ url('/offertes.offerte') }}">Reparatie</a></li>
+                    <li class="redc"><a href="{{ url('/services') }}">Service</a></li>
+                    <li class="redc"><a href="{{ url('/login') }}">Account</a></li>
+                    <a href="{{url('shopping_cart')}}"><img class="shopping_cart"
+                            src="{{ Vite::asset('resources/assets/cart.svg') }}"></a>
                 @endguest
 
                 @auth
 
-                @if (Auth::user()->isUser() || Auth::user()->isAdmin())
-                <li class="redc"><a href="{{ url('/webshop') }}">Webshop</a></li>
-                <li class="redc"><a href="{{ url('offertes.offerte') }}">Reparatie</a></li>
-                <li class="redc"><a href="{{ url('/services') }}">Service</a></li>
-                <a href="{{url('shopping_cart')}}"><img class="shopping_cart" src="{{ Vite::asset('resources/assets/cart.svg') }}"></a>
-                <div class="profile-container">
-                    <img class="person_circle" src="{{ Vite::asset('resources/assets/person-circle.svg') }}"
-                        alt="Profile">
-                        
-                        
-
-                        <div class="account_info">
-                     <p class="button_uitloggen">{{ Auth::user()->name }}</p>
-                     <p class="button_uitloggen"><a class="user_bewerken" href="{{ route('user_change', Auth::user()->id) }}">user bewerken</a></p>
-    <form method="POST" action="layout" class="signout-form">
-        @csrf
-        <button type="submit" class="button_uitloggen">Uitloggen</button>
-    </form>
-</div>
-                </div>
+                    @if (Auth::user()->isUser() || Auth::user()->isAdmin())
+                        <li class="redc"><a href="{{ url('/webshop') }}">Webshop</a></li>
+                        <li class="redc"><a href="{{ url('offertes.offerte') }}">Reparatie</a></li>
+                        <li class="redc"><a href="{{ url('/services') }}">Service</a></li>
+                        <a href="{{url('shopping_cart')}}"><img class="shopping_cart"
+                                src="{{ Vite::asset('resources/assets/cart.svg') }}"></a>
+                        <div class="profile-container">
+                            <img class="person_circle" src="{{ Vite::asset('resources/assets/person-circle.svg') }}"
+                                alt="Profile">
 
 
-                @endif
 
-                @if (Auth::user()->isAdmin())
-                <a href="{{ url('/admin') }}"><img src="{{ Vite::asset('resources/assets/person-gear.svg') }}"></a>
-                @endif
+                            <div class="account_info">
+                                <p class="button_uitloggen">{{ Auth::user()->name }}</p>
+                                <p class="button_uitloggen"><a class="user_bewerken"
+                                        href="{{ route('user_change', Auth::user()->id) }}">user bewerken</a></p>
+                                <form method="POST" action="layout" class="signout-form">
+                                    @csrf
+                                    <button type="submit" class="button_uitloggen">Uitloggen</button>
+                                </form>
+                            </div>
+                        </div>
+
+
+                    @endif
+
+                    @if (Auth::user()->isAdmin())
+                        <a href="{{ url('/admin') }}"><img src="{{ Vite::asset('resources/assets/person-gear.svg') }}"></a>
+                    @endif
 
                 @endauth
             </ul>
@@ -75,8 +78,8 @@ use Illuminate\Support\Facades\Auth;
 
     {{ $slot }}
     <a href="https://business.whatsapp.com/developers/developer-hub" class="float" target="_blank">
-<i class="fa fa-whatsapp my-float"></i>
-</a>
+        <i class="fa fa-whatsapp my-float"></i>
+    </a>
 
 
     <footer class="bg-dark text-white text-center text-lg-center" id="footer">
@@ -121,4 +124,3 @@ use Illuminate\Support\Facades\Auth;
         </div>
         <!-- Copyright -->
     </footer>
-

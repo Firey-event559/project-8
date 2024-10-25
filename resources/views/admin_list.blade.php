@@ -17,9 +17,9 @@
             <h2>Bestellingen</h2>
             <table class="table table-striped">
                 <thead>
-                @if(session('success'))
-            <div class="alert alert-success">{{ session('success') }}</div>
-        @endif
+                    @if(session('success'))
+                        <div class="alert alert-success">{{ session('success') }}</div>
+                    @endif
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Productnaam</th>
@@ -33,23 +33,23 @@
                 </thead>
                 <tbody>
                     @foreach ($orderItems as $orderItem)
-                    <tr>
-                        <th scope="row">{{ $orderItem->order_id }}</th>
-                        <td>{{ optional($orderItem->product)->Name }}</td> 
-                        <td>{{ optional($orderItem->product)->Productnumber }}</td>
-                        <td>{{ $orderItem->quantity }}</td> 
-                        <td>{{ optional($orderItem->order->user)->name }}</td> 
-                        <td>{{ optional($orderItem->order->user)->adress }}</td>
-                        <td>{{ optional($orderItem->order)->delivery_options }}</td>
-                        <td>{{ optional($orderItem->order->user)->phonenumber }}</td> 
+                        <tr>
+                            <th scope="row">{{ $orderItem->order_id }}</th>
+                            <td>{{ optional($orderItem->product)->Name }}</td>
+                            <td>{{ optional($orderItem->product)->Productnumber }}</td>
+                            <td>{{ $orderItem->quantity }}</td>
+                            <td>{{ optional($orderItem->order->user)->name }}</td>
+                            <td>{{ optional($orderItem->order->user)->adress }}</td>
+                            <td>{{ optional($orderItem->order)->delivery_options }}</td>
+                            <td>{{ optional($orderItem->order->user)->phonenumber }}</td>
 
-                        <form action="{{ route('shipping', $orderItem->order) }}" method="post">
-                            @csrf
-                            @method('delete')
-                            <input type="hidden" name="order_id" value="{{ $orderItem->order_id }}">
-                            <td><input type="submit" class="btn btn-primary" value="bestelling voltooien"></td>
-                        </form>
-                    </tr>
+                            <form action="{{ route('shipping', $orderItem->order) }}" method="post">
+                                @csrf
+                                @method('delete')
+                                <input type="hidden" name="order_id" value="{{ $orderItem->order_id }}">
+                                <td><input type="submit" class="btn btn-primary" value="bestelling voltooien"></td>
+                            </form>
+                        </tr>
                     @endforeach
 
 
@@ -60,5 +60,5 @@
 
     </body>
 
-    
+
 </x-layout>

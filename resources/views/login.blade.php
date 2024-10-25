@@ -7,9 +7,9 @@
                     <h2 class="form-title">Login</h2>
 
                     @if(session('error'))
-                <div class=" alert alert-danger" role="alert">
-                    {{ session('error') }}
-                </div> @endif
+                        <div class=" alert alert-danger" role="alert">
+                            {{ session('error') }}
+                    </div> @endif
 
                     @csrf
                     <label for="email"></label>

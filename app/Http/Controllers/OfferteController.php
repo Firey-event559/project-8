@@ -17,8 +17,9 @@ class OfferteController extends Controller
         //
     }
 
-    
-    public function Insertofferte(Request $request){
+
+    public function Insertofferte(Request $request)
+    {
 
         $validated = $request->validate([
             'name' => 'required|max:255',
@@ -36,11 +37,11 @@ class OfferteController extends Controller
         $offerte->details = $validated['details'];
         $offerte->save();
 
-       return redirect('offertes.offerte')->with('success', 'Uw offerte is ontvangen!');
+        return redirect('offertes.offerte')->with('success', 'Uw offerte is ontvangen!');
 
 
 
-       
+
     }
 
     /**
@@ -79,18 +80,18 @@ class OfferteController extends Controller
      * Remove the specified resource from storage.
      */
     public function destroy(offerte $offerte)
-{
-    // Check if the product exists
-    if (!$offerte) {
-        return redirect()->back()->with('error', 'Product niet gevonden.');
+    {
+        // Check if the product exists
+        if (!$offerte) {
+            return redirect()->back()->with('error', 'Product niet gevonden.');
+        }
+
+        // Delete the product
+        $offerte->delete();
+
+        // Redirect back with success message
+        return redirect('admin_offerte')->with('success', 'Product verwijderd.');
     }
-
-    // Delete the product
-    $offerte->delete();
-
-    // Redirect back with success message
-    return redirect('admin_offerte')->with('success', 'Product verwijderd.');
-}
 
 
 
