@@ -9,6 +9,7 @@
             <a href="{{ url('/admin_change') }}">Producten bewerken</a>
             <a href="{{ url('/admin_list') }}">Bestellingen</a>
             <a href="{{ url('/admin_it-nieuws') }}">IT Nieuws</a>
+            <a href="{{ url('/admin_it-nieuws-verwijder') }}">IT Nieuws verwijderen</a>
         </div>
 
         <div class="content4">

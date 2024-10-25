@@ -13,6 +13,7 @@ use App\Models\Producten;
 use App\Models\Offerte; 
 use App\Models\Orders;   
 use App\Models\OrderItem;
+use App\Models\it_nieuws;
 
 // Public Routes
 Route::view('/', 'index');
@@ -94,6 +95,11 @@ Route::group(['middleware' => ['admin']], function () {
     Route::get('admin_list', function () {
         $orderItems = OrderItem::with(['product', 'order.user'])->get();
         return view('admin_list', compact('orderItems'));
+    });
+
+    Route::get('admin_it-nieuws-verwijder', function () {
+        $it_nieuws = it_nieuws::all();
+        return view('admin_it-nieuws-verwijder', compact('it_nieuws'));
     });
 
    
