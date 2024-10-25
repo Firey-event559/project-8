@@ -1,5 +1,19 @@
 <x-layout>
-<img style="margin-top:100px;" src="{{ Vite::asset('resources/assets/bannerlaptop.jpeg') }}" alt="webshopbanner" width="100%" ><br>
+<main id="mainhome" style="padding-bottom: 0px;">
+    <div class="p-5 bg-image" style="
+     background-image: url('{{ Vite::asset('resources/assets/laptopbanner.avif') }}');
+    ">
+      <div class="mask row p-5">
+        <div class="d-flex align-items-stretch h-10 p-5">
+          <div class="text-white">
+          <img src="{{ Vite::asset('resources/assets/copilot.avif') }}">
+            <h4 class="mb-3">Een nieuw tijdperk van AI-aangedreven innovatie begint</h4>
+            <a data-mdb-ripple-init class="btn btn-light btn-lg" role="button" href="#section1">Koop nu</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main><br>
     <h1 class="Product_webshop_tekst">Producten</h1>
     
 
@@ -16,7 +30,7 @@
     @foreach ($products as $product)
 
 
-        <div class="Product_webshop">
+        <div class="Product_webshop" id="section1">
             <div class="Product_info">
                 <a href="{{ route('products', $product->id) }}"><img src="{{ $product->Image }}" class="Image_product"
                         alt="foto product"></a>

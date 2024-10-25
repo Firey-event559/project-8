@@ -21,19 +21,28 @@
                     @error('phonenumber')
                         <div class="text-danger">{{ $message }}</div>
                     @enderror
-
-                    <label for="email">Email</label>
-                    <input type="text" id="email" name="email" placeholder="Email" value="{{ old('email', $user->email) }}" required>
-                    @error('email')
-                        <div class="text-danger">{{ $message }}</div>
-                    @enderror
-                
-
-
-                
                     <label for="adress">Adres</label>
                     <input type="text"  id="address" name="adress"  placeholder="Adres" value="{{ old('adress', $user->adress) }}" required>
                     @error('adress')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
+
+                    <label for="old_password">Oud wachtwoord</label>
+                    <input type="password" id="old_password" name="old_password">
+                    @error('old_password')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
+
+                    <label for="password">Nieuw wachtwoord</label>
+                    <input type="password" id="password" name="password" >
+                    @error('password')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
+
+            
+                    <label for="password_confirmation">Bevestig wachtwoord</label>
+                    <input type="password" id="password_confirmation" name="password_confirmation" >
+                    @error('password_confirmation')
                         <div class="text-danger">{{ $message }}</div>
                     @enderror
                 
