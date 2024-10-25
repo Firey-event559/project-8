@@ -26,7 +26,7 @@
                 <a href="{{ url('/admin_it-nieuws-verwijder', $it_nieuw->id) }}" class="btn btn-danger">verwijderen</a>
             </div>
         </div>
-    @end$oreach
+    @endforeach
 </div>
 </body>
 
