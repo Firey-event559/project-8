@@ -3,8 +3,6 @@
   <main id="mainhome">
     <div class="p-5 bg-image" style="
      background-image: url('{{ Vite::asset('resources/assets/banner.png') }}');
-      
-      
     ">
       <div class="mask row p-5">
         <div class="d-flex align-items-stretch h-10 p-5">

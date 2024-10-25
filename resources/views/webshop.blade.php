@@ -1,5 +1,5 @@
 <x-layout>
-<img src="{{ Vite::asset('resources/assets/bannercolor.jpg') }}" alt="webshopbanner" width="100%" ><br>
+<img style="margin-top:100px;" src="{{ Vite::asset('resources/assets/bannerlaptop.jpeg') }}" alt="webshopbanner" width="100%" ><br>
     <h1 class="Product_webshop_tekst">Producten</h1>
     
 
