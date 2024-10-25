@@ -165,7 +165,6 @@
                 <img src="{{ $it_nieuw->Image }}" class="product-image" alt="Product Image">
                 <h5 class="card-title">{{ $it_nieuw->title }}</h5>
                 <p class="card-description limited-lines">{{ $it_nieuw->description }}</p>
-                <a href="{{ url('/admin_it-nieuws-verwijder', $it_nieuw->id) }}" class="btn btn-danger">verwijderen</a>
             </div>
         </div>
     @endforeach
