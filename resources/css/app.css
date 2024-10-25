@@ -1134,16 +1134,16 @@ div.content6 {
  
 }
 
-.content-container {
+.content-container2 {
     margin-left: 250px;
     margin-top: 100px;
     display: flex;
     margin-bottom: 125px;         
     gap: 80px;              
-    align-items: flex-start; /* Added this line */
+    align-items: flex-start; 
 }
 
-.card {
+.card2 {
     margin-top: 25px;         
     margin-bottom: 20px;      
     flex: 1 1 300px;         
@@ -1170,6 +1170,7 @@ div.content6 {
 .limited-lines:hover {
     max-height: 100em; 
 }
+
 
 
 
