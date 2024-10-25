@@ -7,6 +7,8 @@ use App\Http\Requests\Storeit_nieuwsRequest;
 use App\Http\Requests\Updateit_nieuwsRequest;
 use Illuminate\Http\Request;
 use app\Models\ItNieuws;
+use Illuminate\Support\Facades\File;
+
 
 class ItNieuwsController extends Controller
 {
@@ -96,8 +98,20 @@ class ItNieuwsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(it_nieuws $it_nieuws)
+    public function destroy(it_nieuws $it_nieuw)
     {
-        //
+         // Get the image path
+    $imagepath = public_path($it_nieuw->Image);
+
+    // Check if the image file exists and delete it
+    if (File::exists($imagepath)) {
+        File::delete($imagepath);
     }
+
+    // Delete the it_nieuw instance
+    $it_nieuw->delete();
+
+    // Redirect to the admin_it-nieuws-verwijder page with a success message
+    return redirect('admin.it-nieuws-verwijder')->with('success', 'Nieuwsbericht is verwijderd!');
 }
+    }

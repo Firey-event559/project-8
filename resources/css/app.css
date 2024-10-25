@@ -1140,6 +1140,7 @@ div.content6 {
     display: flex;
     margin-bottom: 125px;         
     gap: 80px;              
+    align-items: flex-start; /* Added this line */
 }
 
 .card {
@@ -1154,4 +1155,22 @@ div.content6 {
     width: 100%;              
     height: 300px;            
 }
+
+
+.limited-lines {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    max-height: 4.5em; 
+    line-height: 1.5em;
+    transition: max-height 5s ease; 
+}
+
+.limited-lines:hover {
+    max-height: 100em; 
+}
+
+
+
 

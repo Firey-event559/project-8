@@ -10,8 +10,8 @@ use App\Http\Controllers\OrderItemController;
 use App\Http\Controllers\ItNieuwsController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Producten;
-use App\Models\Offerte; 
-use App\Models\Orders;   
+use App\Models\Offerte;
+use App\Models\Orders;
 use App\Models\OrderItem;
 use App\Models\it_nieuws;
 
@@ -50,8 +50,8 @@ Route::get('products/{product}', function (Producten $product) {
 
 
 Route::get('orders', function () {
-    $orders = Order::all();  // Fetch orders from the database
-    return view('orders.index', compact('orders')); // Pass orders to the view
+    $orders = Orders::all();  
+    return view('orders.index', compact('orders'));
 });
 
 // Success Views
@@ -61,14 +61,14 @@ Route::view('signup_succes', 'signup_succes');
 
 
 
- Route::group(['middleware' => ['web', 'auth']], function () {
+Route::group(['middleware' => ['web', 'auth']], function () {
     Route::post('layout', [LoginController::class, 'logout']);
 
     Route::get('/shopping_cart', [CartController::class, 'index'])->name('shopping_cart');
     Route::post('add_to_cart', [CartController::class, 'Add_to_cart']);
     Route::post('cart_update', [CartController::class, 'Update_cart']);
     Route::post('Create_order', [OrdersController::class, 'Createorder']);
-    
+
 
     Route::get('user_change/{user}', [UserController::class, 'showEditForm'])->name('user_change');
     Route::put('user_change/{user}', [UserController::class, 'Updateaccount'])->name('Updateaccount');
@@ -79,19 +79,19 @@ Route::view('signup_succes', 'signup_succes');
 Route::group(['middleware' => ['admin']], function () {
     Route::view('admin', 'admin');
 
-    
+
     Route::get('admin_offerte', function () {
         $offertes = Offerte::all();
         return view('admin_offerte', compact('offertes'));
     });
 
-   
+
     Route::get('admin_change', function () {
         $products = Producten::all();
         return view('admin_change', compact('products'));
     });
 
-    
+
     Route::get('admin_list', function () {
         $orderItems = OrderItem::with(['product', 'order.user'])->get();
         return view('admin_list', compact('orderItems'));
@@ -102,7 +102,7 @@ Route::group(['middleware' => ['admin']], function () {
         return view('admin_it-nieuws-verwijder', compact('it_nieuws'));
     });
 
-   
+
     Route::delete('shipping/{order_id}', [OrderItemController::class, 'destroy'])->name('shipping');
 
 
@@ -115,8 +115,9 @@ Route::group(['middleware' => ['admin']], function () {
         return view('admin_it-nieuws');
     });
 
+    Route::get('/admin_it-nieuws-verwijder/{id}', [ItNieuwsController::class, 'destroy'])->name('admin.it-nieuws-verwijder');
     Route::post('insert_it_nieuws', [ItNieuwsController::class, 'Insert_it_nieuws']);
-    
+
     Route::patch('update/{product}', [ProductenController::class, 'Updateproduct'])->name('update');
     Route::delete('/admin/products/{id}', [ProductenController::class, 'destroy'])->name('products.destroy');
     Route::delete('/offertes/{offerte}', [OfferteController::class, 'destroy'])->name('offerte.destroy');
