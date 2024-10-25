@@ -154,18 +154,21 @@
         te herstellen.</p>
     </div>
   </div>
-  <div class="content7">
+  <div class="content-container2">
+@if(session('success'))
+        <div class=" alert alert-success message2" role="alert">
+            {{ session('success') }}
+    </div> @endif
     @foreach($it_nieuws as $it_nieuw)
-    <div class="card" style="width: 18rem;">
-      <div class="card-body">
-      <img src="{{ $it_nieuw->Image }}" class="Image_product" alt="foto product" width="100%">
-      <h5 class="card-title">{{ $it_nieuw->title }}</h5>
-      <p class="card-text">{{ $it_nieuw->description }}</p>
-
-      </div>
-    </div>
-  @endforeach
-  </div>
+        <div class="card2">
+            <div class="card-body">
+                <img src="{{ $it_nieuw->Image }}" class="product-image" alt="Product Image">
+                <h5 class="card-title">{{ $it_nieuw->title }}</h5>
+                <p class="card-description limited-lines">{{ $it_nieuw->description }}</p>
+            </div>
+        </div>
+    @endforeach
+</div>
 
 
 
