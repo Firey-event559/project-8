@@ -787,7 +787,7 @@ div.dtoegevoegd{
 
 h1.Product_webshop_tekst{
     color: #212529;
-    margin-left:70px ;
+    margin-left:120px ;
     margin-bottom:20px ;
 }
 
@@ -802,7 +802,7 @@ div.Product_webshop {
     display: inline-block;
     flex-direction: column;
     align-items: center;
-    padding-left:60px ;
+    padding-left:150px ;
     margin-right:60px;
     max-width: 300px;
     margin-bottom:30px ;
@@ -821,9 +821,8 @@ img.Image_product {
 
 h5.product_name {
     margin: 10px 0 5px; 
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
-    color: #03cee9;
     text-align: center;
     margin-bottom:10px ; 
 }
@@ -836,7 +835,7 @@ p.product_price {
     margin-bottom: 20px;
 }
 input.winkelmand{
-    background-color: rgb(196, 195, 195);
+    background-color: #0d6efd;
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding: 5px 10px;
