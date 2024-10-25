@@ -46,7 +46,7 @@
                             <p class="product_price">€ {{ $product->Price }}</p>
                             <p>{{ $product->Description }}</p>
 
-                            <form action="{{ route('edit', $product->id) }}" method="POST">
+                            <form action="{{ route('edit', $product->id) }}" method="Get">
                                 @csrf
                                 <input type="hidden" name="id" value="{{ $product->id }}">
                                 <input class="edit btn btn-primary" type="submit" value="Bewerken">
