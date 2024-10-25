@@ -6,19 +6,21 @@
     <a href="{{ url('/admin_change') }}">Producten bewerken</a>
     <a href="{{ url('/admin_list') }}">Bestellingen</a>
     <a href="{{ url('/admin_it-nieuws') }}">IT Nieuws</a>
+    <a href="{{ url('/admin_it-nieuws-verwijder') }}">IT Nieuws verwijderen</a>
 </div>
 
-<div class="content7">
+<div class="content-container">
     @foreach($it_nieuws as $it_nieuw)
-        <div class="card" style="width: 20rem;">
+        <div class="card">
             <div class="card-body">
-                <img src="{{ $it_nieuw->Image }}" class="Image_product" alt="foto product" width="300px" height="300px">
+                <img src="{{ $it_nieuw->Image }}" class="product-image" alt="Product Image">
                 <h5 class="card-title">{{ $it_nieuw->title }}</h5>
-                <p class="card-text">{{ $it_nieuw->description }}</p>
-                <a href="{{ url('/admin_it-nieuws-verwijder', $it_nieuw->id) }}" class="btn btn-danger">Verwijderen</a>
+                <p class="card-description">{{ $it_nieuw->description }}</p>
+                <a href="{{ url('/admin_it-nieuws-verwijder', $it_nieuw->id) }}" class="btn btn-danger">verwijderen</a>
             </div>
-        </div> 
+        </div>
     @endforeach
 </div>
+
 
 </x-layout>

@@ -23,44 +23,44 @@ class ItNieuwsController extends Controller
      */
     public function Insert_it_nieuws(request $request)
     {
-       
-    // Validate the request data
-    $validated = $request->validate([
-        'title' => 'required|max:255|min:5',
-        'description' => 'required|min:10',
-        'Image' => 'required|file|mimes:jpeg,png,jpg,gif,svg|max:50000',
-    ]);
-    
 
-// Set a default value for the image path in case it doesn't get set
-$imagepath = $product->Image ?? null;
+        // Validate the request data
+        $validated = $request->validate([
+            'title' => 'required|max:255|min:5',
+            'description' => 'required|min:10',
+            'Image' => 'required|file|mimes:jpeg,png,jpg,gif,svg|max:50000',
+        ]);
 
-// Handle the uploaded image
-if ($request->hasFile('Image')) {
-    $image = $request->file('Image');
-    $imagename = time() . '.' . $image->getClientOriginalExtension();
-    $destinationpath = public_path('/images');
 
-    // Check if the directory exists and create it if not
-    if (!file_exists($destinationpath)) {
-        mkdir($destinationpath, 0755, true);
+        // Set a default value for the image path in case it doesn't get set
+        $imagepath = $product->Image ?? null;
+
+        // Handle the uploaded image
+        if ($request->hasFile('Image')) {
+            $image = $request->file('Image');
+            $imagename = time() . '.' . $image->getClientOriginalExtension();
+            $destinationpath = public_path('/images');
+
+            // Check if the directory exists and create it if not
+            if (!file_exists($destinationpath)) {
+                mkdir($destinationpath, 0755, true);
+            }
+
+            // Move the new image to the destination path
+            $image->move($destinationpath, $imagename);
+            $imagepath = 'images/' . $imagename;
+        }
+
+        // Create a new it_nieuws instance and assign properties
+        $it_nieuws = new it_nieuws();
+        $it_nieuws->title = $validated['title'];
+        $it_nieuws->description = $validated['description'];
+        $it_nieuws->image = $imagepath;
+        $it_nieuws->save();
+
+        // Redirect to the admin_it-nieuws page
+        return redirect('admin_it-nieuws')->with('success', 'Nieuwsbericht is geplaatst!');
     }
-
-    // Move the new image to the destination path
-    $image->move($destinationpath, $imagename);
-    $imagepath = 'images/' . $imagename;
-}
-
-// Create a new it_nieuws instance and assign properties
-$it_nieuws = new it_nieuws();
-$it_nieuws->title = $validated['title'];
-$it_nieuws->description = $validated['description'];
-$it_nieuws->image = $imagepath;  
-$it_nieuws->save();
-
-     // Redirect to the admin_it-nieuws page
-   return redirect('admin_it-nieuws')->with('success', 'Nieuwsbericht is geplaatst!');
-}
     /**
      * Store a newly created resource in storage.
      */
