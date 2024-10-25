@@ -35,23 +35,7 @@
   </div>
 
 
-  <div class="container text-center p-5 sectioncolor text-light ">
-    <div class="col-md-6 how-img">
-      <img src="{{ Vite::asset('resources/assets/engineer.jpg') }}" width="450px" height="300px">
-    </div>
-    <div class="col-md-6 text-start">
-      <h2>Over ons</h2>
-      <h4 class="subheading">10 jaar ervaring in de reparatiediensten.</h4>
-      <p>Welkom bij Uneed-it, uw vertrouwde partner voor al uw reparatiebehoeften. Bij Uneed-it
-        streven
-        we ernaar hoogwaardige kwalitatieve reparatiediensten te bieden met een onwrikbare focus op klanttevredenheid
-        en excellentie in kwaliteit. Met een schat aan ervaring in de sector hebben we een onberispelijke reputatie
-        opgebouwd als een bedrijf dat synoniem staat voor vakmanschap, snelle service en eerlijke prijzen. Of het nu
-        gaat om het herstellen van elektronica, huishoudelijke apparaten, auto's of andere technische apparaten, ons
-        team van deskundige technici staat paraat om uw problemen op te lossen en uw apparaten weer in optimale staat
-        te herstellen.</p>
-    </div>
-  </div>
+
 
   <div class="container mt-5 mb-5">
 
@@ -69,7 +53,9 @@
 
             <h5 class="mb-0">Bruce Hardy</h5>
             <span>Software Developer</span>
-            <p>Ik ben ontzettend tevreden met de service van Uneed-it! Mijn wasmachine ging stuk en binnen 24 uur was er al een monteur langsgekomen om het probleem op te lossen. De technicus was vriendelijk, professioneel en wist precies wat er moest gebeuren. Binnen een uur werkte mijn wasmachine weer als nieuw.</p>
+            <p>Ik ben ontzettend tevreden met de service van Uneed-it! Mijn wasmachine ging stuk en binnen 24 uur was er
+              al een monteur langsgekomen om het probleem op te lossen. De technicus was vriendelijk, professioneel en
+              wist precies wat er moest gebeuren. Binnen een uur werkte mijn wasmachine weer als nieuw.</p>
 
           </div>
 
@@ -98,7 +84,9 @@
 
             <h5 class="mb-0">Mark Smith</h5>
             <span>Web Developer</span>
-            <p>Geweldige ervaring met Uneed-it. Ik had problemen met mijn laptop en dacht dat ik een nieuwe moest kopen, maar dankzij hun snelle diagnose en reparatie werkte mijn laptop weer perfect. Het team was transparant over de kosten, en er waren geen verborgen verrassingen. De reparatie duurde iets langer dan verwacht.</p>
+            <p>Geweldige ervaring met Uneed-it. Ik had problemen met mijn laptop en dacht dat ik een nieuwe moest kopen,
+              maar dankzij hun snelle diagnose en reparatie werkte mijn laptop weer perfect. Het team was transparant
+              over de kosten, en er waren geen verborgen verrassingen. De reparatie duurde iets langer dan verwacht.</p>
 
           </div>
 
@@ -129,7 +117,10 @@
 
             <h5 class="mb-0">Veera Duncan</h5>
             <span>Software Architect</span>
-            <p>Topservice! Mijn koelkast was kapot en Uneed-it heeft hem binnen no-time gerepareerd. De communicatie was uitstekend, ze hielden me goed op de hoogte van elke stap in het proces. De prijs was heel redelijk in vergelijking met andere bedrijven die ik had geraadpleegd. Ik zou ze zonder twijfel aan iedereen aanbevelen!</p>
+            <p>Topservice! Mijn koelkast was kapot en Uneed-it heeft hem binnen no-time gerepareerd. De communicatie was
+              uitstekend, ze hielden me goed op de hoogte van elke stap in het proces. De prijs was heel redelijk in
+              vergelijking met andere bedrijven die ik had geraadpleegd. Ik zou ze zonder twijfel aan iedereen
+              aanbevelen!</p>
 
           </div>
 
@@ -144,9 +135,39 @@
         </div>
 
       </div>
-
-
     </div>
-
   </div>
+  <div class="container text-center p-5 sectioncolor text-light ">
+    <div class="col-md-6 how-img">
+      <img src="{{ Vite::asset('resources/assets/engineer.jpg') }}" width="450px" height="300px">
+    </div>
+    <div class="col-md-6 text-start">
+      <h2>Over ons</h2>
+      <h4 class="subheading">10 jaar ervaring in de reparatiediensten.</h4>
+      <p>Welkom bij Uneed-it, uw vertrouwde partner voor al uw reparatiebehoeften. Bij Uneed-it
+        streven
+        we ernaar hoogwaardige kwalitatieve reparatiediensten te bieden met een onwrikbare focus op klanttevredenheid
+        en excellentie in kwaliteit. Met een schat aan ervaring in de sector hebben we een onberispelijke reputatie
+        opgebouwd als een bedrijf dat synoniem staat voor vakmanschap, snelle service en eerlijke prijzen. Of het nu
+        gaat om het herstellen van elektronica, huishoudelijke apparaten, auto's of andere technische apparaten, ons
+        team van deskundige technici staat paraat om uw problemen op te lossen en uw apparaten weer in optimale staat
+        te herstellen.</p>
+    </div>
+  </div>
+  <div class="content7">
+    @foreach($it_nieuws as $it_nieuw)
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+      <img src="{{ $it_nieuw->Image }}" class="Image_product" alt="foto product" width="100%">
+      <h5 class="card-title">{{ $it_nieuw->title }}</h5>
+      <p class="card-text">{{ $it_nieuw->description }}</p>
+
+      </div>
+    </div>
+  @endforeach
+  </div>
+
+
+
+
 </x-layout>
