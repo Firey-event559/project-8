@@ -6,12 +6,11 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
-class LoginController extends Controller
+class Logincontroller extends Controller
 {
-    
+
     public function Selectaccount(Request $request)
     {
-      
         $validatedData = $request->validate([
             'email' => 'required|email|exists:users,email|max:255|min:6',
             'password' => 'required|min:6|max:255',
@@ -19,19 +18,15 @@ class LoginController extends Controller
 
         $credentials = $request->only('email', 'password');
 
-       
         if (Auth::attempt($credentials)) {
             $user = Auth::user();
+
             $token = $user->createToken('my-app-token')->plainTextToken;
 
-            
             Session::put('user_email', $user->email);
-
-           
             return redirect('/index')->with('email', $user->email);
         }
 
-        
         return back()->withErrors([
             'password' => 'Invalid email or password. Please try again.',
         ])->withInput($request->only('email'));
@@ -42,10 +37,10 @@ class LoginController extends Controller
 
         Session::forget('user_email');
 
-       
+
         Auth::logout();
 
-    
+
         return redirect('/login');
     }
 }

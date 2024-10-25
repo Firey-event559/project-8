@@ -75,8 +75,8 @@ Route::group(['middleware' => ['web', 'auth']], function () {
     Route::post('layout', [LoginController::class, 'logout']);
 
     Route::get('/shopping_cart', [CartController::class, 'index'])->name('shopping_cart');
-    Route::post('add_to_cart', [CartController::class, 'Add_to_cart']);
-    Route::post('cart_update', [CartController::class, 'Update_cart']);
+    Route::post('add_to_cart', [CartController::class, 'Addtocart']);
+    Route::post('cart_update', [CartController::class, 'Updatecart']);
     Route::post('Create_order', [OrdersController::class, 'Createorder']);
 
 
@@ -140,5 +140,5 @@ Route::group(['middleware' => ['admin']], function () {
 
 
 Route::post('signup', [UserController::class, 'Insertaccount']);
-Route::post('login', [LoginController::class, 'Selectaccount']);
+Route::post('login', [Logincontroller::class, 'Selectaccount']);
 Route::post('offerte', [OfferteController::class, 'Insertofferte']);

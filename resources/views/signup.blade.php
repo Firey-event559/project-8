@@ -16,8 +16,8 @@
 
                     <span style="color: red;">{{$message}}</span> @enderror
                     <label for="Email"></label>
-                    <input type="text" name="email" id="email" placeholder="Email" value="{{ old('email') }}" required><br>
-                    @error('gmail')
+                    <input type="email" name="email" id="email" placeholder="Email" value="{{ old('email') }}" required><br>
+                    @error('email')
 
                     <span style="color: red;">{{$message}}</span> @enderror
                     <label for="adress"></label></label>
