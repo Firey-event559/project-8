@@ -154,11 +154,8 @@
         te herstellen.</p>
     </div>
   </div>
-  <div class="content-container2">
-@if(session('success'))
-        <div class=" alert alert-success message2" role="alert">
-            {{ session('success') }}
-    </div> @endif
+  
+  <div class="text-center p-5">
     @foreach($it_nieuws as $it_nieuw)
         <div class="card2">
             <div class="card-body">

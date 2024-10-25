@@ -1139,25 +1139,28 @@ div.content6 {
     margin-top: 100px;
     display: flex;
     margin-bottom: 45px;         
-    gap: 80px;              
+               
     align-items: flex-start;
      
 }
 
 .card2 {
-    margin-top: 25px;         
+    display: inline-block;
+    margin-top: 25px;  
+          
     margin-bottom: 20px;      
     flex: 1 1 300px;         
     max-width: 300px;  
     border: 1px solid rgba(0,0,0,.125);
     border-radius: 5px;      
     padding: 10px;     
+    margin-right: 20px;
 }
 
 .product-image {
     object-fit: cover;       
     width: 100%;              
-    height: 100%;            
+    height: 154px;            
 }
 
 
@@ -1175,7 +1178,10 @@ div.content6 {
     max-height: 100em; 
 }
 
-
+.itnieuwsbox{
+    margin-left: 200px;
+    
+}
 
 
 
