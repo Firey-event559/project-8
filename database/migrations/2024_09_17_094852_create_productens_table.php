@@ -17,7 +17,7 @@ return new class extends Migration
             $table->integer('Productnumber');
             $table->integer('Stock');
             $table->integer('Price');
-            $table->text('Description', 100000);
+            $table->longText('Description');
             $table->string('Image');
             $table->timestamps();
         });

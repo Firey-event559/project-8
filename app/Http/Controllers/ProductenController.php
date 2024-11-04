@@ -58,8 +58,6 @@ class ProductenController extends Controller
 
     public function Updateproduct(Request $request, Producten $product)
     {
-
-
         // Validate the form data
         $validated = $request->validate([
             'Name' => 'required|max:255|string|min:2',

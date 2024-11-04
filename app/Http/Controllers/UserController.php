@@ -16,11 +16,11 @@ class UserController extends Controller
     {
         // Validate the form data
         $validated = $request->validate([
-            'name' => 'required|max:255|string|min:2',
-            'phonenumber' => 'required|numeric',
-            'email' => 'required|email|unique:users,email',
-            'adress' => 'required|string|min:2',
-            'password' => 'required | min:6',
+            'name' => 'required|max:255|string|min:2|max:255',
+            'phonenumber' => 'required|numeric|digits_between:5,20',
+            'email' => 'required|email|unique:users,email|max:255',
+            'adress' => 'required|string|min:2|max:255',
+            'password' => 'required | min:6|max:20',
         ]);
 
         // Create a new user
@@ -44,10 +44,10 @@ class UserController extends Controller
 
         // Validate the form data
         $validated = $request->validate([
-            'name' => 'required|max:255|string|min:2',
+           'name' => 'required|max:255|string|min:2|max:255',
             'phonenumber' => 'required|numeric',
-            'adress' => 'required|string|min:2',
-            'password' => 'nullable|string|min:8|confirmed',
+            'adress' => 'required|string|min:2|max:255',
+            'password' => 'nullable|string|min:8|max:20|confirmed',
         ]);
 
         if ($request->filled('old_password')) {
