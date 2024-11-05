@@ -2,11 +2,12 @@
 
 namespace Database\Seeders;
 
+use App\Models\OrderItem;
 use Illuminate\Database\Seeder;
-use Database\Seeders\ProductenSeeder;
 use App\Models\producten;
 use App\Models\User;
 use App\Models\offerte;
+use App\Models\orders;
 
 
 
@@ -23,7 +24,8 @@ class DatabaseSeeder extends Seeder
         producten::factory()->count(100)->create();
         User::factory()->count(100)->create();
         offerte::factory()->count(100)->create();
-        
-
+        orders::factory()->count(100)->create();
+        OrderItem::factory()->count(100)->create();
+    
     }
 }

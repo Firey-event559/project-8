@@ -25,14 +25,14 @@ class UserFactory extends Factory
     public function definition(): array
     {
        return [
-            'name' => $this->faker->name, // Random name
-            'phonenumber' => $this->faker->phoneNumber, // Random phone number
-            'email' => $this->faker->unique()->safeEmail, // Unique random email
-            'adress' => $this->faker->address, // Random address
-            'password' => bcrypt('password'), // Default password (hashed)
-            'role' => 1, // Set role to 1
-            'created_at' => now(), // Current timestamp for created_at
-            'updated_at' => now(), // Current timestamp for updated_at
+            'name' => $this->faker->name, 
+            'phonenumber' => $this->faker->phoneNumber, 
+            'email' => $this->faker->unique()->safeEmail, 
+            'adress' => $this->faker->address, 
+            'password' => bcrypt('password'), 
+            'role' => 1, 
+            'created_at' => now(),
+            'updated_at' => now(),
         ];
         
     }

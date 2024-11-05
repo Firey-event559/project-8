@@ -1186,13 +1186,18 @@ div.itnieuws {
 }
 p.product_text {
     display: block;           
-    max-height: 4.5em;    
+    max-height: 1.5em;    
     overflow: hidden;       
     position: relative;      
-    transition: max-height 1s ease; /* Smooth transition */
+    transition: max-height 1s ease; 
 }
 
 p.product_text:hover {
-    max-height: none; /* Remove height limit on hover */
-    overflow: visible; /* Allow overflow to be visible */
+    max-height: none; 
+    overflow: visible; 
+}
+
+div.content10{
+    margin-left: 200px;
+    padding: 1px 16px;
 }

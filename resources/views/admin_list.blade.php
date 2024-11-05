@@ -13,7 +13,7 @@
             <a href="{{ url('/admin_it-nieuws-verwijder') }}">IT Nieuws verwijderen</a>
         </div>
 
-        <div class="content1">
+        <div class="content10">
             <h2>Bestellingen</h2>
             <table class="table table-striped">
                 <thead>
