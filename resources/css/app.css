@@ -1184,3 +1184,15 @@ div.content6 {
 div.itnieuws {
     margin-bottom: 100px;
 }
+p.product_text {
+    display: block;           
+    max-height: 4.5em;    
+    overflow: hidden;       
+    position: relative;      
+    transition: max-height 1s ease; /* Smooth transition */
+}
+
+p.product_text:hover {
+    max-height: none; /* Remove height limit on hover */
+    overflow: visible; /* Allow overflow to be visible */
+}

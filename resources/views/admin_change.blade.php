@@ -35,7 +35,7 @@
                         <div class="Product_details">
                             <h5 class="product_name">{{ $product->Name }}</h5>
                             <p class="product_price">€ {{ $product->Price }}</p>
-                            <p>{{ $product->Description }}</p>
+                            <p class="product_text">{{ $product->Description }}</p>
 
                             <form action="{{ route('edit', $product->id) }}" method="GET">
                                 @csrf
