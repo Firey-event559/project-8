@@ -19,24 +19,24 @@
         @endif
 
         <!-- IT Nieuws Section -->
-        <div class="m-10 itnieuwsbox itnieuws">
+        <div class=" itnieuwsbox itnieuws">
             <h2>IT Nieuws verwijderen</h2>
-            <div class="card-container">
-                @foreach($it_nieuws as $it_nieuw)
-                    <div class="card2">
-                        <div class="card-body">
-                            <img src="{{ $it_nieuw->Image }}" class="product-image" alt="Product Image">
-                            <h5 class="card-title">{{ $it_nieuw->title }}</h5>
-                            <p class="card-description limited-lines">{{ $it_nieuw->description }}</p>
-                            <a href="{{ url('/admin_it-nieuws-verwijder', $it_nieuw->id) }}"
-                                class="btn btn-danger">Verwijderen</a>
-                        </div>
+            @foreach($it_nieuws as $it_nieuw)
+                <div class="card2">
+                    <div class="card-body">
+                        <img src="{{ $it_nieuw->Image }}" class="product-image" alt="Product Image">
+                        <h5 class="card-title">{{ $it_nieuw->title }}</h5>
+                        <p class="card-description limited-lines">{{ $it_nieuw->description }}</p>
+                        <a href="{{ url('/admin_it-nieuws-verwijder', $it_nieuw->id) }}"
+                            class="btn btn-danger">Verwijderen</a>
                     </div>
+                </div>
 
-              @endforeach
+            @endforeach
 
-            </div>
+
         </div>
+
 
     </body>
 </x-layout>

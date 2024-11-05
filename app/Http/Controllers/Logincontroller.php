@@ -12,7 +12,7 @@ class Logincontroller extends Controller
     public function Selectaccount(Request $request)
     {
         $validatedData = $request->validate([
-            'email' => 'required|email|exists:users,email|max:255|min:6',
+            'email' => 'required|email|exists:users,email|max:255|min:6|max:255',
             'password' => 'required|min:6|max:255',
         ]);
 

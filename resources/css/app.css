@@ -803,7 +803,7 @@ div.Product_webshop {
     flex-direction: column;
     align-items: center;
     padding-left:150px ;
-    margin-right:60px;
+    margin-right:45px;
     max-width: 300px;
     margin-bottom:30px ;
 }
@@ -1145,23 +1145,23 @@ div.content6 {
 
 .card2 {
     display: inline-block;
-    margin-top: 25px;  
-          
-    margin-bottom: 20px;      
-    flex: 1 1 300px;         
-    max-width: 300px;  
+    vertical-align: top; 
+    margin-top: 25px;
+    margin-bottom: 20px;
+    flex: 1 1 300px;
+    max-width: 300px;
     border: 1px solid rgba(0,0,0,.125);
-    border-radius: 5px;      
-    padding: 10px;     
+    border-radius: 5px;
+    padding: 10px;
     margin-right: 20px;
+    min-height: 350px;
 }
 
 .product-image {
-    object-fit: cover;       
-    width: 100%;              
-    height: 154px;            
+    object-fit: cover;
+    width: 100%;
+    height: 154px;
 }
-
 
 .limited-lines {
     overflow: hidden;
@@ -1170,21 +1170,17 @@ div.content6 {
     -webkit-box-orient: vertical;
     max-height: 4.5em; 
     line-height: 1.5em;
-    transition: max-height 5s ease; 
+    transition: max-height 2s ease-in-out, opacity 0.3s ease-in-out; 
 }
 
 .limited-lines:hover {
     max-height: 100em; 
 }
 
-.itnieuwsbox{
+.itnieuwsbox {
     margin-left: 200px;
-    
 }
 
-div.itnieuws{
-    margin-bottom:100px ;
+div.itnieuws {
+    margin-bottom: 100px;
 }
-
-
-

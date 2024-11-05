@@ -15,11 +15,11 @@ class ProductenController extends Controller
     {
         // Validate the form data
         $validated = $request->validate([
-            'Name' => 'required|max:255|string|min:2',
-            'Productnumber' => 'required|numeric',
-            'Stock' => 'required|numeric',
-            'Price' => 'required|numeric',
-            'Description' => 'required|string|min:2',
+            'Name' => 'required|max:255|string|min:2|max:255',
+            'Productnumber' => 'required|numeric|digits_between:5,20',
+            'Stock' => 'required|numeric|max:10000',
+            'Price' => 'required|numeric|max:10000',
+            'Description' => 'required|string|min:2|max:50000',
             'Image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:50000',
         ]);
 
