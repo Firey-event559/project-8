@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Auth;
 <html lang="en">
 
 <head>
-<link rel="icon" type="image/x-icon" href="{{ asset('resources/assets/favicon-32x32.png') }}">
+<link rel="icon" href="{{ asset('favicon.ico') }}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @vite (['resources/css/app.css'])
