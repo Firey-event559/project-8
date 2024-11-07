@@ -3,27 +3,32 @@
 use Darryldecode\Cart\Facades\CartFacade as Cart;
 
 ?>
-<x-layout>
+
+
+   <x-layout>
+
     <div class="cart-container">
+
+    <h1>Winkelwagentje</h1>
 
         @if(session('success'))
             <div class="alert alert-success">{{ session('success') }}</div>
         @endif
 
-        <h1>Winkelwagentje</h1>
-
-
-
         @if(session('error'))
-            <div class="alert alert-danger">{{ session('error') }}</div>
-        @endif
+                    <div class="alert alert-danger">{{ session('error') }}</div>
+                @endif
+
+
 
         @if($cartitems->isEmpty())
             <p class="text_empty_cart">Jouw winkelwagentje is leeg</p>
         @else
+
                 <!-- Cart update form -->
                 <form action="cart_update" method="POST">
                     @csrf
+
                     <table class="cart-table">
                         <thead>
                             <tr>
@@ -107,6 +112,7 @@ use Darryldecode\Cart\Facades\CartFacade as Cart;
                     </div>
 
                     <input class="checkout-btn" type="submit" value="Doorgaan naar afrekenen">
+
                 </form>
             </div>
         @endif
@@ -118,4 +124,5 @@ use Darryldecode\Cart\Facades\CartFacade as Cart;
         <p>© 2024 Jouw Bedrijf. Alle rechten voorbehouden.</p>
     </footer>
     </div>
-</x-layout>
+
+    </x-layout>

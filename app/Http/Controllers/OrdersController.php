@@ -39,7 +39,7 @@ class OrdersController extends Controller
             'product_id' => 'required|array',
             'product_id.*' => 'required|exists:productens,id',
             'quantity' => 'required|array',
-            'quantity.*' => 'required|integer|min:1',
+            'quantity.*' => 'required|integer|min:1|max:5',
         ]);
 
         DB::beginTransaction();
@@ -66,7 +66,7 @@ class OrdersController extends Controller
                 // Check stock
                 if ($product->Stock < $quantity) {
                     DB::rollback();
-                    return redirect('shopping_cart')->with('error', 'Not enough stock for ' . $product->Name);
+                    return redirect('shopping_cart')->with('error', "Niet genoeg voorraad {$product->Name}");
                 }
 
                 // Reduce stock and save
@@ -87,7 +87,7 @@ class OrdersController extends Controller
             // Commit the transaction
             DB::commit();
 
-            return redirect('shopping_cart')->with('success', 'Jouw bestelling is succesvol geplaatst!');
+            return redirect('shopping_cart')->with('stock', 'Jouw bestelling is succesvol geplaatst!');
         } catch (\Exception $e) {
             DB::rollback();
             \Log::error('Order creation failed: ' . $e->getMessage());

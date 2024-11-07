@@ -17,7 +17,7 @@ class UserController extends Controller
         // Validate the form data
         $validated = $request->validate([
             'name' => 'required|max:255|string|min:2|max:255',
-            'phonenumber' => 'required|numeric|digits_between:5,20',
+            'phonenumber' => 'required|regex:/^[0-9\-\(\)\s]+$/|min:5|max:20',
             'email' => 'required|email|unique:users,email|max:255',
             'adress' => 'required|string|min:2|max:255',
             'password' => 'required | min:6|max:20',
@@ -45,7 +45,7 @@ class UserController extends Controller
         // Validate the form data
         $validated = $request->validate([
            'name' => 'required|max:255|string|min:2|max:255',
-            'phonenumber' => 'required|numeric|digits_between:5,20',
+           'phonenumber' => 'required|regex:/^[0-9\-\(\)\s]+$/|min:5|max:20',
             'adress' => 'required|string|min:2|max:255',
             'password' => 'nullable|string|min:8|max:20|confirmed',
         ]);
