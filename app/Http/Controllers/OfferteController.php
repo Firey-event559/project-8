@@ -22,9 +22,9 @@ class OfferteController extends Controller
     {
 
         $validated = $request->validate([
-            'name' => 'required|max:255',
-            'email' => 'required|email|max:100',
-            'phonenumber' => 'required|numeric|max:16',
+            'name' => 'required|min:3|max:255',
+            'email' => 'required|email|max:255',
+            'phonenumber' => 'required|regex:/^[0-9\-\(\)\s]+$/|min:5|max:20',
             'productselect' => 'required',
             'details' => 'required|min:10|max:5000',
         ]);

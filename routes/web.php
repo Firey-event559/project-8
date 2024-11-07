@@ -64,7 +64,7 @@ Route::get('orders', function () {
     return view('orders.index', compact('orders'));
 });
 
-// Success Views
+
 Route::view('offertes.offerte_succes', 'offertes.offerte_succes');
 Route::view('signup_succes', 'signup_succes');
 
