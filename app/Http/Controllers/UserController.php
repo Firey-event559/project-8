@@ -45,7 +45,7 @@ class UserController extends Controller
         // Validate the form data
         $validated = $request->validate([
            'name' => 'required|max:255|string|min:2|max:255',
-            'phonenumber' => 'required|numeric',
+            'phonenumber' => 'required|numeric|digits_between:5,20',
             'adress' => 'required|string|min:2|max:255',
             'password' => 'nullable|string|min:8|max:20|confirmed',
         ]);
