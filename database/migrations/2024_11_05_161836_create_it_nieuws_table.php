@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('it_nieuws', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->text('description', 100000);
+            $table->longtext('description');
             $table->string('Image');
             $table->timestamps();
         });

@@ -6,7 +6,7 @@ use App\Models\it_nieuws;
 use App\Http\Requests\Storeit_nieuwsRequest;
 use App\Http\Requests\Updateit_nieuwsRequest;
 use Illuminate\Http\Request;
-use app\Models\ItNieuws;
+use App\Models\ItNieuws;
 use Illuminate\Support\Facades\File;
 
 
@@ -54,7 +54,7 @@ class ItNieuwsController extends Controller
         }
 
         // Create a new it_nieuws instance and assign properties
-        $it_nieuws = new it_nieuws();
+        $it_nieuws = new ItNieuws();
         $it_nieuws->title = $validated['title'];
         $it_nieuws->description = $validated['description'];
         $it_nieuws->image = $imagepath;
@@ -74,7 +74,7 @@ class ItNieuwsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(it_nieuws $it_nieuws)
+    public function show(ItNieuws $it_nieuws)
     {
         //
     }
@@ -82,7 +82,7 @@ class ItNieuwsController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(it_nieuws $it_nieuws)
+    public function edit(ItNieuws $it_nieuws)
     {
         //
     }
@@ -90,7 +90,7 @@ class ItNieuwsController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Updateit_nieuwsRequest $request, it_nieuws $it_nieuws)
+    public function update(Updateit_nieuwsRequest $request, ItNieuws $it_nieuws)
     {
 
     }
@@ -99,7 +99,7 @@ class ItNieuwsController extends Controller
     public function destroy($id)
     {
         // Find the it_nieuw instance by ID
-        $it_nieuw = it_nieuws::findOrFail($id);
+        $it_nieuw = ItNieuws::findOrFail($id);
 
         // Get the image path
         $imagepath = public_path($it_nieuw->Image);

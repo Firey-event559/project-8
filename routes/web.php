@@ -13,7 +13,7 @@ use App\Models\Producten;
 use App\Models\Offerte;
 use App\Models\Orders;
 use App\Models\OrderItem;
-use App\Models\it_nieuws;
+use App\Models\ItNieuws;
 
 // Public Routes
 
@@ -26,12 +26,12 @@ Route::view('/contact', 'contact');
 Route::view('/signup', 'signup');
 
 Route::get('/', function () {
-    $it_nieuws = it_nieuws::all();
+    $it_nieuws = ItNieuws::all();
     return view('index', compact('it_nieuws'));
 });
 
 route::get('index', function () {
-    $it_nieuws = it_nieuws::all();
+    $it_nieuws = ItNieuws::all();
     return view('index', compact('it_nieuws'));
 });
 
@@ -108,7 +108,7 @@ Route::group(['middleware' => ['admin']], function () {
     });
 
     Route::get('admin_it-nieuws-verwijder', function () {
-        $it_nieuws = it_nieuws::all();
+        $it_nieuws = ItNieuws::all();
         return view('admin_it-nieuws-verwijder', compact('it_nieuws'));
     });
 

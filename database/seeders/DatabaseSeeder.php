@@ -8,7 +8,7 @@ use App\Models\producten;
 use App\Models\User;
 use App\Models\offerte;
 use App\Models\orders;
-use App\Models\it_nieuws;
+use App\Models\ItNieuws;
 
 
 
@@ -27,7 +27,7 @@ class DatabaseSeeder extends Seeder
         offerte::factory()->count(100)->create();
         orders::factory()->count(100)->create();
         OrderItem::factory()->count(100)->create();
-        it_nieuws::factory()->count(100)->create();
+        ItNieuws::factory()->count(100)->create();
     
     }
 }

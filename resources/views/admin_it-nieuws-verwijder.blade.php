@@ -11,15 +11,16 @@
             <a href="{{ url('/admin_it-nieuws-verwijder') }}">IT Nieuws verwijderen</a>
         </div>
 
-        <!-- Success Message -->
+       
+
+        <!-- IT Nieuws Section -->
+        <div class="itnieuwsbox itnieuws">
+             <!-- Success Message -->
         @if(session('success'))
             <div class="alert alert-success message2" role="alert">
                 {{ session('success') }}
             </div>
         @endif
-
-        <!-- IT Nieuws Section -->
-        <div class=" itnieuwsbox itnieuws">
             <h2>IT Nieuws verwijderen</h2>
             @foreach($it_nieuws as $it_nieuw)
                 <div class="card2">

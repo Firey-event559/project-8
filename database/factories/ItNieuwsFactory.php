@@ -1,16 +1,16 @@
 <?php
 
 namespace Database\Factories;
+use App\Models\ItNieuws;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use App\Models\it_nieuws;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\it_nieuws>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\ItNieuws>
  */
 class ItNieuwsFactory extends Factory
 {
-    protected $model = it_nieuws::class;
+    protected $model = ItNieuws::class;
     public function definition(): array
     {
         $images = [
@@ -24,12 +24,10 @@ class ItNieuwsFactory extends Factory
 
         return [
             'title' => $this->faker->randomElement($titles),
-            'description' => $this->faker->sentence,
+            'description' => $this->faker->sentence(50),
             'Image' => $this->faker->randomElement($images),
             'created_at' => now(), 
             'updated_at' => now(),
         ];
     }
 }
-
-
