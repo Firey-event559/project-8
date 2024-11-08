@@ -25,9 +25,9 @@ class ProductenFactory extends Factory
             'Dell XPS 13',
             'HP Spectre x360',
             'Asus ZenBook 14',
-            'Lenovo ThinkPad X1 Carbon',
-            'Google Pixelbook Go',
-            'Samsung Galaxy Book Pro',
+            'Lenovo ThinkPad X1',
+            'Google Pixelbook',
+            'Samsung Galaxy',
             'Acer Swift 3',
             'Razer Blade Stealth',
         ];
