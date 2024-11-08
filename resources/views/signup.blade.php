@@ -7,8 +7,8 @@
                     <h2 class="form-title">Registreren</h2>
                     @csrf
                     <label for="name"></label>
-                    <input type="text" name="name" id="name" placeholder="naam" value="{{ old('email') }}" required><br>
-                    @error('naam')
+                    <input type="text" name="name" id="name" placeholder="naam" value="{{ old('name') }}" required><br>
+                    @error('name')
 
                     <span style="color: red;">{{$message}}</span> @enderror
                     <label for="phonenumber"></label>
@@ -23,8 +23,8 @@
                     @error('email')
 
                     <span style="color: red;">{{$message}}</span> @enderror
-                    <label for="adress"></label></label>
-                    <input type="text" name="adress" id="email" placeholder="Adress" value="{{ old('adress') }}"
+                    <label for="adress2"></label>
+                    <input type="text" name="adress" id="adress2" placeholder="Adress" value="{{ old('adress') }}"
                         required><br>
                     @error('adress')
                     <span style="color: red;">{{$message}}</span> @enderror

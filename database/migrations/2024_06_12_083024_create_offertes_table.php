@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('phonenumber');
             $table->string('productnumber');
-            $table->string('details');
+            $table->longtext('details');
 
         });
     }
