@@ -20,7 +20,7 @@ class OfferteController extends Controller
 
     public function Insertofferte(Request $request)
     {
-
+        // Validate the request data
         $validated = $request->validate([
             'name' => 'required|min:3|max:255',
             'email' => 'required|email|min: 3|max:255',
@@ -28,7 +28,7 @@ class OfferteController extends Controller
             'productselect' => 'required',
             'details' => 'required|min:10|max:50000',
         ]);
-
+        // Create a new offerte instance and assign properties
         $offerte = new offerte();
         $offerte->name = $validated['name'];
         $offerte->email = $validated['email'];
@@ -36,7 +36,7 @@ class OfferteController extends Controller
         $offerte->productnumber = $validated['productselect'];
         $offerte->details = $validated['details'];
         $offerte->save();
-
+        // Redirect back with success message
         return redirect('offertes.offerte')->with('success', 'Uw offerte is ontvangen!');
 
 
@@ -90,7 +90,7 @@ class OfferteController extends Controller
         $offerte->delete();
 
         // Redirect back with success message
-        return redirect('admin_offerte')->with('success', 'Product verwijderd.');
+        return redirect('admin_offerte')->with('success', 'offerte succesvol verwijderd.');
     }
 
 

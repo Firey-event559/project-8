@@ -30,7 +30,7 @@ class ItNieuwsController extends Controller
         $validated = $request->validate([
             'title' => 'required|max:255|min:5|max:255',
             'description' => 'required|min:10|max:50000',
-            'Image' => 'required|file|mimes:jpeg,png,jpg,gif,svg|max:50000',
+            'Image' => 'required|file|mimes:jpeg,png,jpg,gif,svg|mimetypes:image/png,image/jpeg,image/jpg,image/gif,image/svg+xml|max:50000',
         ]);
 
 

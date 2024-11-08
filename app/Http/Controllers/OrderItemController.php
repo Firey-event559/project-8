@@ -61,7 +61,7 @@ class OrderItemController extends Controller
      */
     public function destroy(string $order_id)
     {
-
+       // Find the OrderItems associated with the Order
         $orderItems = OrderItem::where('order_id', $order_id);
 
         // Check if any order items exist

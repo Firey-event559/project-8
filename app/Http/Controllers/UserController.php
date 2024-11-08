@@ -49,10 +49,10 @@ class UserController extends Controller
             'adress' => 'required|string|min:2|max:255',
             'password' => 'nullable|string|min:8|max:20|confirmed',
         ]);
-
+        // Check if the old password is correct
         if ($request->filled('old_password')) {
             if (!Hash::check($request->old_password, $user->password)) {
-                // validation error if password doesn't ma
+                // validation error if password doesn't match
                 throw ValidationException::withMessages([
                     'old_password' => ['Het oude wachtwoord is onjuist.']
                 ]);

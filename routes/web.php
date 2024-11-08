@@ -41,11 +41,6 @@ Route::get('offertes.offerte', function () {
     return view('offertes.offerte', compact('products'));
 });
 
-Route::get('offertes.offerte', function () {
-    $products = Producten::all();
-    return view('offertes.offerte', compact('products'));
-});
-
 
 Route::get('webshop', function () {
     $products = Producten::all();
@@ -55,8 +50,6 @@ Route::get('webshop', function () {
 Route::get('products/{product}', function (Producten $product) {
     return view('product_view', compact('product'));
 })->name('products');
-
-
 
 
 Route::get('orders', function () {
