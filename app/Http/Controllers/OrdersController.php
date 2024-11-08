@@ -87,7 +87,7 @@ class OrdersController extends Controller
             // Commit the transaction
             DB::commit();
 
-            return redirect('shopping_cart')->with('stock', 'Jouw bestelling is succesvol geplaatst!');
+            return redirect('shopping_cart')->with('success', 'Jouw bestelling is succesvol geplaatst!');
         } catch (\Exception $e) {
             DB::rollback();
             \Log::error('Order creation failed: ' . $e->getMessage());
