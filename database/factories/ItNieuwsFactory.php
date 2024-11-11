@@ -20,13 +20,13 @@ class ItNieuwsFactory extends Factory
             'voorbeeld 1',
             'voorbeeld 2',
             'voorbeeld 3',
-            ];
+        ];
 
         return [
             'title' => $this->faker->randomElement($titles),
             'description' => $this->faker->sentence(50),
             'Image' => $this->faker->randomElement($images),
-            'created_at' => now(), 
+            'created_at' => now(),
             'updated_at' => now(),
         ];
     }

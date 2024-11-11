@@ -1,4 +1,5 @@
 <x-layout>
+
     <body class="admin_list">
         <div class="sidebar">
             <a href="{{ url('/admin') }}">Producten toevoegen</a>
@@ -25,7 +26,7 @@
                         <div class="form-outline" data-mdb-input-init>
                             <label for="form6Example1" class="form-label">Titel</label>
                             <input type="text" id="form6Example1" class="form-control" name="title"
-                                   value="{{ old('title') }}" required>
+                                value="{{ old('title') }}" required>
                             @error('title')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
@@ -36,7 +37,8 @@
                 <!-- Description input -->
                 <div class="form-outline mb-4" data-mdb-input-init>
                     <label for="form6Example7" class="form-label">Beschrijving</label>
-                    <textarea name="description" class="form-control" id="form6Example7" rows="4" required>{{ old('description') }}</textarea>
+                    <textarea name="description" class="form-control" id="form6Example7" rows="4"
+                        required>{{ old('description') }}</textarea>
                     @error('description')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
@@ -45,7 +47,7 @@
                 <!-- Image input -->
                 <div class="form-group mb-4">
                     <input type="file" name="Image" class="form-control-file" id="exampleFormControlFile1"
-                           value="{{ old('Image') }}">
+                        value="{{ old('Image') }}">
                     @error('Image')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror

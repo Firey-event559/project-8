@@ -20,11 +20,11 @@ class OrdersFactory extends Factory
             'Delivery',
         ];
         return [
-            'amount' => $this->faker->unique()->numberBetween(1000, 9999), 
+            'amount' => $this->faker->unique()->numberBetween(1000, 9999),
             'delivery_options' => $this->faker->randomElement($delivery_options),
             'user_id' => 1,
-            'created_at' => now(), 
+            'created_at' => now(),
             'updated_at' => now(),
-          ];
+        ];
     }
 }

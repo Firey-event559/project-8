@@ -9,7 +9,6 @@ use App\Models\producten;
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\producten>
  */
 class ProductenFactory extends Factory
-
 {
     protected $model = producten::class;
 
@@ -33,13 +32,13 @@ class ProductenFactory extends Factory
         ];
 
         return [
-            'Name' => $this->faker->randomElement($productname), 
-            'Productnumber' => $this->faker->unique()->numberBetween(1000, 9999), 
-            'Stock' => $this->faker->numberBetween(1, 100), 
-            'Price' => $this->faker->numberBetween(1000, 10000), 
+            'Name' => $this->faker->randomElement($productname),
+            'Productnumber' => $this->faker->unique()->numberBetween(1000, 9999),
+            'Stock' => $this->faker->numberBetween(1, 100),
+            'Price' => $this->faker->numberBetween(1000, 10000),
             'Description' => $this->faker->sentence,
             'Image' => $this->faker->randomElement($images),
-            'created_at' => now(), 
+            'created_at' => now(),
             'updated_at' => now(),
         ];
     }

@@ -53,7 +53,7 @@ Route::get('products/{product}', function (Producten $product) {
 
 
 Route::get('orders', function () {
-    $orders = Orders::all();  
+    $orders = Orders::all();
     return view('orders.index', compact('orders'));
 });
 

@@ -17,10 +17,10 @@ class OrderItemFactory extends Factory
     public function definition(): array
     {
         return [
-            'order_id' =>$this->faker->numberBetween(1, 100),
-            'product_id'=>(int)$this->faker->numberBetween(1,100),
+            'order_id' => $this->faker->numberBetween(1, 100),
+            'product_id' => (int) $this->faker->numberBetween(1, 100),
             'quantity' => $this->faker->numberBetween(1, 10),
-            'created_at' => now(), 
+            'created_at' => now(),
             'updated_at' => now(),
         ];
     }

@@ -19,17 +19,17 @@ class Logincontroller extends Controller
 
         // Attempt to log in the user
         $credentials = $request->only('email', 'password');
-         
+
         if (Auth::attempt($credentials)) {
             $user = Auth::user();
-             // Create a token for the user
+            // Create a token for the user
             $token = $user->createToken('my-app-token')->plainTextToken;
 
             // Store the token in a session
             Session::put('user_email', $user->email);
             return redirect('/index')->with('email', $user->email);
         }
-         // Redirect back with an error message
+        // Redirect back with an error message
         return back()->withErrors([
             'password' => 'Invalid email or password. Please try again.',
         ])->withInput($request->only('email'));
@@ -41,7 +41,7 @@ class Logincontroller extends Controller
         // Forget the user's email from the session
         Session::forget('user_email');
 
-       // Log the user out
+        // Log the user out
         Auth::logout();
 
         // Redirect to the login page

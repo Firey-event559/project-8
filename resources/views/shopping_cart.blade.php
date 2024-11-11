@@ -5,19 +5,19 @@ use Darryldecode\Cart\Facades\CartFacade as Cart;
 ?>
 
 
-   <x-layout>
+<x-layout>
 
     <div class="cart-container">
 
-    <h1>Winkelwagentje</h1>
+        <h1>Winkelwagentje</h1>
 
         @if(session('success'))
             <div class="alert alert-success">{{ session('success') }}</div>
         @endif
 
         @if(session('error'))
-                    <div class="alert alert-danger">{{ session('error') }}</div>
-                @endif
+            <div class="alert alert-danger">{{ session('error') }}</div>
+        @endif
 
 
 
@@ -125,4 +125,4 @@ use Darryldecode\Cart\Facades\CartFacade as Cart;
     </footer>
     </div>
 
-    </x-layout>
+</x-layout>

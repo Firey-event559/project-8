@@ -14,10 +14,10 @@
 
         <div class="itnieuwsbox itnieuws">
             <!-- Success Message -->
-            
-        <!-- IT Nieuws Section -->
-        <h2>IT Nieuws verwijderen</h2>
-        @if(session('success'))
+
+            <!-- IT Nieuws Section -->
+            <h2>IT Nieuws verwijderen</h2>
+            @if(session('success'))
                 <div class="alert alert-success message2" role="alert">
                     {{ session('success') }}
                 </div>

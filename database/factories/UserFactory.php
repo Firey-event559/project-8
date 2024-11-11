@@ -12,8 +12,8 @@ use App\Models\User;
  */
 class UserFactory extends Factory
 {
-    
-   
+
+
     protected $model = User::class;
     protected static ?string $password;
 
@@ -24,21 +24,21 @@ class UserFactory extends Factory
      */
     public function definition(): array
     {
-       return [
-            'name' => $this->faker->name, 
-            'phonenumber' => $this->faker->phoneNumber, 
-            'email' => $this->faker->unique()->safeEmail, 
-            'adress' => $this->faker->address, 
-            'password' => bcrypt('password'), 
-            'role' => 1, 
+        return [
+            'name' => $this->faker->name,
+            'phonenumber' => $this->faker->phoneNumber,
+            'email' => $this->faker->unique()->safeEmail,
+            'adress' => $this->faker->address,
+            'password' => bcrypt('password'),
+            'role' => 1,
             'created_at' => now(),
             'updated_at' => now(),
         ];
-        
+
     }
     public function unverified(): static
     {
-        return $this->state(fn (array $attributes) => [
+        return $this->state(fn(array $attributes) => [
             'email_verified_at' => null,
         ]);
     }

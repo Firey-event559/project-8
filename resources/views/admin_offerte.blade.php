@@ -15,8 +15,8 @@
         <div class="content4">
             <h2>Offertes</h2>
             @if(session('success'))
-            <div class="alert alert-success">{{ session('success') }}</div>
-        @endif
+                <div class="alert alert-success">{{ session('success') }}</div>
+            @endif
             <table class="table table-striped">
                 <thead>
                     <tr>

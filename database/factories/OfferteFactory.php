@@ -14,16 +14,15 @@ class OfferteFactory extends Factory
     protected $model = offerte::class;
 
     public function definition(): array
-
     {
-    
-    return [
-        'name' => $this->faker->name, 
-        'email' => $this->faker->unique()->safeEmail, 
-        'phonenumber' => $this->faker->phoneNumber,
-        'productnumber' => $this->faker->numberBetween(1030221, 1134556), 
-        'details' => $this->faker->sentence,
-    ];
-}
+
+        return [
+            'name' => $this->faker->name,
+            'email' => $this->faker->unique()->safeEmail,
+            'phonenumber' => $this->faker->phoneNumber,
+            'productnumber' => $this->faker->numberBetween(1030221, 1134556),
+            'details' => $this->faker->sentence,
+        ];
+    }
 
 }

@@ -154,7 +154,7 @@
         te herstellen.</p>
     </div>
   </div>
-  
+
   <div class="text-center p-5">
     @foreach($it_nieuws as $it_nieuw)
     <div class="card2">
