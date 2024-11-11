@@ -51,11 +51,10 @@ use Darryldecode\Cart\Facades\CartFacade as Cart;
                                     <td>€{{ number_format($item->price, 2, ',', '.') }}</td>
                                     <td>
                                         <input type="hidden" name="product_id[]" value="{{ $item->id }}">
-                                        <input type="number" name="quantity[]" value="{{ $item->quantity }}" min="1"
+                                        <input type="number" name="quantity[]" value="{{ $item->quantity }}" min="1" max="5"
                                             style="width: 60px;">
                                     </td>
                                     <td>€{{ number_format($item->quantity * $item->price, 2, ',', '.') }}</td>
-
 
                                 </tr>
                             @endforeach
