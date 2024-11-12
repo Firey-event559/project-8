@@ -83,7 +83,7 @@ class OfferteController extends Controller
     {
         // Check if the product exists
         if (!$offerte) {
-            return redirect()->back()->with('error', 'Product niet gevonden.');
+            return redirect()->back()->with('error', 'offerte niet gevonden.');
         }
 
         // Delete the product
