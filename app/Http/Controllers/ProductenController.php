@@ -46,7 +46,7 @@ class ProductenController extends Controller
         $product->Stock = $validated['Stock'];
         $product->Price = $validated['Price'];
         $product->Description = $validated['Description'];
-        $product->Image = $imagepath; // Save the image path
+        $product->Image = $imagepath; // Save the image path  
         $product->save();
 
 
